@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1500px;
+  width: 100%;
+}

@@ -1,0 +1,39 @@
+{
+    "title": "Chào mừng đến với Nuxt Cinema!",
+    "currentLanguage": "Ngôn ngữ hiện tại: Tiếng Việt",
+    "header": {
+        "home": "Trang chủ",
+        "movies": "Các bộ phim",
+        "cinemas": "Các rạp chiếm phim",
+        "about": "Thông tin"
+    },
+    "hero": {
+        "title": "NUXT CINEMA",
+        "subtitle": "Trải Nghiệm Phim Ảnh Chưa Từng Có - Rạp Cao Cấp, Phim Mới Nhất, Giải Trí Tuyệt Vời",
+        "bookNow": "Đặt Vé Ngay",
+        "watchTrailers": "Xem Trailer"
+    },
+    "sections": {
+        "nowShowing": "Đang Chiếu",
+        "comingSoon": "Sắp Chiếu",
+        "ourCinemas": "Hệ Thống Rạp",
+        "cinemasSubtitle": "Khám phá các địa điểm cao cấp với công nghệ hiện đại nhất"
+    },
+    "common": {
+        "viewAll": "Xem Tất Cả",
+        "bookTicket": "Đặt Vé",
+        "watchTrailer": "Xem Trailer",
+        "learnMore": "Tìm Hiểu Thêm"
+    },
+    "status": {
+        "now_showing": "Đang Chiếu",
+        "coming_soon": "Sắp Chiếu",
+        "ended": "Đã Kết Thúc"
+    },
+    "cta": {
+        "title": "Sẵn Sàng Cho Cuộc Phiêu Lưu Điện Ảnh Tiếp Theo?",
+        "subtitle": "Tham gia cùng hàng triệu người yêu phim và đặt trải nghiệm rạp chiếu hoàn hảo ngay hôm nay",
+        "browseMovies": "Duyệt Phim",
+        "findCinema": "Tìm Rạp"
+    }
+}
