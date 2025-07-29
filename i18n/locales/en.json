@@ -1,0 +1,39 @@
+{
+    "title": "Welcome to Nuxt Cinema!",
+    "currentLanguage": "Current language: English",
+    "header": {
+        "home": "Home",
+        "movies": "Movies",
+        "cinemas": "Cinemas",
+        "about": "About"
+    },
+    "hero": {
+        "title": "NUXT CINEMA",
+        "subtitle": "Experience Movies Like Never Before - Premium Theaters, Latest Films, Ultimate Entertainment",
+        "bookNow": "Book Tickets Now",
+        "watchTrailers": "Watch Trailers"
+    },
+    "sections": {
+        "nowShowing": "Now Showing",
+        "comingSoon": "Coming Soon",
+        "ourCinemas": "Our Cinemas",
+        "cinemasSubtitle": "Discover our premium locations with state-of-the-art technology"
+    },
+    "common": {
+        "viewAll": "View All",
+        "bookTicket": "Book Ticket",
+        "watchTrailer": "Watch Trailer",
+        "learnMore": "Learn More"
+    },
+    "status": {
+        "now_showing": "Now Showing",
+        "coming_soon": "Coming Soon",
+        "ended": "Ended"
+    },
+    "cta": {
+        "title": "Ready for Your Next Movie Adventure?",
+        "subtitle": "Join millions of movie lovers and book your perfect cinema experience today",
+        "browseMovies": "Browse Movies",
+        "findCinema": "Find Cinema"
+    }
+}
