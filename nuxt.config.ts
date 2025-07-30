@@ -10,7 +10,6 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxtjs/i18n',
     '@nuxt/devtools',
-    'nuxt-lucide-icons',
     [
       '@pinia/nuxt',
       {
@@ -25,9 +24,6 @@ export default defineNuxtConfig({
     families: {
       Montserrat: true
     }
-  },
-  lucide: {
-    namePrefix: 'Icon'
   },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }

@@ -2,7 +2,7 @@ import type {
     User, Genre, Movie,
     Cinema, Screen, Seat,
     TimeSlot, MovieSchedule,
-    SoldInvoice, Ticket, Rating
+    Event
 } from '../../types/type'
 
 export const users: User[] = [
@@ -259,7 +259,7 @@ export const movies: Movie[] = [
         posterImg: '/posters/MV1.jpg',
         trailer: 'https://www.youtube.com/watch?v=Way9Dexny3w',
         releaseDate: '2024-03-01',
-        status: 'ended',
+        status: 'now_showing',
         directors: ['Denis Villeneuve'],
         casts: ['Timothée Chalamet', 'Zendaya', 'Rebecca Ferguson', 'Austin Butler'],
         ratings: []
@@ -286,7 +286,7 @@ export const movies: Movie[] = [
         posterImg: '/posters/MV2.jpg',
         trailer: 'https://www.youtube.com/watch?v=JfVOs4VSpmA',
         releaseDate: '2021-12-17',
-        status: 'ended',
+        status: 'now_showing',
         directors: ['Jon Watts'],
         casts: ['Tom Holland', 'Zendaya', 'Benedict Cumberbatch', 'Willem Dafoe'],
         ratings: []
@@ -337,10 +337,10 @@ export const movies: Movie[] = [
         ],
         genres: [1, 3, 5],
         duration: 115,
-        posterImg: '/posters/MV4.jpg',
+        posterImg: '/posters/MV4.webp',
         trailer: 'https://www.youtube.com/watch?v=lV1OOlGwExM',
         releaseDate: '2024-03-29',
-        status: 'ended',
+        status: 'now_showing',
         directors: ['Adam Wingard'],
         casts: ['Rebecca Hall', 'Brian Tyree Henry', 'Dan Stevens'],
         ratings: []
@@ -364,10 +364,10 @@ export const movies: Movie[] = [
         ],
         genres: [3, 11, 8],
         duration: 190,
-        posterImg: '/posters/MV5.jpg',
+        posterImg: '/posters/MV5.webp',
         trailer: 'https://www.youtube.com/watch?v=9cGDhDB7898',
         releaseDate: '2025-12-19',
-        status: 'coming_soon',
+        status: 'now_showing',
         directors: ['James Cameron'],
         casts: ['Sam Worthington', 'Zoe Saldaña', 'Sigourney Weaver', 'Michelle Yeoh'],
         ratings: []
@@ -421,7 +421,7 @@ export const movies: Movie[] = [
         posterImg: '/posters/MV7.jpg',
         trailer: 'https://www.youtube.com/watch?v=wxN1T1uxQ2g',
         releaseDate: '2022-04-08',
-        status: 'ended',
+        status: 'now_showing',
         directors: ['Daniel Kwan', 'Daniel Scheinert'],
         casts: ['Michelle Yeoh', 'Ke Huy Quan', 'Stephanie Hsu', 'Jamie Lee Curtis'],
         ratings: []
@@ -472,7 +472,7 @@ export const movies: Movie[] = [
         ],
         genres: [2, 12, 15],
         duration: 122,
-        posterImg: '/posters/MV9.jpg',
+        posterImg: '/posters/MV9.webp',
         trailer: 'https://www.youtube.com/watch?v=_OKAwz2MsJs',
         releaseDate: '2024-10-04',
         status: 'ended',
@@ -526,7 +526,7 @@ export const movies: Movie[] = [
         ],
         genres: [10, 4, 2, 8],
         duration: 96,
-        posterImg: '/posters/MV11.jpg',
+        posterImg: '/posters/MV11.png',
         trailer: 'https://www.youtube.com/watch?v=LEjhY15eCx0',
         releaseDate: '2024-06-14',
         status: 'ended',
@@ -607,7 +607,7 @@ export const movies: Movie[] = [
         ],
         genres: [1, 3, 5],
         duration: 150,
-        posterImg: '/posters/MV14.jpg',
+        posterImg: '/posters/MV14.webp',
         trailer: 'https://www.youtube.com/watch?v=L3pk_TBkihU',
         releaseDate: '2020-09-03',
         status: 'ended',
@@ -634,10 +634,10 @@ export const movies: Movie[] = [
         ],
         genres: [1, 11, 2],
         duration: 161,
-        posterImg: '/posters/MV15.jpg',
+        posterImg: '/posters/MV15.webp',
         trailer: 'https://www.youtube.com/watch?v=_Z3QKkl1WyM',
         releaseDate: '2022-11-11',
-        status: 'ended',
+        status: 'coming_soon',
         directors: ['Ryan Coogler'],
         casts: ['Letitia Wright', 'Lupita Nyong\'o', 'Danai Gurira', 'Tenoch Huerta Mejía'],
         ratings: []
@@ -661,10 +661,10 @@ export const movies: Movie[] = [
         ],
         genres: [10, 11, 4, 8],
         duration: 100,
-        posterImg: '/posters/MV16.jpg',
+        posterImg: '/posters/MV16.png',
         trailer: 'https://www.youtube.com/watch?v=xOsLIiBStEs',
         releaseDate: '2020-12-25',
-        status: 'ended',
+        status: 'coming_soon',
         directors: ['Pete Docter', 'Kemp Powers'],
         casts: ['Jamie Foxx', 'Tina Fey', 'Graham Norton', 'Rachel House'],
         ratings: []
@@ -688,10 +688,10 @@ export const movies: Movie[] = [
         ],
         genres: [1, 11, 2],
         duration: 150,
-        posterImg: '/posters/MV17.jpg',
+        posterImg: '/posters/MV17.webp',
         trailer: 'https://www.youtube.com/watch?v=4rgYUipGJNo',
         releaseDate: '2024-11-22',
-        status: 'ended',
+        status: 'coming_soon',
         directors: ['Ridley Scott'],
         casts: ['Paul Mescal', 'Denzel Washington', 'Connie Nielsen', 'Pedro Pascal'],
         ratings: []
@@ -718,7 +718,7 @@ export const movies: Movie[] = [
         posterImg: '/posters/MV18.jpg',
         trailer: 'https://www.youtube.com/watch?v=6COmYeLsz4c',
         releaseDate: '2024-11-27',
-        status: 'ended',
+        status: 'coming_soon',
         directors: ['Jon M. Chu'],
         casts: ['Cynthia Erivo', 'Ariana Grande', 'Jonathan Bailey', 'Michelle Yeoh'],
         ratings: []
@@ -745,7 +745,7 @@ export const movies: Movie[] = [
         posterImg: '/posters/MV19.jpg',
         trailer: 'https://www.youtube.com/watch?v=Ox8ZLF6cGM0',
         releaseDate: '2025-07-11',
-        status: 'now_showing',
+        status: 'coming_soon',
         directors: ['James Gunn'],
         casts: ['David Corenswet', 'Rachel Brosnahan', 'Nicholas Hoult', 'Isabela Merced'],
         ratings: []
@@ -782,73 +782,160 @@ export const movies: Movie[] = [
 export const cinemas: Cinema[] = [
     {
         id: 1,
-        translations: [
-            {
-                locale: 'vi',
-                name: 'CGV Vincom Center Bà Triệu',
-                description: 'Cụm rạp chiếu phim tiêu chuẩn quốc tế của CGV tại trung tâm thương mại Vincom, Hà Nội.'
-            },
-            {
-                locale: 'en',
-                name: 'CGV Vincom Center Ba Trieu',
-                description: 'An international standard cinema complex of CGV at Vincom shopping center, Hanoi.'
-            }
-        ],
+        translations: [{ locale: 'vi', name: 'CGV Vincom Center Bà Triệu', description: 'Cụm rạp chiếu phim tiêu chuẩn quốc tế tại trung tâm Hà Nội.' }, { locale: 'en', name: 'CGV Vincom Center Ba Trieu', description: 'An international standard cinema complex in central Hanoi.' }],
         address: 'Tầng 6, Vincom Center, 191 Bà Triệu, Hai Bà Trưng, Hà Nội',
-        image: '/cinema/cgv.jpg'
+        image: ''
     },
     {
         id: 2,
-        translations: [
-            {
-                locale: 'vi',
-                name: 'BHD Star Discovery Cầu Giấy',
-                description: 'Rạp chiếu phim BHD Star tại quận Cầu Giấy, với nhiều phòng chiếu hiện đại.'
-            },
-            {
-                locale: 'en',
-                name: 'BHD Star Discovery Cau Giay',
-                description: 'BHD Star cinema in Cau Giay district, with multiple modern screens.'
-            }
-        ],
-        address: 'Tầng 8, TTTM Discovery, 302 Cầu Giấy, Dịch Vọng, Cầu Giấy, Hà Nội',
-        image: '/cinema/bhd.jpg'
+        translations: [{ locale: 'vi', name: 'CGV Hồ Gươm Plaza', description: 'Rạp chiếu phim hiện đại tại khu vực Hà Đông.' }, { locale: 'en', name: 'CGV Ho Guom Plaza', description: 'A modern cinema in the Ha Dong district.' }],
+        address: 'Tầng 3, TTTM Hồ Gươm Plaza, 110 Trần Phú, Mộ Lao, Hà Đông, Hà Nội',
+        image: ''
     },
     {
         id: 3,
-        translations: [
-            {
-                locale: 'vi',
-                name: 'Lotte Cinema Landmark 72',
-                description: 'Cụm rạp Lotte Cinema sang trọng nằm trong tòa nhà cao nhất Hà Nội.'
-            },
-            {
-                locale: 'en',
-                name: 'Lotte Cinema Landmark 72',
-                description: 'A luxurious Lotte Cinema complex located in Hanoi\'s tallest building.'
-            }
-        ],
-        address: 'Tầng 5, Keangnam Hanoi Landmark 72, Lô E6, Khu đô thị mới Cầu Giấy, Mễ Trì, Nam Từ Liêm, Hà Nội',
-        image: '/cinema/lotte.jpg'
+        translations: [{ locale: 'vi', name: 'CGV Aeon Long Biên', description: 'Cụm rạp hiện đại với công nghệ IMAX, mang đến trải nghiệm xem phim sống động.' }, { locale: 'en', name: 'CGV Aeon Mall Long Bien', description: 'A modern cinema with IMAX technology, offering a vivid movie-watching experience.' }],
+        address: 'Tầng 4, TTTM AEON Mall Long Biên, 27 Cổ Linh, Long Biên, Hà Nội',
+        image: ''
+    },
+    {
+        id: 4,
+        translations: [{ locale: 'vi', name: 'CGV Vincom Nguyễn Chí Thanh', description: 'Rạp chiếu phim sang trọng tại một trong những con đường sầm uất nhất Hà Nội.' }, { locale: 'en', name: 'CGV Vincom Nguyen Chi Thanh', description: 'A luxurious cinema on one of Hanoi\'s busiest streets.' }],
+        address: 'Tầng 5, TTTM Vincom Center Nguyễn Chí Thanh, 54A Nguyễn Chí Thanh, Láng Thượng, Đống Đa, Hà Nội',
+        image: ''
+    },
+    {
+        id: 5,
+        translations: [{ locale: 'vi', name: 'CGV Indochina Plaza Hà Nội', description: 'Điểm đến giải trí quen thuộc của giới trẻ khu vực Cầu Giấy.' }, { locale: 'en', name: 'CGV Indochina Plaza Hanoi', description: 'A familiar entertainment destination for young people in the Cau Giay area.' }],
+        address: 'Tầng 4, Indochina Plaza, 241 Xuân Thủy, Dịch Vọng Hậu, Cầu Giấy, Hà Nội',
+        image: ''
+    },
+    {
+        id: 6,
+        translations: [{ locale: 'vi', name: 'CGV Rice City', description: 'Cụm rạp tiện lợi phục vụ cư dân khu đô thị Rice City và lân cận.' }, { locale: 'en', name: 'CGV Rice City', description: 'A convenient cinema complex serving residents of Rice City urban area and its surroundings.' }],
+        address: 'Tầng 2, Tòa nhà Trung, Rice City Linh Đàm, Hoàng Liệt, Hoàng Mai, Hà Nội',
+        image: ''
+    },
+    {
+        id: 7,
+        translations: [{ locale: 'vi', name: 'CGV Hà Nội Centerpoint', description: 'Rạp chiếu phim nằm ở vị trí giao thông thuận tiện trên đường Lê Văn Lương.' }, { locale: 'en', name: 'CGV Hanoi Centerpoint', description: 'A cinema conveniently located on Le Van Luong street.' }],
+        address: 'Tầng 5, TTTM Hà Nội Centerpoint, 27 Lê Văn Lương, Nhân Chính, Thanh Xuân, Hà Nội',
+        image: ''
+    },
+    {
+        id: 8,
+        translations: [{ locale: 'vi', name: 'CGV Vincom Royal City', description: 'Một trong những cụm rạp lớn nhất của CGV, nằm trong khu đô thị phức hợp Royal City.' }, { locale: 'en', name: 'CGV Vincom Royal City', description: 'One of CGV\'s largest cinema complexes, located in the Royal City urban area.' }],
+        address: 'Tầng B2, TTTM Vincom Mega Mall Royal City, 72A Nguyễn Trãi, Thượng Đình, Thanh Xuân, Hà Nội',
+        image: ''
+    },
+    {
+        id: 9,
+        translations: [{ locale: 'vi', name: 'CGV Vincom Times City', description: 'Cụm rạp với nhiều phòng chiếu, bao gồm cả phòng chiếu cao cấp Gold Class.' }, { locale: 'en', name: 'CGV Vincom Times City', description: 'A cinema complex with many screens, including the premium Gold Class.' }],
+        address: 'Tầng B1, TTTM Vincom Mega Mall Times City, 458 Minh Khai, Hai Bà Trưng, Hà Nội',
+        image: ''
+    },
+    {
+        id: 10,
+        translations: [{ locale: 'vi', name: 'CGV Vincom Long Biên', description: 'Rạp chiếu phim tại khu đô thị Vinhomes Riverside.' }, { locale: 'en', name: 'CGV Vincom Long Bien', description: 'A cinema in the Vinhomes Riverside urban area.' }],
+        address: 'Tầng 4, TTTM Vincom Plaza Long Biên, Phúc Lợi, Long Biên, Hà Nội',
+        image: ''
+    },
+    {
+        id: 11,
+        translations: [{ locale: 'vi', name: 'CGV Mac Plaza (Machinco)', description: 'Rạp chiếu phim tại tòa nhà Machinco, phục vụ khu vực Hà Đông.' }, { locale: 'en', name: 'CGV Mac Plaza (Machinco)', description: 'A cinema in the Machinco building, serving the Ha Dong area.' }],
+        address: 'Tầng 7, Tòa nhà Machinco, 10 Trần Phú, Mộ Lao, Hà Đông, Hà Nội',
+        image: ''
+    },
+    {
+        id: 12,
+        translations: [{ locale: 'vi', name: 'CGV Trương Định Plaza', description: 'Cụm rạp tại quận Hoàng Mai.' }, { locale: 'en', name: 'CGV Truong Dinh Plaza', description: 'A cinema complex in Hoang Mai district.' }],
+        address: 'Tầng 5, Trương Định Plaza, 461 Trương Định, Tân Mai, Hoàng Mai, Hà Nội',
+        image: ''
+    },
+    {
+        id: 13,
+        translations: [{ locale: 'vi', name: 'CGV Tràng Tiền Plaza', description: 'Rạp chiếu phim sang trọng nằm ngay trung tâm thủ đô.' }, { locale: 'en', name: 'CGV Trang Tien Plaza', description: 'A luxurious cinema located right in the heart of the capital.' }],
+        address: 'Tầng 5, TTTM Tràng Tiền Plaza, 24 Hai Bà Trưng, Hoàn Kiếm, Hà Nội',
+        image: ''
+    },
+    {
+        id: 14,
+        translations: [{ locale: 'vi', name: 'CGV Sun Grand Thụy Khuê', description: 'Cụm rạp với tầm nhìn đẹp, gần Hồ Tây.' }, { locale: 'en', name: 'CGV Sun Grand Thuy Khue', description: 'A cinema with a beautiful view, near West Lake.' }],
+        address: 'Tầng 5, TTTM Sun Grand City, 69B Thụy Khuê, Tây Hồ, Hà Nội',
+        image: ''
+    },
+    {
+        id: 15,
+        translations: [{ locale: 'vi', name: 'CGV Sun Grand Lương Yên', description: 'Rạp chiếu phim tại khu vực trung tâm, gần phố cổ.' }, { locale: 'en', name: 'CGV Sun Grand Luong Yen', description: 'A cinema in the central area, near the Old Quarter.' }],
+        address: 'Tầng 3, Sun Grand City Ancora, 3 Lương Yên, Bạch Đằng, Hai Bà Trưng, Hà Nội',
+        image: ''
+    },
+    {
+        id: 16,
+        translations: [{ locale: 'vi', name: 'CGV Vincom Bắc Từ Liêm', description: 'Phục vụ khán giả khu vực Bắc Từ Liêm và các vùng lân cận.' }, { locale: 'en', name: 'CGV Vincom Bac Tu Liem', description: 'Serving audiences in the Bac Tu Liem area and its surroundings.' }],
+        address: 'Tầng 5, TTTM Vincom Plaza Bắc Từ Liêm, 234 Phạm Văn Đồng, Cổ Nhuế, Bắc Từ Liêm, Hà Nội',
+        image: ''
+    },
+    {
+        id: 17,
+        translations: [{ locale: 'vi', name: 'CGV Vincom Metropolis Liễu Giai', description: 'Rạp chiếu phim đẳng cấp tại tòa nhà Metropolis.' }, { locale: 'en', name: 'CGV Vincom Metropolis Lieu Giai', description: 'A high-class cinema in the Metropolis building.' }],
+        address: 'Tầng 3, TTTM Vincom Center Metropolis, 29 Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội',
+        image: ''
+    },
+    {
+        id: 18,
+        translations: [{ locale: 'vi', name: 'CGV Xuân Diệu', description: 'Rạp chiếu phim dành cho cộng đồng khu vực Tây Hồ.' }, { locale: 'en', name: 'CGV Xuan Dieu', description: 'A cinema for the Tay Ho community.' }],
+        address: 'Tầng 2, Tòa nhà D\' Le Roi Soleil, 59 Xuân Diệu, Quảng An, Tây Hồ, Hà Nội',
+        image: ''
+    },
+    {
+        id: 19,
+        translations: [{ locale: 'vi', name: 'CGV Vincom Sky Lake Phạm Hùng', description: 'Cụm rạp hiện đại tại khu vực Mỹ Đình.' }, { locale: 'en', name: 'CGV Vincom Sky Lake Pham Hung', description: 'A modern cinema complex in the My Dinh area.' }],
+        address: 'Tầng 3, TTTM Vincom Plaza Skylake, Phạm Hùng, Mỹ Đình 1, Nam Từ Liêm, Hà Nội',
+        image: ''
+    },
+    {
+        id: 20,
+        translations: [{ locale: 'vi', name: 'CGV Vincom Trần Duy Hưng', description: 'Rạp chiếu phim tại ngã tư Trần Duy Hưng - Khuất Duy Tiến.' }, { locale: 'en', name: 'CGV Vincom Tran Duy Hung', description: 'A cinema at the intersection of Tran Duy Hung - Khuat Duy Tien.' }],
+        address: 'Tầng 5, TTTM Vincom Center Trần Duy Hưng, 119 Trần Duy Hưng, Trung Hòa, Cầu Giấy, Hà Nội',
+        image: ''
+    },
+    {
+        id: 21,
+        translations: [{ locale: 'vi', name: 'CGV Aeon Hà Đông', description: 'Cụm rạp lớn nhất khu vực Hà Đông với nhiều công nghệ mới.' }, { locale: 'en', name: 'CGV Aeon Ha Dong', description: 'The largest cinema complex in Ha Dong with many new technologies.' }],
+        address: 'Tầng 3, TTTM AEON Mall Hà Đông, Dương Nội, Hà Đông, Hà Nội',
+        image: ''
+    },
+    {
+        id: 22,
+        translations: [{ locale: 'vi', name: 'CGV Vincom Ocean Park', description: 'Cụm rạp tại thành phố biển hồ Ocean Park.' }, { locale: 'en', name: 'CGV Vincom Ocean Park', description: 'A cinema complex in the Ocean Park lake city.' }],
+        address: 'Tầng 3, TTTM Vincom Mega Mall Ocean Park, Gia Lâm, Hà Nội',
+        image: ''
     }
 ];
 
-export const screens: Screen[] = [
-    // CGV Screens
-    { id: 1, name: 'Screen 1', cinemaId: 1, capacity: 50, type: 'IMAX' },
-    { id: 2, name: 'Screen 2', cinemaId: 1, capacity: 50, type: 'standard' },
-    { id: 3, name: 'Screen 3', cinemaId: 1, capacity: 50, type: 'VIP' },
+const generateAllScreens = (allCinemas: Cinema[]): Screen[] => {
+    const allScreens: Screen[] = [];
+    let screenId = 1;
+    const screenTypes: Screen['type'][] = ['standard', 'VIP', 'IMAX', '3D', '4D'];
 
-    // BHD Star Screens
-    { id: 4, name: 'Screen 1', cinemaId: 2, capacity: 50, type: '3D' },
-    { id: 5, name: 'Screen 2', cinemaId: 2, capacity: 50, type: 'standard' },
-    { id: 6, name: 'Screen 3', cinemaId: 2, capacity: 50, type: 'standard' },
-
-    // Lotte Cinema Screens
-    { id: 7, name: 'Screen 1', cinemaId: 3, capacity: 50, type: '4D' },
-    { id: 8, name: 'Screen 2', cinemaId: 3, capacity: 50, type: 'VIP' },
-    { id: 9, name: 'Screen 3', cinemaId: 3, capacity: 50, type: 'standard' }
-];
+    for (const cinema of allCinemas) {
+        // Tạo 3 phòng chiếu cho mỗi rạp
+        for (let i = 1; i <= 3; i++) {
+            const randomIndex = Math.floor(Math.random() * screenTypes.length);
+            const randomType = screenTypes[randomIndex] as Screen['type'];
+            allScreens.push({
+                id: screenId,
+                name: `Screen ${i}`,
+                cinemaId: cinema.id,
+                capacity: 50,
+                type: randomType
+            });
+            screenId++;
+        }
+    }
+    return allScreens;
+};
 
 const generateSeatsForScreen = (screenId: number, startSeatId: number): { seats: Seat[], nextSeatId: number } => {
     const seats: Seat[] = [];
@@ -863,8 +950,7 @@ const generateSeatsForScreen = (screenId: number, startSeatId: number): { seats:
                 screenId: screenId,
                 row: row,
                 column: col.toString(),
-                // Trạng thái có sẵn ngẫu nhiên, khoảng 70% ghế có sẵn
-                isAvailable: Math.random() > 0.3
+                isAvailable: Math.random() > 0.3 // ~70% ghế có sẵn
             });
             currentSeatId++;
         }
@@ -872,20 +958,17 @@ const generateSeatsForScreen = (screenId: number, startSeatId: number): { seats:
     return { seats, nextSeatId: currentSeatId };
 };
 
-const generateAllSeats = (): Seat[] => {
+const generateAllSeats = (allScreens: Screen[]): Seat[] => {
     let allSeats: Seat[] = [];
     let nextSeatId = 1;
 
-    for (const screen of screens) {
+    for (const screen of allScreens) {
         const result = generateSeatsForScreen(screen.id, nextSeatId);
         allSeats = allSeats.concat(result.seats);
         nextSeatId = result.nextSeatId;
     }
-
     return allSeats;
 };
-
-export const seats: Seat[] = generateAllSeats();
 
 const createTimeSlots = (): TimeSlot[] => {
     const slots: TimeSlot[] = [];
@@ -894,13 +977,10 @@ const createTimeSlots = (): TimeSlot[] => {
     let id = 1;
     for (const date of dates) {
         for (const startTime of startTimes) {
-            // Giả định thời lượng phim trung bình là 2.5 giờ
             const [hour, minute] = startTime.split(':').map(Number);
-            if (hour === undefined || isNaN(hour) || minute === undefined || isNaN(minute)) continue;
-            const end = new Date();
-            end.setHours(hour, minute + 150, 0, 0); // Thêm 150 phút
+            const end = new Date(`${date}T${startTime}`);
+            end.setMinutes(end.getMinutes() + 150); // Thêm 150 phút
             const endTime = `${end.getHours().toString().padStart(2, '0')}:${end.getMinutes().toString().padStart(2, '0')}`;
-
             slots.push({ id, startTime, endTime, date });
             id++;
         }
@@ -908,57 +988,192 @@ const createTimeSlots = (): TimeSlot[] => {
     return slots;
 };
 
-const createMovieSchedules = (allTimeSlots: TimeSlot[]): MovieSchedule[] => {
+const createMovieSchedules = (allCinemas: Cinema[], allScreens: Screen[], allTimeSlots: TimeSlot[]): MovieSchedule[] => {
     const schedules: MovieSchedule[] = [];
     let scheduleId = 1;
-    const usedScreenTime = new Set<string>(); // Để tránh trùng lặp lịch chiếu (screenId + timeSlotId)
-    const today = new Date();
-    const todayStr = today.toISOString().slice(0, 10);
+    const usedScreenTime = new Set<string>(); // Key: "screenId-timeSlotId"
+    const todayStr = '2025-07-30'; // Giả định ngày hôm nay
 
-    // Lọc các khung giờ cho phim đã chiếu, đang chiếu
     const pastTimeSlots = allTimeSlots.filter(ts => ts.date < todayStr);
     const nowShowingTimeSlots = allTimeSlots.filter(ts => ts.date >= todayStr);
-
-    // Lấy danh sách phim theo trạng thái
     const endedMovies = movies.filter(m => m.status === 'ended');
     const nowShowingMovies = movies.filter(m => m.status === 'now_showing');
 
     // Tạo lịch cho phim đang chiếu
     for (const movie of nowShowingMovies) {
-        for (const cinema of cinemas) {
-            const cinemaScreens = screens.filter(s => s.cinemaId === cinema.id);
-            // Tạo 2 lịch chiếu ngẫu nhiên cho mỗi phim ở mỗi rạp
-            for (let i = 0; i < 2; i++) {
-                const screen = cinemaScreens[Math.floor(Math.random() * cinemaScreens.length)];
-                const timeSlot = nowShowingTimeSlots[Math.floor(Math.random() * nowShowingTimeSlots.length)];
-                if (!screen || !timeSlot) continue;
-                const key = `${screen.id}-${timeSlot.id}`;
-                if (!usedScreenTime.has(key)) {
-                    schedules.push({ id: scheduleId++, cinemaId: cinema.id, movieId: movie.id, screenId: screen.id, timeSlotId: timeSlot.id });
-                    usedScreenTime.add(key);
-                }
-            }
-        }
-    }
+        // Tạo lịch chiếu ở 5 rạp ngẫu nhiên để dữ liệu không quá lớn
+        const randomCinemas = [...allCinemas].sort(() => 0.5 - Math.random()).slice(0, 5);
+        for (const cinema of randomCinemas) {
+            const cinemaScreens = allScreens.filter(s => s.cinemaId === cinema.id);
+            if (cinemaScreens.length === 0) continue;
 
-    // Tạo lịch cho phim đã kết thúc
-    for (const movie of endedMovies) {
-        // Chỉ tạo lịch cho 1 rạp ngẫu nhiên để giảm số lượng
-        const cinema = cinemas[Math.floor(Math.random() * cinemas.length)];
-        if (!cinema) continue;
-        const cinemaScreens = screens.filter(s => s.cinemaId === cinema.id);
-        const screen = cinemaScreens[Math.floor(Math.random() * cinemaScreens.length)];
-        const timeSlot = pastTimeSlots[Math.floor(Math.random() * pastTimeSlots.length)];
-        if (!screen || !timeSlot) continue;
-        const key = `${screen.id}-${timeSlot.id}`;
-        if (!usedScreenTime.has(key)) {
-            schedules.push({ id: scheduleId++, cinemaId: cinema.id, movieId: movie.id, screenId: screen.id, timeSlotId: timeSlot.id });
-            usedScreenTime.add(key);
+            const screen = cinemaScreens[Math.floor(Math.random() * cinemaScreens.length)];
+            const timeSlot = nowShowingTimeSlots[Math.floor(Math.random() * nowShowingTimeSlots.length)];
+            if (!screen || !timeSlot) continue;
+
+            const key = `${screen.id}-${timeSlot.id}`;
+            if (!usedScreenTime.has(key)) {
+                schedules.push({ id: scheduleId++, cinemaId: cinema.id, movieId: movie.id, screenId: screen.id, timeSlotId: timeSlot.id });
+                usedScreenTime.add(key);
+            }
         }
     }
     return schedules;
 };
 
+export const screens: Screen[] = generateAllScreens(cinemas);
+
+export const seats: Seat[] = generateAllSeats(screens);
+
 export const timeSlots: TimeSlot[] = createTimeSlots();
 
-export const movieSchedules: MovieSchedule[] = createMovieSchedules(timeSlots);
+export const movieSchedules: MovieSchedule[] = createMovieSchedules(cinemas, screens, timeSlots);
+
+export const events: Event[] = [
+    {
+        id: 1,
+        code: 'HAPPY-TUESDAY',
+        translations: [
+            {
+                locale: 'vi',
+                name: 'Thứ Ba Vui Vẻ - Đồng Giá Vé 2D',
+                description: 'Tận hưởng ngày thứ Ba hàng tuần với giá vé 2D cực kỳ ưu đãi tại tất cả các rạp CGV.',
+                terms: 'Áp dụng cho tất cả các suất chiếu 2D vào ngày thứ Ba, không bao gồm ngày lễ, Tết. Không áp dụng cho phòng chiếu đặc biệt như IMAX, 4DX, VIP.'
+            },
+            {
+                locale: 'en',
+                name: 'Happy Tuesday - Flat Rate for 2D Tickets',
+                description: 'Enjoy every Tuesday with a special flat rate for 2D movie tickets at all CGV cinemas.',
+                terms: 'Applies to all 2D screenings on Tuesdays, excluding public holidays. Not applicable for special formats like IMAX, 4DX, VIP.'
+            }
+        ],
+        type: 'discount',
+        startDate: '2025-01-01',
+        endDate: '2025-12-31',
+        status: 'active',
+        image: '/events/event1.webp',
+        applicableCinemas: [], // Áp dụng cho tất cả rạp
+    },
+    {
+        id: 2,
+        code: 'MARVEL-FAN-MEETUP-2025',
+        translations: [
+            {
+                locale: 'vi',
+                name: 'Sự Kiện Đặc Biệt: Ra Mắt "Bộ Tứ Siêu Đẳng"',
+                description: 'Tham gia suất chiếu đặc biệt và nhận quà tặng độc quyền từ Marvel dành cho fan hâm mộ.',
+                terms: 'Chỉ áp dụng cho suất chiếu lúc 19:00 ngày 25/07/2025 tại CGV Vincom Center Bà Triệu. Số lượng có hạn.'
+            },
+            {
+                locale: 'en',
+                name: 'Special Event: "The Fantastic Four" Premiere',
+                description: 'Join the special screening and receive exclusive Marvel merchandise for fans.',
+                terms: 'Only applicable for the 19:00 screening on July 25, 2025, at CGV Vincom Center Ba Trieu. Limited availability.'
+            }
+        ],
+        type: 'special_screening',
+        startDate: '2025-07-25',
+        endDate: '2025-07-25',
+        status: 'active',
+        image: '/events/event2.jpeg',
+        applicableCinemas: [1], // Chỉ áp dụng cho CGV Vincom Center Bà Triệu
+        applicableMovies: [3], // Chỉ áp dụng cho phim "The Fantastic Four"
+    },
+    {
+        id: 3,
+        code: 'VIP-COMBO-DEAL',
+        translations: [
+            {
+                locale: 'vi',
+                name: 'Ưu Đãi Combo Cho Thành Viên VIP',
+                description: 'Thành viên VIP và VVIP được giảm giá 30% khi mua bất kỳ combo bắp nước nào.',
+                terms: 'Thành viên cần xuất trình thẻ/mã thành viên VIP hoặc VVIP tại quầy. Áp dụng cho tất cả các ngày trong tuần.'
+            },
+            {
+                locale: 'en',
+                name: 'VIP Combo Deal',
+                description: 'VIP and VVIP members get a 30% discount on any popcorn and drink combo.',
+                terms: 'Members must present their VIP or VVIP membership card/code at the counter. Applicable on all days of the week.'
+            }
+        ],
+        type: 'combo',
+        startDate: '2025-07-01',
+        endDate: '2025-09-30',
+        status: 'active',
+        image: '/events/event3.jpg',
+        applicableCinemas: [],
+        requiredTier: 'vip',
+    },
+    {
+        id: 4,
+        code: 'SUMMER-GIVEAWAY-24',
+        translations: [
+            {
+                locale: 'vi',
+                name: 'Rút Thăm Hè Sôi Động 2024',
+                description: 'Với mỗi hóa đơn trên 200.000đ, bạn sẽ nhận được một phiếu rút thăm trúng thưởng chuyến du lịch Nhật Bản.',
+                terms: 'Chương trình đã kết thúc. Kết quả đã được công bố trên trang chủ.'
+            },
+            {
+                locale: 'en',
+                name: 'Exciting Summer Giveaway 2024',
+                description: 'With every invoice over 200,000 VND, you received a raffle ticket for a chance to win a trip to Japan.',
+                terms: 'This event has ended. The results have been announced on the homepage.'
+            }
+        ],
+        type: 'giveaway',
+        startDate: '2024-06-01',
+        endDate: '2024-08-31',
+        status: 'expired',
+        image: '/events/event4.jpg',
+        applicableCinemas: [],
+    },
+    {
+        id: 5,
+        code: 'BACK2SCHOOL-2025',
+        translations: [
+            {
+                locale: 'vi',
+                name: 'Tựu Trường Rộn Rã - Giảm Giá Học Sinh',
+                description: 'Học sinh, sinh viên được giảm 15% trên giá vé khi xuất trình thẻ học sinh/sinh viên hợp lệ.',
+                terms: 'Áp dụng cho vé 2D và 3D. Mỗi thẻ chỉ áp dụng cho 1 vé. Không áp dụng kèm các khuyến mãi khác.'
+            },
+            {
+                locale: 'en',
+                name: 'Back to School Fun - Student Discount',
+                description: 'Students get a 15% discount on ticket prices upon presenting a valid student ID.',
+                terms: 'Applies to 2D and 3D tickets. Each ID is valid for one ticket only. Cannot be combined with other promotions.'
+            }
+        ],
+        type: 'discount',
+        startDate: '2025-08-15',
+        endDate: '2025-09-15',
+        status: 'active', // Giả sử hôm nay là trong khoảng thời gian này
+        image: '/events/event5.jpg',
+        applicableCinemas: [],
+    },
+    {
+        id: 6,
+        code: 'AVATAR3-PREBOOK',
+        translations: [
+            {
+                locale: 'vi',
+                name: 'Đặt Vé Sớm AVATAR 3 - Nhận Ngay Bắp Nước',
+                description: 'Đặt vé trước cho bom tấn AVATAR 3 để nhận miễn phí một combo bắp rang và nước ngọt cỡ vừa.',
+                terms: 'Chương trình sẽ sớm được kích hoạt. Áp dụng cho 1000 khách hàng đầu tiên đặt vé online.'
+            },
+            {
+                locale: 'en',
+                name: 'AVATAR 3 Early Bird - Free Popcorn Combo',
+                description: 'Pre-book your tickets for the blockbuster AVATAR 3 and receive a free medium popcorn and soft drink combo.',
+                terms: 'This promotion will be activated soon. Applies to the first 1000 customers who book online.'
+            }
+        ],
+        type: 'combo',
+        startDate: '2025-11-20',
+        endDate: '2025-12-18',
+        status: 'inactive', // Chưa tới ngày diễn ra
+        image: '/events/event6.jpg',
+        applicableMovies: [5], // Chỉ áp dụng cho phim Avatar 3
+    }
+];

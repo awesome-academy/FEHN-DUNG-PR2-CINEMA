@@ -1,29 +1,35 @@
 {
-    "title": "Chào mừng đến với Nuxt Cinema!",
+    "title": "Chào mừng đến với Kaydi Cinema!",
     "currentLanguage": "Ngôn ngữ hiện tại: Tiếng Việt",
-    "header": {
+    "topbar": {
+        "news": "Tin mới",
+        "tickets": "Vé của tôi",
+        "signIn": "Đăng nhập",
+        "signUp": "Đăng ký"
+    },
+    "navbar": {
         "home": "Trang chủ",
-        "movies": "Các bộ phim",
-        "cinemas": "Các rạp chiếm phim",
-        "about": "Thông tin"
+        "movies": "Phim",
+        "cinemas": "Rạp chiếu",
+        "about": "Giới thiệu"
     },
     "hero": {
-        "title": "NUXT CINEMA",
-        "subtitle": "Trải Nghiệm Phim Ảnh Chưa Từng Có - Rạp Cao Cấp, Phim Mới Nhất, Giải Trí Tuyệt Vời",
+        "title": "Kaydi Cinema",
+        "subtitle": "Trải nghiệm điện ảnh đỉnh cao – Rạp hiện đại, phim mới, ưu đãi hấp dẫn",
         "bookNow": "Đặt Vé Ngay",
         "watchTrailers": "Xem Trailer"
     },
-    "sections": {
-        "nowShowing": "Đang Chiếu",
-        "comingSoon": "Sắp Chiếu",
-        "ourCinemas": "Hệ Thống Rạp",
-        "cinemasSubtitle": "Khám phá các địa điểm cao cấp với công nghệ hiện đại nhất"
+    "nowShowingMovies": {
+        "title": "Phim đang chiếu",
+        "subTitle": "Các bộ phim đang chiếu tại Kaydi Cinema"
     },
-    "common": {
-        "viewAll": "Xem Tất Cả",
-        "bookTicket": "Đặt Vé",
-        "watchTrailer": "Xem Trailer",
-        "learnMore": "Tìm Hiểu Thêm"
+    "upcomingMovies": {
+        "title": "Phim sắp chiếu",
+        "subTitle": "Các bộ phim sắp chiếu tại Kaydi Cinema"
+    },
+    "news": {
+        "title": "Tin tức & Khuyến mãi",
+        "subTitle": "Cập nhật thông tin và ưu đãi mới nhất"
     },
     "status": {
         "now_showing": "Đang Chiếu",
@@ -35,5 +41,17 @@
         "subtitle": "Tham gia cùng hàng triệu người yêu phim và đặt trải nghiệm rạp chiếu hoàn hảo ngay hôm nay",
         "browseMovies": "Duyệt Phim",
         "findCinema": "Tìm Rạp"
+    },
+    "footer": {
+        "title": "© 2025 Kaydi Cinema • Bản quyền thuộc về Kaydi Cinema"
+    },
+    "movieTrailerInfo": {
+        "brief": "Miêu tả",
+        "cast": "Diễn viên",
+        "directors": "Đạo diễn",
+        "genres": "Thể loại",
+        "releaseDate": "Ngày phát hành",
+        "buyTickets": "Mua vé",
+        "notAvailable": "Không khả dụng"
     }
 }
