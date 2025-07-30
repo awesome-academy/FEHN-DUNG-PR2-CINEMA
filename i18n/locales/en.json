@@ -1,29 +1,35 @@
 {
-    "title": "Welcome to Nuxt Cinema!",
+    "title": "Welcome to Kaydi Cinema!",
     "currentLanguage": "Current language: English",
-    "header": {
+    "topbar": {
+        "news": "News & Offers",
+        "tickets": "My Tickets",
+        "signIn": "Sign In",
+        "signUp": "Sign Up"
+    },
+    "navbar": {
         "home": "Home",
         "movies": "Movies",
-        "cinemas": "Cinemas",
-        "about": "About"
+        "cinemas": "CGV Cinemas",
+        "about": "About Us"
     },
     "hero": {
-        "title": "NUXT CINEMA",
-        "subtitle": "Experience Movies Like Never Before - Premium Theaters, Latest Films, Ultimate Entertainment",
-        "bookNow": "Book Tickets Now",
-        "watchTrailers": "Watch Trailers"
+        "title": "Kaydi Cinema",
+        "subtitle": "Experience Premium Cinema – Modern Theaters, Latest Movies, Exciting Promotions",
+        "bookNow": "Book Now",
+        "watchTrailers": "Watch Trailer"
     },
-    "sections": {
-        "nowShowing": "Now Showing",
-        "comingSoon": "Coming Soon",
-        "ourCinemas": "Our Cinemas",
-        "cinemasSubtitle": "Discover our premium locations with state-of-the-art technology"
+    "nowShowingMovies": {
+        "title": "Now Showing",
+        "subTitle": "Currently showing at Kaydi Cinema"
     },
-    "common": {
-        "viewAll": "View All",
-        "bookTicket": "Book Ticket",
-        "watchTrailer": "Watch Trailer",
-        "learnMore": "Learn More"
+    "upcomingMovies": {
+        "title": "Upcoming",
+        "subTitle": "Upcoming movies at Kaydi Cinema"
+    },
+    "news": {
+        "title": "News & Promotions",
+        "subTitle": "Stay updated with the latest news and special offers"
     },
     "status": {
         "now_showing": "Now Showing",
@@ -31,9 +37,21 @@
         "ended": "Ended"
     },
     "cta": {
-        "title": "Ready for Your Next Movie Adventure?",
-        "subtitle": "Join millions of movie lovers and book your perfect cinema experience today",
+        "title": "Ready for your next cinematic adventure?",
+        "subtitle": "Join millions of movie lovers and enjoy the perfect cinema experience today",
         "browseMovies": "Browse Movies",
-        "findCinema": "Find Cinema"
+        "findCinema": "Find CGV Cinemas"
+    },
+    "footer": {
+        "title": "© 2025 Kaydi Cinema • All rights reserved by Kaydi Cinema"
+    },
+    "movieTrailerInfo": {
+        "brief": "Brief",
+        "cast": "Case",
+        "directors": "Directors",
+        "genres": "Genres",
+        "releaseDate": "Release date",
+        "buyTickets": "Buy Tickets",
+        "notAvailable": "Not Available"
     }
 }

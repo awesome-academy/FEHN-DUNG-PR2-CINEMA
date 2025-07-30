@@ -151,3 +151,25 @@ export interface VoucherUsage {
     usedAt: string;
     soldInvoiceId: number;
 }
+
+export interface EventTranslation {
+    locale: string;
+    name: string;
+    description: string;
+    terms: string;
+}
+
+export interface Event {
+    id: number;
+    code: string;
+    translations: EventTranslation[];
+    type: 'discount' | 'combo' | 'special_screening' | 'giveaway';
+    startDate: string;
+    endDate: string;
+    status: 'active' | 'inactive' | 'expired';
+    image: string;
+
+    applicableCinemas?: number[];
+    applicableMovies?: number[];
+    requiredTier?: MembershipTier;
+}

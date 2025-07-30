@@ -1,5 +1,11 @@
 <template>
-  <div class="container">Home page</div>
+  <div>
+    <HeroSection />
+    <Navbar />
+    <MovieCarousel />
+    <UpcomingMovies />
+    <News />
+  </div>
 </template>
 
 <script setup lang="ts"></script>
