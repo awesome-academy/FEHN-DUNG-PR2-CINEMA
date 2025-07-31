@@ -5,7 +5,8 @@
         "news": "Tin mới",
         "tickets": "Vé của tôi",
         "signIn": "Đăng nhập",
-        "signUp": "Đăng ký"
+        "signUp": "Đăng ký",
+        "signOut": "Đăng xuất"
     },
     "navbar": {
         "home": "Trang chủ",
@@ -53,5 +54,32 @@
         "releaseDate": "Ngày phát hành",
         "buyTickets": "Mua vé",
         "notAvailable": "Không khả dụng"
+    },
+    "signIn": {
+        "title": "Chào mừng quay trở lại",
+        "subTitle": "Đăng nhập vào tài khoản",
+        "email": "Email",
+        "password": "Mật khẩu",
+        "forgotPassword": "Quên mật khẩu?",
+        "signInBtn": "Đăng nhập",
+        "haveAccount": "Chưa có tài khoản?",
+        "signUpNavigation": "Đăng ký",
+        "emailLabel": "Vui lòng điền email",
+        "passwordLabel": "Vui lòng điền mật khẩu"
+    },
+    "signUp": {
+        "title": "Tạo tài khoản mới",
+        "subTitle": "Đăng ký thành viên",
+        "username": "Tên đăng nhập",
+        "email": "Email",
+        "password": "Mật khẩu",
+        "phone": "Số điện thoại",
+        "signUpBtn": "Đăng ký",
+        "haveAccount": "Đã có tài khoản?",
+        "signInNavigation": "Đăng nhập",
+        "usernameLabel": "Vui lòng điền tên đăng nhập",
+        "emailLabel": "Vui lòng điền email",
+        "passwordLabel": "Vui lòng điền mật khẩu",
+        "phoneLabel": "Vui lòng điền số điện thoại"
     }
 }
