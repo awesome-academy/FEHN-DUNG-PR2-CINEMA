@@ -1,3 +1,24 @@
+<script setup lang="ts">
+import { Newspaper, Ticket } from "lucide-vue-next";
+import { useUserStore } from "~/stores/user";
+import { watch } from "vue";
+
+const { t } = useI18n();
+const localePath = useLocalePath();
+const userStore: any = useUserStore();
+const toast = useToast();
+const router = useRouter();
+
+const handleSignOut = () => {
+  userStore.signOutSuccess();
+  toast.success({
+    message: "Đăng xuất thành công!",
+    position: "topCenter",
+  });
+  router.push(localePath("/"));
+};
+</script>
+
 <template>
   <div
     class="bg-[#121212] text-gray-400 h-[50px] py-2 border-b border-slate-800 shadow-md"
@@ -18,23 +39,34 @@
           <div>{{ t("topbar.tickets") }}</div>
         </div>
         <div class="hidden md:block">|</div>
-        <div class="hover:cursor-pointer hover:text-white hover:font-semibold">
-          {{ t("topbar.signIn") }}
-        </div>
-        <div>|</div>
-        <div class="hover:cursor-pointer hover:text-white hover:font-semibold">
-          {{ t("topbar.signUp") }}
-        </div>
+        <template v-if="userStore.currentUser">
+          <div
+            @click="handleSignOut"
+            class="hover:cursor-pointer hover:text-white hover:font-semibold"
+          >
+            {{ t("topbar.signOut") }}
+          </div>
+        </template>
+        <template v-else>
+          <NuxtLink
+            :to="localePath('/signIn')"
+            class="hover:cursor-pointer hover:text-white hover:font-semibold"
+          >
+            {{ t("topbar.signIn") }}
+          </NuxtLink>
+          <div>|</div>
+          <NuxtLink
+            :to="localePath('/signUp')"
+            class="hover:cursor-pointer hover:text-white hover:font-semibold"
+          >
+            {{ t("topbar.signUp") }}
+          </NuxtLink>
+        </template>
         <div>|</div>
         <LanguageSwitcher />
       </div>
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { Newspaper, Ticket } from "lucide-vue-next";
-const { t } = useI18n();
-</script>
 
 <style scoped></style>

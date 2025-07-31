@@ -5,7 +5,8 @@
         "news": "News & Offers",
         "tickets": "My Tickets",
         "signIn": "Sign In",
-        "signUp": "Sign Up"
+        "signUp": "Sign Up",
+        "signOut": "Sign out"
     },
     "navbar": {
         "home": "Home",
@@ -53,5 +54,33 @@
         "releaseDate": "Release date",
         "buyTickets": "Buy Tickets",
         "notAvailable": "Not Available"
+    },
+    "signIn": {
+        "title": "Welcome Back",
+        "subTitle": "Sign in to your account",
+        "email": "Email",
+        "password": "Password",
+        "forgotPassword": "Forgot password?",
+        "signInBtn": "Sign In",
+        "haveAccount": "Don't have an account?",
+        "signUpNavigation": "Sign Up",
+        "emailLabel": "Enter email",
+        "passwordLabel": "Enter password"
+    },
+    "signUp": {
+        "title": "Create a New Account",
+        "subTitle": "Register as a member",
+        "username": "Username",
+        "email": "Email",
+        "password": "Password",
+        "phone": "Phone Number",
+        "forgotPassword": "Forgot password?",
+        "signUpBtn": "Sign Up",
+        "haveAccount": "Already has account?",
+        "signInNavigation": "Sign In",
+        "usernameLabel": "Enter username",
+        "emailLabel": "Enter email",
+        "passwordLabel": "Enter password",
+        "phoneLabel": "Enter phone number"
     }
 }

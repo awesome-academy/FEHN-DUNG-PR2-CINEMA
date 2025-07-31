@@ -16,6 +16,8 @@ export default defineNuxtConfig({
         autoImports: ['defineStore', 'acceptHMRUpdate'],
       }
     ],
+    'nuxt-toast',
+    'pinia-plugin-persistedstate/nuxt',
   ],
   imports: {
     dirs: ['stores']
