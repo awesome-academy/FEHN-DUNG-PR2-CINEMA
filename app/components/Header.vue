@@ -25,19 +25,21 @@ const handleSignOut = () => {
   >
     <div class="container">
       <div class="flex justify-end items-center gap-3">
-        <div
+        <NuxtLink
+          :to="localePath('/news')"
           class="hidden md:flex justify-center items-center gap-2 hover:cursor-pointer hover:text-white hover:font-semibold"
         >
           <Newspaper :size="16" />
           <div>{{ t("topbar.news") }}</div>
-        </div>
+        </NuxtLink>
         <div class="hidden md:block">|</div>
-        <div
+        <NuxtLink
+          :to="localePath('/my_tickets')"
           class="hidden md:flex justify-center items-center gap-2 hover:cursor-pointer hover:text-white hover:font-semibold"
         >
           <Ticket :size="16" />
           <div>{{ t("topbar.tickets") }}</div>
-        </div>
+        </NuxtLink>
         <div class="hidden md:block">|</div>
         <template v-if="userStore.currentUser">
           <div
