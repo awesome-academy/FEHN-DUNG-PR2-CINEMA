@@ -48,7 +48,7 @@
     },
     "movieTrailerInfo": {
         "brief": "Brief",
-        "cast": "Case",
+        "cast": "Cast",
         "directors": "Directors",
         "genres": "Genres",
         "releaseDate": "Release date",
@@ -82,5 +82,25 @@
         "emailLabel": "Enter email",
         "passwordLabel": "Enter password",
         "phoneLabel": "Enter phone number"
+    },
+    "movies": {
+        "sections": {
+            "now_showing": "Now Showing",
+            "coming_soon": "Coming Soon",
+            "ended": "Ended"
+        },
+        "search": {
+            "placeholder": "Search movies, directors, cast..."
+        },
+        "filters": {
+            "genre": "Genre",
+            "allYears": "All Years",
+            "clear": "Clear Filters"
+        },
+        "noResults": "No movies found matching your criteria",
+        "viewModes": {
+            "grid": "Grid View",
+            "list": "List View"
+        }
     }
 }

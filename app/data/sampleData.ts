@@ -394,7 +394,7 @@ export const movies: Movie[] = [
         posterImg: '/posters/MV6.jpg',
         trailer: 'https://www.youtube.com/watch?v=uYPbbksJxIg',
         releaseDate: '2023-07-21',
-        status: 'ended',
+        status: 'now_showing',
         directors: ['Christopher Nolan'],
         casts: ['Cillian Murphy', 'Emily Blunt', 'Matt Damon', 'Robert Downey Jr.'],
         ratings: []
@@ -448,7 +448,7 @@ export const movies: Movie[] = [
         posterImg: '/posters/MV8.jpg',
         trailer: 'https://www.youtube.com/watch?v=qSqVVswa420',
         releaseDate: '2022-05-27',
-        status: 'ended',
+        status: 'now_showing',
         directors: ['Joseph Kosinski'],
         casts: ['Tom Cruise', 'Miles Teller', 'Jennifer Connelly', 'Jon Hamm'],
         ratings: []
@@ -475,7 +475,7 @@ export const movies: Movie[] = [
         posterImg: '/posters/MV9.webp',
         trailer: 'https://www.youtube.com/watch?v=_OKAwz2MsJs',
         releaseDate: '2024-10-04',
-        status: 'ended',
+        status: 'now_showing',
         directors: ['Todd Phillips'],
         casts: ['Joaquin Phoenix', 'Lady Gaga', 'Zazie Beetz', 'Brendan Gleeson'],
         ratings: []

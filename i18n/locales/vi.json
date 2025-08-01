@@ -81,5 +81,25 @@
         "emailLabel": "Vui lòng điền email",
         "passwordLabel": "Vui lòng điền mật khẩu",
         "phoneLabel": "Vui lòng điền số điện thoại"
+    },
+    "movies": {
+        "sections": {
+            "now_showing": "Đang Chiếu",
+            "coming_soon": "Sắp Chiếu",
+            "ended": "Đã Kết Thúc"
+        },
+        "search": {
+            "placeholder": "Tìm kiếm phim, đạo diễn, diễn viên..."
+        },
+        "filters": {
+            "genre": "Thể loại",
+            "allYears": "Tất cả các năm",
+            "clear": "Xóa bộ lọc"
+        },
+        "noResults": "Không tìm thấy phim nào phù hợp với tiêu chí của bạn",
+        "viewModes": {
+            "grid": "Dạng lưới",
+            "list": "Dạng danh sách"
+        }
     }
 }
