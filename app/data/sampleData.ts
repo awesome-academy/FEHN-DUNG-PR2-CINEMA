@@ -262,7 +262,7 @@ export const movies: Movie[] = [
         status: 'now_showing',
         directors: ['Denis Villeneuve'],
         casts: ['Timothée Chalamet', 'Zendaya', 'Rebecca Ferguson', 'Austin Butler'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 2,
@@ -289,7 +289,7 @@ export const movies: Movie[] = [
         status: 'now_showing',
         directors: ['Jon Watts'],
         casts: ['Tom Holland', 'Zendaya', 'Benedict Cumberbatch', 'Willem Dafoe'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 3,
@@ -316,7 +316,7 @@ export const movies: Movie[] = [
         status: 'now_showing',
         directors: ['Matt Shakman'],
         casts: ['Pedro Pascal', 'Vanessa Kirby', 'Joseph Quinn', 'Ebon Moss-Bachrach'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 4,
@@ -343,7 +343,7 @@ export const movies: Movie[] = [
         status: 'now_showing',
         directors: ['Adam Wingard'],
         casts: ['Rebecca Hall', 'Brian Tyree Henry', 'Dan Stevens'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 5,
@@ -370,7 +370,7 @@ export const movies: Movie[] = [
         status: 'now_showing',
         directors: ['James Cameron'],
         casts: ['Sam Worthington', 'Zoe Saldaña', 'Sigourney Weaver', 'Michelle Yeoh'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 6,
@@ -397,7 +397,7 @@ export const movies: Movie[] = [
         status: 'now_showing',
         directors: ['Christopher Nolan'],
         casts: ['Cillian Murphy', 'Emily Blunt', 'Matt Damon', 'Robert Downey Jr.'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 7,
@@ -424,7 +424,7 @@ export const movies: Movie[] = [
         status: 'now_showing',
         directors: ['Daniel Kwan', 'Daniel Scheinert'],
         casts: ['Michelle Yeoh', 'Ke Huy Quan', 'Stephanie Hsu', 'Jamie Lee Curtis'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 8,
@@ -451,7 +451,7 @@ export const movies: Movie[] = [
         status: 'now_showing',
         directors: ['Joseph Kosinski'],
         casts: ['Tom Cruise', 'Miles Teller', 'Jennifer Connelly', 'Jon Hamm'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 9,
@@ -478,7 +478,7 @@ export const movies: Movie[] = [
         status: 'now_showing',
         directors: ['Todd Phillips'],
         casts: ['Joaquin Phoenix', 'Lady Gaga', 'Zazie Beetz', 'Brendan Gleeson'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 10,
@@ -505,7 +505,7 @@ export const movies: Movie[] = [
         status: 'ended',
         directors: ['Julius Onah'],
         casts: ['Anthony Mackie', 'Harrison Ford', 'Danny Ramirez', 'Tim Blake Nelson'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 11,
@@ -532,7 +532,7 @@ export const movies: Movie[] = [
         status: 'ended',
         directors: ['Kelsey Mann'],
         casts: ['Amy Poehler', 'Maya Hawke', 'Kensington Tallman', 'Liza Lapira'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 12,
@@ -559,7 +559,7 @@ export const movies: Movie[] = [
         status: 'ended',
         directors: ['Shawn Levy'],
         casts: ['Ryan Reynolds', 'Hugh Jackman', 'Emma Corrin', 'Morena Baccarin'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 13,
@@ -586,7 +586,7 @@ export const movies: Movie[] = [
         status: 'ended',
         directors: ['Matt Reeves'],
         casts: ['Robert Pattinson', 'Zoë Kravitz', 'Paul Dano', 'Jeffrey Wright'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 14,
@@ -613,7 +613,7 @@ export const movies: Movie[] = [
         status: 'ended',
         directors: ['Christopher Nolan'],
         casts: ['John David Washington', 'Robert Pattinson', 'Elizabeth Debicki', 'Kenneth Branagh'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 15,
@@ -640,7 +640,7 @@ export const movies: Movie[] = [
         status: 'coming_soon',
         directors: ['Ryan Coogler'],
         casts: ['Letitia Wright', 'Lupita Nyong\'o', 'Danai Gurira', 'Tenoch Huerta Mejía'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 16,
@@ -667,7 +667,7 @@ export const movies: Movie[] = [
         status: 'coming_soon',
         directors: ['Pete Docter', 'Kemp Powers'],
         casts: ['Jamie Foxx', 'Tina Fey', 'Graham Norton', 'Rachel House'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 17,
@@ -694,7 +694,7 @@ export const movies: Movie[] = [
         status: 'coming_soon',
         directors: ['Ridley Scott'],
         casts: ['Paul Mescal', 'Denzel Washington', 'Connie Nielsen', 'Pedro Pascal'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 18,
@@ -721,7 +721,7 @@ export const movies: Movie[] = [
         status: 'coming_soon',
         directors: ['Jon M. Chu'],
         casts: ['Cynthia Erivo', 'Ariana Grande', 'Jonathan Bailey', 'Michelle Yeoh'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 19,
@@ -748,7 +748,7 @@ export const movies: Movie[] = [
         status: 'coming_soon',
         directors: ['James Gunn'],
         casts: ['David Corenswet', 'Rachel Brosnahan', 'Nicholas Hoult', 'Isabela Merced'],
-        ratings: []
+        ratings: 4.5
     },
     {
         id: 20,
@@ -775,7 +775,7 @@ export const movies: Movie[] = [
         status: 'coming_soon',
         directors: ['Yann Demange'],
         casts: ['Mahershala Ali', 'Mia Goth', 'Delroy Lindo'],
-        ratings: []
+        ratings: 4.5
     }
 ];
 

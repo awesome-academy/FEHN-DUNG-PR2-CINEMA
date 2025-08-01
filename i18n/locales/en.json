@@ -53,7 +53,8 @@
         "genres": "Genres",
         "releaseDate": "Release date",
         "buyTickets": "Buy Tickets",
-        "notAvailable": "Not Available"
+        "notAvailable": "Not Available",
+        "viewDetails": "View Details"
     },
     "signIn": {
         "title": "Welcome Back",
@@ -157,5 +158,22 @@
         "notFound": "No available information found",
         "availableAt": "Available at: ",
         "validFor": "Valid for: "
+    },
+    "movieDetail": {
+        "backBtn": "Back",
+        "nowShowing": "Now Showing",
+        "comingSoon": "Coming soon",
+        "ended": "Ended",
+        "brief": "Brief",
+        "genres": "Genres",
+        "releaseDate": "Release Date",
+        "directors": "Directors",
+        "cast": "Cast",
+        "buyTickets": "Buy Tickets",
+        "notAvailable": "Not Available",
+        "trailer": "Trailer",
+        "notFound": "No available information found",
+        "notFoundMessage": "The movie you are looking for does not exist.",
+        "backToHome": "Back to home page"
     }
 }

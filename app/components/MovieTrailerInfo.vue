@@ -25,6 +25,7 @@ interface Emits {
 
 const props = defineProps<Props>();
 const emit = defineEmits<Emits>();
+const localePath = useLocalePath();
 
 const { t, locale } = useI18n();
 const videoRef = ref<HTMLVideoElement>();
@@ -44,15 +45,6 @@ const formatReleaseDate = (dateString: string) => {
     day: "numeric",
   });
 };
-
-const averageRating = computed(() => {
-  if (!props.movie?.ratings?.length) return 0;
-  const sum = props.movie.ratings.reduce(
-    (acc: number, rating: number) => acc + rating,
-    0
-  );
-  return (sum / props.movie.ratings.length).toFixed(1);
-});
 
 const closeModal = () => {
   if (videoRef.value) {
@@ -158,7 +150,7 @@ onUnmounted(() => {
             <div class="flex flex-wrap items-center gap-4 mb-4 text-sm">
               <div class="flex items-center gap-1">
                 <Star class="w-4 h-4 text-yellow-400" />
-                <span>{{ averageRating }}/10</span>
+                <span>{{ movie.ratings }}/5</span>
               </div>
               <div class="flex items-center gap-1">
                 <Calendar class="w-4 h-4 text-gray-400" />
@@ -214,6 +206,12 @@ onUnmounted(() => {
                     : t("movieTrailerInfo.buyTickets")
                 }}
               </button>
+              <NuxtLink
+                :to="localePath(`/movieDetail/${movie.id}`)"
+                class="flex justify-center items-center gap-2 bg-red-600 text-white px-6 py-3 rounded font-semibold hover:bg-red-700 hover:cursor-pointer disabled:bg-gray-600 disabled:cursor-not-allowed transition-colors"
+              >
+                {{ t("movieTrailerInfo.viewDetails") }}
+              </NuxtLink>
             </div>
           </div>
 
