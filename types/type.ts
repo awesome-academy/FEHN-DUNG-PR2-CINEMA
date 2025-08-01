@@ -9,7 +9,6 @@ export interface Membership {
     upgradedAt: string;
 }
 
-
 export interface User {
     id: number
     username: string
@@ -51,7 +50,7 @@ export interface Movie {
     status: 'coming_soon' | 'now_showing' | 'ended'
     directors: string[]
     casts: string[]
-    ratings: number[]
+    ratings: number
 }
 
 export interface CinemaTranslation {

@@ -53,7 +53,8 @@
         "genres": "Thể loại",
         "releaseDate": "Ngày phát hành",
         "buyTickets": "Mua vé",
-        "notAvailable": "Không khả dụng"
+        "notAvailable": "Không khả dụng",
+        "viewDetails": "Xem chi tiết"
     },
     "signIn": {
         "title": "Chào mừng quay trở lại",
@@ -156,5 +157,22 @@
         "notFound": "Không tìm thấy thông tin khả dụng",
         "availableAt": "Khả dụng ở: ",
         "validFor": "Áp dụng đối với phim: "
+    },
+    "movieDetail": {
+        "backBtn": "Quay lại",
+        "nowShowing": "Đang Chiếu",
+        "comingSoon": "Sắp Chiếu",
+        "ended": "Đã Kết Thúc",
+        "brief": "Miêu tả",
+        "genres": "Thể loại",
+        "releaseDate": "Ngày phát hành",
+        "directors": "Đạo diễn",
+        "cast": "Diễn viên",
+        "buyTickets": "Mua vé",
+        "notAvailable": "Không khả dụng",
+        "trailer": "Trailer",
+        "notFound": "Không tìm thấy thông tin khả dụng",
+        "notFoundMessage": "Bộ phim bạn tìm kiếm không tồn tại.",
+        "backToHome": "Quay trở lại trang chủ"
     }
 }
