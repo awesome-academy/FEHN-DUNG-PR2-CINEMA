@@ -118,5 +118,43 @@
         "address": "Địa chỉ",
         "city": "Thành phố",
         "location": "Vị trí cụ thể"
+    },
+    "listEvents": {
+        "searchPlaceholder": "Tìm kiếm",
+        "filterMonth": "Tháng",
+        "filterYear": "Năm",
+        "listEventsTitle": "Kết quả tìm thấy: ",
+        "noResults": "Không tìm thấy kết quả",
+        "clearFilters": "Xóa lựa chọn",
+        "startDate": "Ngày bắt đầu",
+        "endDate": "Ngày kết thúc"
+    },
+    "months": {
+        "january": "Tháng Một",
+        "february": "Tháng Hai",
+        "march": "Tháng Ba",
+        "april": "Tháng Tư",
+        "may": "Tháng Năm",
+        "june": "Tháng Sáu",
+        "july": "Tháng Bảy",
+        "august": "Tháng Tám",
+        "september": "Tháng Chín",
+        "october": "Tháng Mười",
+        "november": "Tháng Mười Một",
+        "december": "Tháng Mười Hai"
+    },
+    "eventDetail": {
+        "backBtn": "Quay lại",
+        "date": "Thông tin thời gian",
+        "startDate": "Ngày bắt đầu",
+        "endDate": "Ngày kết thúc",
+        "membershipRequired": "Hạng áp dụng",
+        "applicableLocations": "Địa điểm áp dụng",
+        "applicableMovies": "Phim áp dụng",
+        "terms": "Điều kiện áp dụng",
+        "eventCode": "Mã",
+        "notFound": "Không tìm thấy thông tin khả dụng",
+        "availableAt": "Khả dụng ở: ",
+        "validFor": "Áp dụng đối với phim: "
     }
 }

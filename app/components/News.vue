@@ -5,6 +5,7 @@ import { Calendar } from "lucide-vue-next";
 
 const { t, locale } = useI18n();
 const { events: allEvents } = useEvents(locale);
+const localePath = useLocalePath();
 
 // Filter active events for display
 const activeEvents = computed(() => {
@@ -68,7 +69,7 @@ const formatDate = (dateString: string) => {
           <div class="relative h-48 overflow-hidden">
             <img
               :src="event.image"
-              :alt="event.translation?.name"
+              :alt="event.name"
               class="w-full h-full object-cover transition-transform duration-500"
             />
             <div
@@ -101,11 +102,11 @@ const formatDate = (dateString: string) => {
             <h3
               class="text-xl font-bold text-white mb-3 line-clamp-2 group-hover:text-blue-400 transition-colors"
             >
-              {{ event.translation?.name }}
+              {{ event.name }}
             </h3>
 
             <p class="text-gray-400 text-sm mb-4 line-clamp-3">
-              {{ event.translation?.description }}
+              {{ event.description }}
             </p>
 
             <div
@@ -125,7 +126,7 @@ const formatDate = (dateString: string) => {
                 <span class="font-semibold text-gray-300">{{
                   locale === "vi" ? "Điều kiện:" : "Terms:"
                 }}</span>
-                {{ event.translation?.terms }}
+                {{ event.terms }}
               </p>
             </div>
 
@@ -138,12 +139,13 @@ const formatDate = (dateString: string) => {
         </div>
       </div>
 
-      <div class="text-center mt-12">
-        <button
+      <div class="text-center my-12">
+        <NuxtLink
+          :to="localePath('/news')"
           class="bg-transparent border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
         >
           {{ locale === "vi" ? "Xem Tất Cả Tin Tức" : "View All News" }}
-        </button>
+        </NuxtLink>
       </div>
 
       <div

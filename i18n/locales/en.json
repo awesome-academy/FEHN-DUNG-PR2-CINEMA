@@ -119,5 +119,43 @@
         "address": "Address",
         "city": "City",
         "location": "Location"
+    },
+    "listEvents": {
+        "searchPlaceholder": "Search",
+        "filterMonth": "Month",
+        "filterYear": "Year",
+        "listEventsTitle": "Results found: ",
+        "noResults": "No results found",
+        "clearFilters": "Clear selection",
+        "startDate": "Start date",
+        "endDate": "End date"
+    },
+    "months": {
+        "january": "January",
+        "february": "February",
+        "march": "March",
+        "april": "April",
+        "may": "May",
+        "june": "June",
+        "july": "July",
+        "august": "August",
+        "september": "September",
+        "october": "October",
+        "november": "November",
+        "december": "December"
+    },
+    "eventDetail": {
+        "backBtn": "Back",
+        "date": "Date Information",
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "membershipRequired": "Required Membership",
+        "applicableLocations": "Applicable Locations",
+        "applicableMovies": "Applicable Movies",
+        "terms": "Terms and Conditions",
+        "eventCode": "Code",
+        "notFound": "No available information found",
+        "availableAt": "Available at: ",
+        "validFor": "Valid for: "
     }
 }
