@@ -107,7 +107,7 @@ onUnmounted(() => {
 <template>
   <div
     v-if="isOpen && movie"
-    class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+    class="fixed inset-0 z-50 flex items-center justify-center p-2 md:p-0 bg-black/80 backdrop-blur-sm"
     @click.self="closeModal"
   >
     <div
@@ -210,7 +210,7 @@ onUnmounted(() => {
                 <Ticket />
                 {{
                   movie.status === "ended"
-                    ? t("movieTrailerInfo.notAvaiable")
+                    ? t("movieTrailerInfo.notAvailable")
                     : t("movieTrailerInfo.buyTickets")
                 }}
               </button>

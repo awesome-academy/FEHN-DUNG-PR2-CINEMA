@@ -21,7 +21,7 @@ const handleSignOut = () => {
 
 <template>
   <div
-    class="bg-[#121212] text-gray-400 h-[50px] py-2 border-b border-slate-800 shadow-md"
+    class="bg-[#121212] text-gray-400 h-[50px] py-2 border-b border-slate-600 shadow-md"
   >
     <div class="container">
       <div class="flex justify-end items-center gap-3">

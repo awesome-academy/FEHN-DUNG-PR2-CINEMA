@@ -49,8 +49,8 @@ const handleSignIn = () => {
   <div class="bg-[#161623]">
     <div class="container">
       <div class="flex justify-center items-center h-screen mx-auto">
-        <div class="w-[400px] md:w-[1000px] bg-[#1f1f2d] text-white">
-          <div class="grid grid-cols-2">
+        <div class="w-full md:w-[1000px] bg-[#1f1f2d] text-white">
+          <div class="grid grid-cols-1 md:grid-cols-2">
             <div class="hidden md:block md:col-span-1">
               <img
                 src="/cinema/cinema-theatre.webp"
@@ -60,7 +60,7 @@ const handleSignIn = () => {
             </div>
 
             <div class="col-span-1">
-              <div class="flex flex-col p-10 gap-4">
+              <div class="flex flex-col p-4 md:p-10 gap-4">
                 <h2 class="font-semibold text-[26px]">
                   {{ t("signIn.title") }}
                 </h2>
