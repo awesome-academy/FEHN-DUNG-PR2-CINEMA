@@ -780,137 +780,323 @@ export const movies: Movie[] = [
 ];
 
 export const cinemas: Cinema[] = [
+    // --- HÀ NỘI (22 RẠP) ---
     {
         id: 1,
         translations: [{ locale: 'vi', name: 'CGV Vincom Center Bà Triệu', description: 'Cụm rạp chiếu phim tiêu chuẩn quốc tế tại trung tâm Hà Nội.' }, { locale: 'en', name: 'CGV Vincom Center Ba Trieu', description: 'An international standard cinema complex in central Hanoi.' }],
-        address: 'Tầng 6, Vincom Center, 191 Bà Triệu, Hai Bà Trưng, Hà Nội',
-        image: ''
+        address: 'Tầng 6, Vincom Center, 191 Bà Triệu, Hai Bà Trưng',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.5396398682988!2d105.84693577503089!3d21.01108308063383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab8c636ccf95%3A0xee8c463dd46033b4!2sCGV%20Vincom%20Center%20B%C3%A0%20Tri%E1%BB%87u!5e0!3m2!1svi!2s!4v1754017994664!5m2!1svi!2s'
     },
     {
         id: 2,
         translations: [{ locale: 'vi', name: 'CGV Hồ Gươm Plaza', description: 'Rạp chiếu phim hiện đại tại khu vực Hà Đông.' }, { locale: 'en', name: 'CGV Ho Guom Plaza', description: 'A modern cinema in the Ha Dong district.' }],
-        address: 'Tầng 3, TTTM Hồ Gươm Plaza, 110 Trần Phú, Mộ Lao, Hà Đông, Hà Nội',
-        image: ''
+        address: 'Tầng 3, TTTM Hồ Gươm Plaza, 110 Trần Phú, Mộ Lao, Hà Đông',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.33930661569!2d105.78307117503!3d20.979031680657904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acd2c0e21d7b%3A0xec2205f220faeb2!2zQ0dWIEjhu5MgR8awxqFtIFBsYXph!5e0!3m2!1svi!2s!4v1754018044960!5m2!1svi!2s'
     },
     {
         id: 3,
-        translations: [{ locale: 'vi', name: 'CGV Aeon Long Biên', description: 'Cụm rạp hiện đại với công nghệ IMAX, mang đến trải nghiệm xem phim sống động.' }, { locale: 'en', name: 'CGV Aeon Mall Long Bien', description: 'A modern cinema with IMAX technology, offering a vivid movie-watching experience.' }],
-        address: 'Tầng 4, TTTM AEON Mall Long Biên, 27 Cổ Linh, Long Biên, Hà Nội',
-        image: ''
+        translations: [{ locale: 'vi', name: 'CGV Aeon Long Biên', description: 'Cụm rạp hiện đại với công nghệ IMAX.' }, { locale: 'en', name: 'CGV Aeon Mall Long Bien', description: 'A modern cinema with IMAX technology.' }],
+        address: 'Tầng 4, TTTM AEON Mall Long Biên, 27 Cổ Linh, Long Biên',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.1311964668535!2d105.89622067503134!3d21.027435880621457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a96a85453f37%3A0x39ce34aaf20a939!2sAeon%20Mall%20Long%20Bi%C3%AAn!5e0!3m2!1svi!2s!4v1754018116156!5m2!1svi!2s'
     },
     {
         id: 4,
         translations: [{ locale: 'vi', name: 'CGV Vincom Nguyễn Chí Thanh', description: 'Rạp chiếu phim sang trọng tại một trong những con đường sầm uất nhất Hà Nội.' }, { locale: 'en', name: 'CGV Vincom Nguyen Chi Thanh', description: 'A luxurious cinema on one of Hanoi\'s busiest streets.' }],
-        address: 'Tầng 5, TTTM Vincom Center Nguyễn Chí Thanh, 54A Nguyễn Chí Thanh, Láng Thượng, Đống Đa, Hà Nội',
-        image: ''
+        address: 'Tầng 5, TTTM Vincom Center Nguyễn Chí Thanh, 54A Nguyễn Chí Thanh, Láng Thượng, Đống Đa',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.230309993746!2d105.8094797!3d21.0234688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab6a17e518e3%3A0x82ef164fc911c781!2sVincom%20Center%20Nguy%E1%BB%85n%20Ch%C3%AD%20Thanh!5e0!3m2!1svi!2s!4v1754018144696!5m2!1svi!2s'
     },
     {
         id: 5,
         translations: [{ locale: 'vi', name: 'CGV Indochina Plaza Hà Nội', description: 'Điểm đến giải trí quen thuộc của giới trẻ khu vực Cầu Giấy.' }, { locale: 'en', name: 'CGV Indochina Plaza Hanoi', description: 'A familiar entertainment destination for young people in the Cau Giay area.' }],
-        address: 'Tầng 4, Indochina Plaza, 241 Xuân Thủy, Dịch Vọng Hậu, Cầu Giấy, Hà Nội',
-        image: ''
+        address: 'Tầng 4, Indochina Plaza, 241 Xuân Thủy, Dịch Vọng Hậu, Cầu Giấy',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.924955855995!2d105.7827578!3d21.0356885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4abcf6766d%3A0x3d53b16db55e9419!2sIndochina%20Plaza%20HaNoi!5e0!3m2!1svi!2s!4v1754018165189!5m2!1svi!2s'
     },
     {
         id: 6,
         translations: [{ locale: 'vi', name: 'CGV Rice City', description: 'Cụm rạp tiện lợi phục vụ cư dân khu đô thị Rice City và lân cận.' }, { locale: 'en', name: 'CGV Rice City', description: 'A convenient cinema complex serving residents of Rice City urban area and its surroundings.' }],
-        address: 'Tầng 2, Tòa nhà Trung, Rice City Linh Đàm, Hoàng Liệt, Hoàng Mai, Hà Nội',
-        image: ''
+        address: 'Tầng 2, Tòa nhà Trung, Rice City Linh Đàm, Hoàng Liệt, Hoàng Mai',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.726532154152!2d105.8229605!3d20.9634945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad0ab4818d47%3A0xbcf0bc5e56ff267d!2zVG_DoCBUcnVuZyBSaWNlIENpdHkgTGluaCDEkMOgbQ!5e0!3m2!1svi!2s!4v1754018181879!5m2!1svi!2s'
     },
     {
         id: 7,
         translations: [{ locale: 'vi', name: 'CGV Hà Nội Centerpoint', description: 'Rạp chiếu phim nằm ở vị trí giao thông thuận tiện trên đường Lê Văn Lương.' }, { locale: 'en', name: 'CGV Hanoi Centerpoint', description: 'A cinema conveniently located on Le Van Luong street.' }],
-        address: 'Tầng 5, TTTM Hà Nội Centerpoint, 27 Lê Văn Lương, Nhân Chính, Thanh Xuân, Hà Nội',
-        image: ''
+        address: 'Tầng 5, TTTM Hà Nội Centerpoint, 27 Lê Văn Lương, Nhân Chính, Thanh Xuân',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.6983136271824!2d105.80427720000002!3d21.00472700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad05e1b3a375%3A0x14291da3deed9287!2sCenter%20Point!5e0!3m2!1svi!2s!4v1754018211672!5m2!1svi!2s'
     },
     {
         id: 8,
         translations: [{ locale: 'vi', name: 'CGV Vincom Royal City', description: 'Một trong những cụm rạp lớn nhất của CGV, nằm trong khu đô thị phức hợp Royal City.' }, { locale: 'en', name: 'CGV Vincom Royal City', description: 'One of CGV\'s largest cinema complexes, located in the Royal City urban area.' }],
-        address: 'Tầng B2, TTTM Vincom Mega Mall Royal City, 72A Nguyễn Trãi, Thượng Đình, Thanh Xuân, Hà Nội',
-        image: ''
+        address: 'Tầng B2, TTTM Vincom Mega Mall Royal City, 72A Nguyễn Trãi, Thượng Đình, Thanh Xuân',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.7629699504155!2d105.81519560000004!3d21.002136500000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad490c3331c5%3A0x38cce1b37de2c3f6!2sVincom%20Mega%20Mall%20Royal%20City!5e0!3m2!1svi!2s!4v1754018230199!5m2!1svi!2s'
     },
     {
         id: 9,
         translations: [{ locale: 'vi', name: 'CGV Vincom Times City', description: 'Cụm rạp với nhiều phòng chiếu, bao gồm cả phòng chiếu cao cấp Gold Class.' }, { locale: 'en', name: 'CGV Vincom Times City', description: 'A cinema complex with many screens, including the premium Gold Class.' }],
-        address: 'Tầng B1, TTTM Vincom Mega Mall Times City, 458 Minh Khai, Hai Bà Trưng, Hà Nội',
-        image: ''
+        address: 'Tầng B1, TTTM Vincom Mega Mall Times City, 458 Minh Khai, Hai Bà Trưng',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.9458657873042!2d105.8678324!3d20.994806999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac04b6fcfa63%3A0x579e974a43b9f42f!2sVincom%20Mega%20Mall%20Times%20City!5e0!3m2!1svi!2s!4v1754018253143!5m2!1svi!2s'
     },
     {
         id: 10,
         translations: [{ locale: 'vi', name: 'CGV Vincom Long Biên', description: 'Rạp chiếu phim tại khu đô thị Vinhomes Riverside.' }, { locale: 'en', name: 'CGV Vincom Long Bien', description: 'A cinema in the Vinhomes Riverside urban area.' }],
-        address: 'Tầng 4, TTTM Vincom Plaza Long Biên, Phúc Lợi, Long Biên, Hà Nội',
-        image: ''
+        address: 'Tầng 4, TTTM Vincom Plaza Long Biên, Phúc Lợi, Long Biên',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.552207783889!2d105.9164512!3d21.050596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a9de9d0cc337%3A0xe15f797dbd2797e2!2sVincom%20Plaza%20Long%20Bi%C3%AAn!5e0!3m2!1svi!2s!4v1754018268551!5m2!1svi!2s'
     },
     {
         id: 11,
         translations: [{ locale: 'vi', name: 'CGV Mac Plaza (Machinco)', description: 'Rạp chiếu phim tại tòa nhà Machinco, phục vụ khu vực Hà Đông.' }, { locale: 'en', name: 'CGV Mac Plaza (Machinco)', description: 'A cinema in the Machinco building, serving the Ha Dong area.' }],
-        address: 'Tầng 7, Tòa nhà Machinco, 10 Trần Phú, Mộ Lao, Hà Đông, Hà Nội',
-        image: ''
+        address: 'Tầng 7, Tòa nhà Machinco, 10 Trần Phú, Mộ Lao, Hà Đông',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.227801896233!2d105.7913493!3d20.983503699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad06aaeee37f%3A0x380d3de0f471c92e!2sCGV%20Machinco!5e0!3m2!1svi!2s!4v1754018283255!5m2!1svi!2s'
     },
     {
         id: 12,
         translations: [{ locale: 'vi', name: 'CGV Trương Định Plaza', description: 'Cụm rạp tại quận Hoàng Mai.' }, { locale: 'en', name: 'CGV Truong Dinh Plaza', description: 'A cinema complex in Hoang Mai district.' }],
-        address: 'Tầng 5, Trương Định Plaza, 461 Trương Định, Tân Mai, Hoàng Mai, Hà Nội',
-        image: ''
+        address: 'Tầng 5, Trương Định Plaza, 461 Trương Định, Tân Mai, Hoàng Mai',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.2075706208125!2d105.8462634!3d20.984315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad6dfd2d2985%3A0x8198c2d2ff778f26!2zVHLGsMahbmcgxJDhu4tuaCBQbGF6YQ!5e0!3m2!1svi!2s!4v1754018302440!5m2!1svi!2s'
     },
     {
         id: 13,
         translations: [{ locale: 'vi', name: 'CGV Tràng Tiền Plaza', description: 'Rạp chiếu phim sang trọng nằm ngay trung tâm thủ đô.' }, { locale: 'en', name: 'CGV Trang Tien Plaza', description: 'A luxurious cinema located right in the heart of the capital.' }],
-        address: 'Tầng 5, TTTM Tràng Tiền Plaza, 24 Hai Bà Trưng, Hoàn Kiếm, Hà Nội',
-        image: ''
+        address: 'Tầng 5, TTTM Tràng Tiền Plaza, 24 Hai Bà Trưng, Hoàn Kiếm',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.196633569566!2d105.8532846!3d21.0248168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab85b21db31f%3A0x497acf351c7dd9fc!2zVHLDoG5nIFRp4buBbiBQbGF6YQ!5e0!3m2!1svi!2s!4v1754018315846!5m2!1svi!2s'
     },
     {
         id: 14,
         translations: [{ locale: 'vi', name: 'CGV Sun Grand Thụy Khuê', description: 'Cụm rạp với tầm nhìn đẹp, gần Hồ Tây.' }, { locale: 'en', name: 'CGV Sun Grand Thuy Khue', description: 'A cinema with a beautiful view, near West Lake.' }],
-        address: 'Tầng 5, TTTM Sun Grand City, 69B Thụy Khuê, Tây Hồ, Hà Nội',
-        image: ''
+        address: 'Tầng 5, TTTM Sun Grand City, 69B Thụy Khuê, Tây Hồ',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.7997186231482!2d105.8258984!3d21.0406983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abbc998979a1%3A0xdfc0be5ac8ed0c79!2zU3VuIFBsYXphIFRo4buleSBLaHXDqg!5e0!3m2!1svi!2s!4v1754018328640!5m2!1svi!2s'
     },
     {
         id: 15,
         translations: [{ locale: 'vi', name: 'CGV Sun Grand Lương Yên', description: 'Rạp chiếu phim tại khu vực trung tâm, gần phố cổ.' }, { locale: 'en', name: 'CGV Sun Grand Luong Yen', description: 'A cinema in the central area, near the Old Quarter.' }],
-        address: 'Tầng 3, Sun Grand City Ancora, 3 Lương Yên, Bạch Đằng, Hai Bà Trưng, Hà Nội',
-        image: ''
+        address: 'Tầng 3, Sun Grand City Ancora, 3 Lương Yên, Bạch Đằng, Hai Bà Trưng',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.561710383102!2d105.8638455!3d21.010199099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab0067d49c1b%3A0x39ba94cade72ed64!2sSảnh%20T1%20-%20Sun%20Grand%20City%20Ancora!5e0!3m2!1svi!2s!4v1754018342022!5m2!1svi!2s'
     },
     {
         id: 16,
         translations: [{ locale: 'vi', name: 'CGV Vincom Bắc Từ Liêm', description: 'Phục vụ khán giả khu vực Bắc Từ Liêm và các vùng lân cận.' }, { locale: 'en', name: 'CGV Vincom Bac Tu Liem', description: 'Serving audiences in the Bac Tu Liem area and its surroundings.' }],
-        address: 'Tầng 5, TTTM Vincom Plaza Bắc Từ Liêm, 234 Phạm Văn Đồng, Cổ Nhuế, Bắc Từ Liêm, Hà Nội',
-        image: ''
+        address: 'Tầng 5, TTTM Vincom Plaza Bắc Từ Liêm, 234 Phạm Văn Đồng, Cổ Nhuế, Bắc Từ Liêm',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.499739030898!2d105.78070819999999!3d21.052693599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345593b3245b6d%3A0xae56b6a7812d36d1!2zVmluY29tIFBsYXphIELhuq9jIFThu6sgTGnDqm0!5e0!3m2!1svi!2s!4v1754018355014!5m2!1svi!2s'
     },
     {
         id: 17,
         translations: [{ locale: 'vi', name: 'CGV Vincom Metropolis Liễu Giai', description: 'Rạp chiếu phim đẳng cấp tại tòa nhà Metropolis.' }, { locale: 'en', name: 'CGV Vincom Metropolis Lieu Giai', description: 'A high-class cinema in the Metropolis building.' }],
-        address: 'Tầng 3, TTTM Vincom Center Metropolis, 29 Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội',
-        image: ''
+        address: 'Tầng 3, TTTM Vincom Center Metropolis, 29 Liễu Giai, Ngọc Khánh, Ba Đình',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0395113101144!2d105.8149069!3d21.031105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4d99f52189%3A0x796855c662901401!2sStarbucks%20Vincom%20Metropolis!5e0!3m2!1svi!2s!4v1754018382565!5m2!1svi!2s'
     },
     {
         id: 18,
         translations: [{ locale: 'vi', name: 'CGV Xuân Diệu', description: 'Rạp chiếu phim dành cho cộng đồng khu vực Tây Hồ.' }, { locale: 'en', name: 'CGV Xuan Dieu', description: 'A cinema for the Tay Ho community.' }],
-        address: 'Tầng 2, Tòa nhà D\' Le Roi Soleil, 59 Xuân Diệu, Quảng An, Tây Hồ, Hà Nội',
-        image: ''
+        address: 'Tầng 2, Tòa nhà D\' Le Roi Soleil, 59 Xuân Diệu, Quảng An, Tây Hồ',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.1896848597935!2d105.8271698!3d21.0650849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aaf85e998405%3A0xea258ab0ab0346d!2sD%27.%20LE%20ROI%20SOLEIL%20PREMIUM%20SUITES!5e0!3m2!1svi!2s!4v1754018398274!5m2!1svi!2s'
     },
     {
         id: 19,
         translations: [{ locale: 'vi', name: 'CGV Vincom Sky Lake Phạm Hùng', description: 'Cụm rạp hiện đại tại khu vực Mỹ Đình.' }, { locale: 'en', name: 'CGV Vincom Sky Lake Pham Hung', description: 'A modern cinema complex in the My Dinh area.' }],
-        address: 'Tầng 3, TTTM Vincom Plaza Skylake, Phạm Hùng, Mỹ Đình 1, Nam Từ Liêm, Hà Nội',
-        image: ''
+        address: 'Tầng 3, TTTM Vincom Plaza Skylake, Phạm Hùng, Mỹ Đình 1, Nam Từ Liêm',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.3155985562084!2d105.7812136!3d21.0200545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313455e34a87eb29%3A0xd88a1bacb077ac22!2sCGV%20Skylake!5e0!3m2!1svi!2s!4v1754018447036!5m2!1svi!2s'
     },
     {
         id: 20,
         translations: [{ locale: 'vi', name: 'CGV Vincom Trần Duy Hưng', description: 'Rạp chiếu phim tại ngã tư Trần Duy Hưng - Khuất Duy Tiến.' }, { locale: 'en', name: 'CGV Vincom Tran Duy Hung', description: 'A cinema at the intersection of Tran Duy Hung - Khuat Duy Tien.' }],
-        address: 'Tầng 5, TTTM Vincom Center Trần Duy Hưng, 119 Trần Duy Hưng, Trung Hòa, Cầu Giấy, Hà Nội',
-        image: ''
+        address: 'Tầng 5, TTTM Vincom Center Trần Duy Hưng, 119 Trần Duy Hưng, Trung Hòa, Cầu Giấy',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.6444862044514!2d105.7958149!3d21.0068834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135adb1e9b63c6b%3A0xc7ad968c046d18fa!2sVincom%20Center%20Tr%E1%BA%A7n%20Duy%20H%C6%B0ng!5e0!3m2!1svi!2s!4v1754018548784!5m2!1svi!2s'
     },
     {
         id: 21,
         translations: [{ locale: 'vi', name: 'CGV Aeon Hà Đông', description: 'Cụm rạp lớn nhất khu vực Hà Đông với nhiều công nghệ mới.' }, { locale: 'en', name: 'CGV Aeon Ha Dong', description: 'The largest cinema complex in Ha Dong with many new technologies.' }],
-        address: 'Tầng 3, TTTM AEON Mall Hà Đông, Dương Nội, Hà Đông, Hà Nội',
-        image: ''
+        address: 'Tầng 3, TTTM AEON Mall Hà Đông, Dương Nội, Hà Đông',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.0731744013488!2d105.75171689999999!3d20.9897037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab7bee9f7757%3A0x4ebf8ccfc24ec4ae!2zQWVvbiBNYWxsIEjDoCDEkMO0bmc!5e0!3m2!1svi!2s!4v1754018623247!5m2!1svi!2s'
     },
     {
         id: 22,
         translations: [{ locale: 'vi', name: 'CGV Vincom Ocean Park', description: 'Cụm rạp tại thành phố biển hồ Ocean Park.' }, { locale: 'en', name: 'CGV Vincom Ocean Park', description: 'A cinema complex in the Ocean Park lake city.' }],
-        address: 'Tầng 3, TTTM Vincom Mega Mall Ocean Park, Gia Lâm, Hà Nội',
-        image: ''
+        address: 'Tầng 3, TTTM Vincom Mega Mall Ocean Park, Gia Lâm',
+        city: 'Hà Nội',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.96870632906!2d105.95938419999999!3d20.9938915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad60e1b65fa7%3A0xca825ac326d4ba54!2sVincom%20Mega%20Mall%20Ocean%20Park!5e0!3m2!1svi!2s!4v1754018638533!5m2!1svi!2s'
+    },
+    // --- TP. HỒ CHÍ MINH (21 RẠP) ---
+    {
+        id: 23,
+        translations: [{ locale: 'vi', name: 'CGV Hùng Vương Plaza', description: 'Một trong những cụm rạp đầu tiên của CGV tại TP.HCM.' }, { locale: 'en', name: 'CGV Hung Vuong Plaza', description: 'One of the first CGV cinemas in HCMC.' }],
+        address: 'Tầng 7, Hùng Vương Plaza, 126 Hồng Bàng, Phường 12, Quận 5',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.717380055253!2d106.66306209999999!3d10.756251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ef0f45da121%3A0x6ce5d38673084259!2zSMO5bmcgVsawxqFuZyBQbGF6YQ!5e0!3m2!1svi!2s!4v1754018651438!5m2!1svi!2s'
+    },
+    {
+        id: 24,
+        translations: [{ locale: 'vi', name: 'CGV Crescent Mall', description: 'Trải nghiệm điện ảnh cao cấp tại Quận 7.' }, { locale: 'en', name: 'CGV Crescent Mall', description: 'A premium cinema experience in District 7.' }],
+        address: 'Tầng 5, Crescent Mall, 101 Tôn Dật Tiên, Tân Phú, Quận 7',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.0771201925613!2d106.71874679999999!3d10.728535199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f894320f91b%3A0xb6c098e537ce0abe!2sCrescent%20Mall!5e0!3m2!1svi!2s!4v1754018663573!5m2!1svi!2s'
+    },
+    {
+        id: 25,
+        translations: [{ locale: 'vi', name: 'CGV Thảo Điền Pearl', description: 'Rạp chiếu phim hiện đại tại khu vực Thảo Điền.' }, { locale: 'en', name: 'CGV Thao Dien Pearl', description: 'A modern cinema in the Thao Dien area.' }],
+        address: 'Tầng 2, Thảo Điền Pearl, 12 Quốc Hương, Thảo Điền, TP. Thủ Đức',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1309606658033!2d106.7328725!3d10.8012804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175261a51b3d5eb%3A0xca45e9df7b7cff4c!2zUGVhcmwgQ2VudGVyIC0gVGjhuqNvIMSQaeG7gW4gUGVhcmw!5e0!3m2!1svi!2s!4v1754018679070!5m2!1svi!2s'
+    },
+    {
+        id: 26,
+        translations: [{ locale: 'vi', name: 'CGV Vincom Thủ Đức', description: 'Điểm đến giải trí hàng đầu tại TP. Thủ Đức.' }, { locale: 'en', name: 'CGV Vincom Thu Duc', description: 'A leading entertainment destination in Thu Duc City.' }],
+        address: 'Tầng 5, TTTM Vincom Plaza Thủ Đức, 216 Võ Văn Ngân, Bình Thọ, TP. Thủ Đức',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.4924465053687!2d106.76509999999999!3d10.850100000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527a1fc80477b%3A0x62944f7a73c84aaf!2zVmluY29tIFBsYXphIFRo4bunIMSQ4bupYw!5e0!3m2!1svi!2s!4v1754018693341!5m2!1svi!2s'
+    },
+    {
+        id: 27,
+        translations: [{ locale: 'vi', name: 'CGV Vivo City', description: 'Cụm rạp lớn với nhiều phòng chiếu, bao gồm cả IMAX.' }, { locale: 'en', name: 'CGV Vivo City', description: 'A large cinema complex with many screens, including IMAX.' }],
+        address: 'Tầng 5, SC VivoCity, 1058 Nguyễn Văn Linh, Tân Phong, Quận 7',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.0551214610787!2d106.7033975!3d10.7302321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f80c3947d97%3A0x11f8c4c9b629e2cf!2sSC%20VivoCity!5e0!3m2!1svi!2s!4v1754018708950!5m2!1svi!2s'
+    },
+    {
+        id: 28,
+        translations: [{ locale: 'vi', name: 'CGV Pearl Plaza', description: 'Rạp chiếu phim tại quận Bình Thạnh.' }, { locale: 'en', name: 'CGV Pearl Plaza', description: 'A cinema in Binh Thanh district.' }],
+        address: 'Tầng 5, Pearl Plaza, 561A Điện Biên Phủ, Phường 25, Quận Bình Thạnh',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1481959506145!2d106.71856299999999!3d10.7999596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529d7845738f3%3A0x6fd8270abc8b4947!2sPearl%20Plaza!5e0!3m2!1svi!2s!4v1754018723260!5m2!1svi!2s'
+    },
+    {
+        id: 29,
+        translations: [{ locale: 'vi', name: 'CGV Liberty Citypoint', description: 'Rạp chiếu phim nằm ngay trung tâm Quận 1.' }, { locale: 'en', name: 'CGV Liberty Citypoint', description: 'A cinema located right in the center of District 1.' }],
+        address: 'Tầng M, Khách sạn Liberty Center Saigon Citypoint, 59-61 Pasteur, Quận 1',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4774277727442!2d106.70063479999999!3d10.774698700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f476e598cb1%3A0x76720b1358eb9260!2zS2jDoWNoIHPhuqFuIExpYmVydHkgQ2VudHJhbCBTw6BpIEfDsm4gQ2l0eVBvaW50!5e0!3m2!1svi!2s!4v1754018737308!5m2!1svi!2s'
+    },
+    {
+        id: 30,
+        translations: [{ locale: 'vi', name: 'CGV Vincom Đồng Khởi', description: 'Rạp chiếu phim sang trọng tại một trong những TTTM sầm uất nhất Sài Gòn.' }, { locale: 'en', name: 'CGV Vincom Dong Khoi', description: 'A luxurious cinema in one of Saigon\'s busiest shopping malls.' }],
+        address: 'Tầng 3, TTTM Vincom Center, 72 Lê Thánh Tôn, Bến Nghé, Quận 1',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4341018727314!2d106.70204179999998!3d10.778026300000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f4876c29a9b%3A0xd2c79768678d2142!2zVmluY29tIENlbnRlciDEkOG7k25nIEto4bufaQ!5e0!3m2!1svi!2s!4v1754018751388!5m2!1svi!2s'
+    },
+    {
+        id: 31,
+        translations: [{ locale: 'vi', name: 'CGV Menas Mall (CGV CT Plaza)', description: 'Rạp chiếu phim gần sân bay Tân Sơn Nhất.' }, { locale: 'en', name: 'CGV Menas Mall (CGV CT Plaza)', description: 'A cinema near Tan Son Nhat airport.' }],
+        address: 'Tầng 10, Menas Mall, 60A Trường Sơn, Phường 2, Quận Tân Bình',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9772125561035!2d106.66555559999998!3d10.813055599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529180a52601b%3A0xaf95c7444b843c70!2sCGV%20Menas%20Mall%20Saigon%20Airport!5e0!3m2!1svi!2s!4v1754018792388!5m2!1svi!2s'
+    },
+    {
+        id: 32,
+        translations: [{ locale: 'vi', name: 'CGV Pandora City', description: 'Cụm rạp tại quận Tân Phú.' }, { locale: 'en', name: 'CGV Pandora City', description: 'A cinema complex in Tan Phu district.' }],
+        address: 'Tầng 4, Pandora City, 1/1 Trường Chinh, Tây Thạnh, Quận Tân Phú',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0642861316364!2d106.63423549999999!3d10.806388399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175295978943725%3A0x4012c0c89a5b6635!2sCGV%20Pandora%20City!5e0!3m2!1svi!2s!4v1754018815357!5m2!1svi!2s'
+    },
+    {
+        id: 33,
+        translations: [{ locale: 'vi', name: 'CGV Aeon Tân Phú', description: 'Cụm rạp lớn tại TTTM Aeon Mall Tân Phú Celadon.' }, { locale: 'en', name: 'CGV Aeon Tan Phu', description: 'A large cinema complex at Aeon Mall Tan Phu Celadon.' }],
+        address: 'Tầng 3, TTTM Aeon Mall, 30 Bờ Bao Tân Thắng, Sơn Kỳ, Quận Tân Phú',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.125458716046!2d106.6179746!3d10.801701999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752bfa7d191e05%3A0xc75071084fbeba9e!2zQ0dWIENlbGFkb24gVMOibiBQaMO6!5e0!3m2!1svi!2s!4v1754018826871!5m2!1svi!2s'
+    },
+    {
+        id: 34,
+        translations: [{ locale: 'vi', name: 'CGV Vincom Gò Vấp', description: 'Rạp chiếu phim tại quận Gò Vấp.' }, { locale: 'en', name: 'CGV Vincom Go Vap', description: 'A cinema in Go Vap district.' }],
+        address: 'Tầng 5, TTTM Vincom Plaza, 12 Phan Văn Trị, Phường 7, Quận Gò Vấp',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.7934386723705!2d106.6892817!3d10.827113799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528f9600a6f3d%3A0x6b75d60918c5fc05!2zQ0dWIFZpbmNvbSBQaGFuIFbEg24gVHLhu4s!5e0!3m2!1svi!2s!4v1754018842093!5m2!1svi!2s'
+    },
+    {
+        id: 35,
+        translations: [{ locale: 'vi', name: 'CGV Hoàng Văn Thụ', description: 'Rạp chiếu phim với phòng chiếu L\'amour sang trọng.' }, { locale: 'en', name: 'CGV Hoang Van Thu', description: 'A cinema with the luxurious L\'amour screening room.' }],
+        address: 'Tầng 1 và 2, Gala Center, 415 Hoàng Văn Thụ, Phường 2, Quận Tân Bình',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.164702446363!2d106.6601481!3d10.7986945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175293117e2c76f%3A0xb556bcbe361c8cc!2zQ0dWIEhvw6BuZyBWxINuIFRo4bul!5e0!3m2!1svi!2s!4v1754018856005!5m2!1svi!2s'
+    },
+    {
+        id: 36,
+        translations: [{ locale: 'vi', name: 'CGV Aeon Bình Tân', description: 'Cụm rạp lớn tại cửa ngõ phía Tây thành phố.' }, { locale: 'en', name: 'CGV Aeon Binh Tan', description: 'A large cinema complex at the western gateway of the city.' }],
+        address: 'Tầng 3, TTTM Aeon Mall, 1 Đường Số 17A, Bình Trị Đông B, Quận Bình Tân',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.8859500527515!2d106.6129012!3d10.7432725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752dcec1b9cb21%3A0xc76983f1bcfd1227!2sCGV%20AEON%20Mall%20B%C3%ACnh%20T%C3%A2n!5e0!3m2!1svi!2s!4v1754018868885!5m2!1svi!2s'
+    },
+    {
+        id: 37,
+        translations: [{ locale: 'vi', name: 'CGV Saigonres Nguyễn Xí', description: 'Rạp chiếu phim tại quận Bình Thạnh.' }, { locale: 'en', name: 'CGV Saigonres Nguyen Xi', description: 'A cinema in Binh Thanh district.' }],
+        address: 'Tầng 4 và 5, TTTM Saigonres Plaza, 188 Nguyễn Xí, Phường 26, Quận Bình Thạnh',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9331174680165!2d106.7072269!3d10.816430400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528914a364431%3A0xacb2294b70a757a4!2zQ0dWIFNhaWdvbnJlcyBOZ3V54buFbiBYw60!5e0!3m2!1svi!2s!4v1754018881515!5m2!1svi!2s'
+    },
+    {
+        id: 38,
+        translations: [{ locale: 'vi', name: 'CGV Sư Vạn Hạnh', description: 'Cụm rạp tại TTTM Vạn Hạnh Mall.' }, { locale: 'en', name: 'CGV Su Van Hanh', description: 'A cinema complex at Van Hanh Mall.' }],
+        address: 'Tầng 6, Vạn Hạnh Mall, 11 Sư Vạn Hạnh, Phường 12, Quận 10',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.531407795258!2d106.6695417!3d10.7705514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752edde029b133%3A0x97e90e1306ccf98e!2zQ0dWIFPGsCBW4bqhbiBI4bqhbmg!5e0!3m2!1svi!2s!4v1754018892971!5m2!1svi!2s'
+    },
+    {
+        id: 39,
+        translations: [{ locale: 'vi', name: 'CGV Vincom Center Landmark 81', description: 'Rạp chiếu phim trong tòa nhà cao nhất Việt Nam.' }, { locale: 'en', name: 'CGV Vincom Center Landmark 81', description: 'A cinema in the tallest building in Vietnam.' }],
+        address: 'Tầng B1, TTTM Vincom Center, 772 Điện Biên Phủ, Phường 22, Quận Bình Thạnh',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2184387187303!2d106.72209889999999!3d10.794575000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529efc333959f%3A0x370ad7e2d5e414cb!2sCGV%20Vincom%20Center%20Landmark%2081!5e0!3m2!1svi!2s!4v1754018903656!5m2!1svi!2s'
+    },
+    {
+        id: 40,
+        translations: [{ locale: 'vi', name: 'CGV Satra Củ Chi', description: 'Rạp chiếu phim phục vụ khán giả tại Củ Chi.' }, { locale: 'en', name: 'CGV Satra Cu Chi', description: 'A cinema serving audiences in Cu Chi.' }],
+        address: 'Tầng 3, TTTM Satra Củ Chi, 1239 Tỉnh Lộ 8, Ấp Thạnh An, Xã Trung An, Huyện Củ Chi',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.728696858364!2d106.5797348!3d10.983839000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d37a1a920713%3A0xba20e68d0b6a9d1d!2sCGV%20Satra%20C%E1%BB%A7%20Chi!5e0!3m2!1svi!2s!4v1754018916102!5m2!1svi!2s'
+    },
+    {
+        id: 41,
+        translations: [{ locale: 'vi', name: 'CGV Gigamall Thủ Đức', description: 'Cụm rạp hiện đại tại TTTM Gigamall.' }, { locale: 'en', name: 'CGV Gigamall Thu Duc', description: 'A modern cinema complex at Gigamall.' }],
+        address: 'Tầng 6, TTTM Gigamall, 240-242 Phạm Văn Đồng, Hiệp Bình Chánh, TP. Thủ Đức',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.787074744622!2d106.7212132!3d10.8276003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752930d4f0ef63%3A0xfeffcc189deddb5b!2zQ0dWIEdpZ2EgTWFsbCBUaOG7pyDEkOG7qWM!5e0!3m2!1svi!2s!4v1754018929547!5m2!1svi!2s'
+    },
+    {
+        id: 42,
+        translations: [{ locale: 'vi', name: 'CGV Lý Chính Thắng', description: 'Rạp chiếu phim tại Quận 3.' }, { locale: 'en', name: 'CGV Ly Chinh Thang', description: 'A cinema in District 3.' }],
+        address: 'Tầng 3, 83 Lý Chính Thắng, Võ Thị Sáu, Quận 3',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2898109357116!2d106.68565029999999!3d10.7891011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fe72df5395b%3A0xca89891a2c85b8f2!2zQ0dWIEzDvSBDaMOtbmggVGjhuq9uZw!5e0!3m2!1svi!2s!4v1754018941404!5m2!1svi!2s'
+    },
+    {
+        id: 43,
+        translations: [{ locale: 'vi', name: 'CGV Vincom Mega Mall Grand Park', description: 'Cụm rạp tại đại đô thị Vinhomes Grand Park.' }, { locale: 'en', name: 'CGV Vincom Mega Mall Grand Park', description: 'A cinema complex in the Vinhomes Grand Park megacity.' }],
+        address: 'Tầng 3, TTTM Vincom Mega Mall, KĐT Vinhomes Grand Park, TP. Thủ Đức',
+        city: 'TP. Hồ Chí Minh',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.5848937815285!2d106.842584!3d10.8430451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317521d4f119d7bb%3A0xd348d4f6ad2af08f!2sCGV%20Vincom%20Mega%20Mall%20Grand%20Park!5e0!3m2!1svi!2s!4v1754018956221!5m2!1svi!2s'
+    },
+    // --- HẢI PHÒNG (2 RẠP) ---
+    {
+        id: 44,
+        translations: [{ locale: 'vi', name: 'CGV Vincom Hải Phòng', description: 'Rạp chiếu phim tại TTTM Vincom Imperia.' }, { locale: 'en', name: 'CGV Vincom Hai Phong', description: 'A cinema at Vincom Imperia Shopping Mall.' }],
+        address: 'Tầng 4, TTTM Vincom Plaza Imperia, Khu đô thị Vinhomes Imperia, Thượng Lý, Hồng Bàng',
+        city: 'Hải Phòng',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.2198913057873!2d106.66253809999999!3d20.8631854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7bf642c8adb3%3A0xa852f981ea9d956!2sCGV%20Vincom%20Imperia%20H%E1%BA%A3i%20Ph%C3%B2ng!5e0!3m2!1svi!2s!4v1754018969890!5m2!1svi!2s'
+    },
+    {
+        id: 45,
+        translations: [{ locale: 'vi', name: 'CGV Aeon Mall Hải Phòng', description: 'Cụm rạp lớn tại TTTM Aeon Mall Lê Chân.' }, { locale: 'en', name: 'CGV Aeon Mall Hai Phong', description: 'A large cinema complex at Aeon Mall Le Chan.' }],
+        address: 'Tầng 3, TTTM Aeon Mall, 10 Võ Nguyên Giáp, Kênh Dương, Lê Chân',
+        city: 'Hải Phòng',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.9735210152735!2d106.68087419999999!3d20.8327757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7120acd8724d%3A0x71797f6955970ddc!2zQ0dWIEFlb24gTWFsbCBI4bqjaSBQaMOybmc!5e0!3m2!1svi!2s!4v1754018983412!5m2!1svi!2s'
     }
 ];
 

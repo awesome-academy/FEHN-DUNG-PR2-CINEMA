@@ -102,5 +102,22 @@
             "grid": "Grid View",
             "list": "List View"
         }
+    },
+    "allCities": {
+        "title": "Select a city"
+    },
+    "allCinemas": {
+        "title": "Cinemas in",
+        "not_found": "No cinemas found in",
+        "address": "Address",
+        "city": "City",
+        "viewDetailsBtn": "Click to view details"
+    },
+    "cinemaModal": {
+        "title": "Cinema details",
+        "description": "Description",
+        "address": "Address",
+        "city": "City",
+        "location": "Location"
     }
 }

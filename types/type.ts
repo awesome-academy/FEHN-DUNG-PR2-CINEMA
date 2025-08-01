@@ -64,7 +64,8 @@ export interface Cinema {
     id: number
     translations: CinemaTranslation[]
     address: string
-    image: string
+    city: string
+    mapUrl: string
 }
 
 export interface Screen {

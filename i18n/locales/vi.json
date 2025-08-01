@@ -101,5 +101,22 @@
             "grid": "Dạng lưới",
             "list": "Dạng danh sách"
         }
+    },
+    "allCities": {
+        "title": "Lựa chọn thành phố"
+    },
+    "allCinemas": {
+        "title": "Rạp chiếu phim ở",
+        "not_found": "Không tìm thấy rạp chiếu phim nào ở",
+        "address": "Địa chỉ",
+        "city": "Thành phố",
+        "viewDetailsBtn": "Xem chi tiết"
+    },
+    "cinemaModal": {
+        "title": "Thông tin chi tiết",
+        "description": "Miêu tả",
+        "address": "Địa chỉ",
+        "city": "Thành phố",
+        "location": "Vị trí cụ thể"
     }
 }
