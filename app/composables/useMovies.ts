@@ -15,7 +15,7 @@ export interface MovieResult {
     status: 'coming_soon' | 'now_showing' | 'ended';
     directors: string[];
     casts: string[];
-    ratings: number[];
+    ratings: number;
 }
 
 export function useMovies(locale: any) {
