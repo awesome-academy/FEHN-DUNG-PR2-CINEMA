@@ -37,7 +37,7 @@ const handleClick = () => {
 <template>
   <div
     @click="handleClick"
-    class="group cursor-pointer transition-all duration-300 hover:scale-105 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl"
+    class="group cursor-pointer transition-all duration-300 hover:scale-105 bg-[#161b22] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl"
   >
     <!-- Movie Poster -->
     <div class="relative overflow-hidden">

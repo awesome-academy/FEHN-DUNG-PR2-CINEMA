@@ -57,7 +57,7 @@ const goBack = () => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-black text-white pb-8">
+  <div class="min-h-screen bg-[#0d1117] text-white pb-8">
     <Navbar />
 
     <div v-if="movie" class="container">

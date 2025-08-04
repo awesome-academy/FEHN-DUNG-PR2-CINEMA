@@ -36,8 +36,7 @@ const handleSignIn = () => {
     });
     return;
   }
-  const { password: _password, ...userData } = findUser;
-  userStore.signInSuccess(userData);
+  userStore.signInSuccess(findUser);
   toast.success({
     message: "Đăng nhập thành công!",
     position: "topCenter",

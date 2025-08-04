@@ -6,7 +6,8 @@
         "tickets": "Vé của tôi",
         "signIn": "Đăng nhập",
         "signUp": "Đăng ký",
-        "signOut": "Đăng xuất"
+        "signOut": "Đăng xuất",
+        "account": "Tài khoản"
     },
     "navbar": {
         "home": "Trang chủ",
@@ -174,5 +175,98 @@
         "notFound": "Không tìm thấy thông tin khả dụng",
         "notFoundMessage": "Bộ phim bạn tìm kiếm không tồn tại.",
         "backToHome": "Quay trở lại trang chủ"
+    },
+    "account": {
+        "sidebar": {
+            "title": "Menu Tài Khoản",
+            "profile": "Hồ Sơ",
+            "account": "Cài Đặt Tài Khoản",
+            "memberCard": "Thẻ Thành Viên",
+            "voucher": "Phiếu Giảm Giá",
+            "history": "Lịch Sử Đặt Vé"
+        },
+        "memberTier": {
+            "member": "Thành Viên",
+            "vip": "VIP",
+            "vvip": "VVIP"
+        },
+        "profile": {
+            "membershipOverview": "Tổng Quan Thành Viên",
+            "currentTier": "Hạng Hiện Tại",
+            "totalPoints": "Tổng Điểm",
+            "totalSpent": "Tổng Chi Tiêu",
+            "accountInfo": "Thông Tin Tài Khoản",
+            "username": "Tên Đăng Nhập",
+            "email": "Email",
+            "phone": "Số Điện Thoại",
+            "status": "Trạng Thái",
+            "joinedDate": "Ngày Tham Gia",
+            "memberSince": "Thành viên từ",
+            "year": "năm",
+            "years": "năm",
+            "month": "tháng",
+            "months": "tháng"
+        },
+        "account": {
+            "title": "Cài Đặt Tài Khoản",
+            "subtitle": "Quản lý thông tin tài khoản và cài đặt bảo mật",
+            "profileInfo": "Thông Tin Hồ Sơ",
+            "username": "Tên Đăng Nhập",
+            "email": "Địa Chỉ Email",
+            "phone": "Số Điện Thoại",
+            "usernamePlaceholder": "Nhập tên đăng nhập",
+            "emailPlaceholder": "Nhập địa chỉ email",
+            "phonePlaceholder": "Nhập số điện thoại",
+            "updateProfile": "Cập Nhật Hồ Sơ",
+            "updating": "Đang cập nhật...",
+            "changePassword": "Đổi Mật Khẩu",
+            "currentPassword": "Mật Khẩu Hiện Tại",
+            "newPassword": "Mật Khẩu Mới",
+            "confirmPassword": "Xác Nhận Mật Khẩu Mới",
+            "currentPasswordPlaceholder": "Nhập mật khẩu hiện tại",
+            "newPasswordPlaceholder": "Nhập mật khẩu mới",
+            "confirmPasswordPlaceholder": "Xác nhận mật khẩu mới",
+            "updatePassword": "Cập Nhật Mật Khẩu"
+        },
+        "memberCard": {
+            "title": "Thẻ Thành Viên",
+            "subtitle": "Xem hạng thành viên và quyền lợi của bạn",
+            "memberID": "Mã Thành Viên",
+            "points": "Điểm",
+            "memberSince": "Thành Viên Từ",
+            "tierProgress": "Tiến Độ Hạng",
+            "spendMore": "Chi tiêu thêm",
+            "toUpgrade": "để nâng cấp lên",
+            "maxTier": "Đã Đạt Hạng Cao Nhất!",
+            "maxTierDesc": "Bạn đã đạt hạng thành viên cao nhất. Hãy tận hưởng tất cả quyền lợi cao cấp!",
+            "currentBenefits": "Quyền Lợi Hiện Tại",
+            "statistics": "Thống Kê Thành Viên",
+            "totalSpent": "Tổng Chi Tiêu",
+            "upgradedAt": "Nâng Cấp Lúc",
+            "benefits": {
+                "member": {
+                    "basic": "Quyền lợi thành viên cơ bản",
+                    "points": "Tích điểm khi mua hàng"
+                },
+                "vip": {
+                    "discount": "Giảm giá 5% cho tất cả vé",
+                    "priority": "Ưu tiên đặt vé",
+                    "earlyAccess": "Xem phim sớm"
+                },
+                "vvip": {
+                    "maxDiscount": "Giảm giá 10% cho tất cả vé",
+                    "exclusiveEvents": "Tham dự buổi chiếu độc quyền",
+                    "personalService": "Dịch vụ khách hàng cá nhân"
+                }
+            }
+        },
+        "voucher": {
+            "title": "Phiếu Giảm Giá Của Tôi",
+            "comingSoon": "Quản lý phiếu giảm giá sẽ sớm ra mắt..."
+        },
+        "history": {
+            "title": "Lịch Sử Đặt Vé",
+            "comingSoon": "Lịch sử đặt vé sẽ sớm ra mắt..."
+        }
     }
 }

@@ -40,7 +40,7 @@ const handleCloseModal = () => {
 </script>
 
 <template>
-  <div class="h-screen overflow-y-scroll bg-black text-white">
+  <div class="h-screen overflow-y-scroll bg-[#0d1117] text-white">
     <Navbar />
     <div class="container">
       <AllCities

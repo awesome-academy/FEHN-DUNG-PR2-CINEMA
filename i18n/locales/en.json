@@ -6,7 +6,8 @@
         "tickets": "My Tickets",
         "signIn": "Sign In",
         "signUp": "Sign Up",
-        "signOut": "Sign out"
+        "signOut": "Sign out",
+        "account": "Account"
     },
     "navbar": {
         "home": "Home",
@@ -175,5 +176,98 @@
         "notFound": "No available information found",
         "notFoundMessage": "The movie you are looking for does not exist.",
         "backToHome": "Back to home page"
+    },
+    "account": {
+        "sidebar": {
+            "title": "Account Menu",
+            "profile": "Profile",
+            "account": "Account Settings",
+            "memberCard": "Member Card",
+            "voucher": "Vouchers",
+            "history": "Order History"
+        },
+        "memberTier": {
+            "member": "Member",
+            "vip": "VIP",
+            "vvip": "VVIP"
+        },
+        "profile": {
+            "membershipOverview": "Membership Overview",
+            "currentTier": "Current Tier",
+            "totalPoints": "Total Points",
+            "totalSpent": "Total Spent",
+            "accountInfo": "Account Information",
+            "username": "Username",
+            "email": "Email",
+            "phone": "Phone",
+            "status": "Status",
+            "joinedDate": "Joined Date",
+            "memberSince": "Member since",
+            "year": "year",
+            "years": "years",
+            "month": "month",
+            "months": "months"
+        },
+        "account": {
+            "title": "Account Settings",
+            "subtitle": "Manage your account information and security settings",
+            "profileInfo": "Profile Information",
+            "username": "Username",
+            "email": "Email Address",
+            "phone": "Phone Number",
+            "usernamePlaceholder": "Enter your username",
+            "emailPlaceholder": "Enter your email address",
+            "phonePlaceholder": "Enter your phone number",
+            "updateProfile": "Update Profile",
+            "updating": "Updating...",
+            "changePassword": "Change Password",
+            "currentPassword": "Current Password",
+            "newPassword": "New Password",
+            "confirmPassword": "Confirm New Password",
+            "currentPasswordPlaceholder": "Enter current password",
+            "newPasswordPlaceholder": "Enter new password",
+            "confirmPasswordPlaceholder": "Confirm new password",
+            "updatePassword": "Update Password"
+        },
+        "memberCard": {
+            "title": "Member Card",
+            "subtitle": "View your membership tier and benefits",
+            "memberID": "Member ID",
+            "points": "Points",
+            "memberSince": "Member Since",
+            "tierProgress": "Tier Progress",
+            "spendMore": "Spend",
+            "toUpgrade": "more to upgrade to",
+            "maxTier": "Maximum Tier Achieved!",
+            "maxTierDesc": "You have reached the highest membership tier. Enjoy all premium benefits!",
+            "currentBenefits": "Current Benefits",
+            "statistics": "Membership Statistics",
+            "totalSpent": "Total Spent",
+            "upgradedAt": "Upgraded At",
+            "benefits": {
+                "member": {
+                    "basic": "Basic member privileges",
+                    "points": "Earn points on purchases"
+                },
+                "vip": {
+                    "discount": "5% discount on all tickets",
+                    "priority": "Priority booking access",
+                    "earlyAccess": "Early access to new movies"
+                },
+                "vvip": {
+                    "maxDiscount": "10% discount on all tickets",
+                    "exclusiveEvents": "Exclusive movie premieres",
+                    "personalService": "Personal customer service"
+                }
+            }
+        },
+        "voucher": {
+            "title": "My Vouchers",
+            "comingSoon": "Voucher management coming soon..."
+        },
+        "history": {
+            "title": "Order History",
+            "comingSoon": "Order history coming soon..."
+        }
     }
 }
