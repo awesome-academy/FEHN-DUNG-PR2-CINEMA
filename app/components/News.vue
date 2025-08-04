@@ -49,7 +49,7 @@ const formatDate = (dateString: string) => {
 </script>
 
 <template>
-  <div class="bg-black text-white py-16">
+  <div class="bg-[#0d1117] text-white py-16">
     <div class="container mx-auto px-4 overflow-hidden">
       <!-- Section Header -->
       <div class="text-center mb-12">
@@ -63,7 +63,7 @@ const formatDate = (dateString: string) => {
         <div
           v-for="event in activeEvents"
           :key="event.id"
-          class="group relative bg-gray-900 rounded-2xl overflow-hidden transition-all duration-300 hover:cursor-pointer hover:shadow-2xl hover:shadow-gray-500/20"
+          class="group relative bg-[#161b22] rounded-2xl overflow-hidden transition-all duration-300 hover:cursor-pointer hover:shadow-2xl hover:shadow-gray-500/20"
         >
           <!-- Event Image -->
           <div class="relative h-48 overflow-hidden">

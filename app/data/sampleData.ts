@@ -2,7 +2,7 @@ import type {
     User, Genre, Movie,
     Cinema, Screen, Seat,
     TimeSlot, MovieSchedule,
-    Event
+    Event, MembershipTier, Membership
 } from '../../types/type'
 
 export const users: User[] = [
@@ -35,9 +35,36 @@ export const users: User[] = [
         password: '123456',
         phone: '0912345678',
         role: 'member',
-        tier: 'member',
+        tier: 'vip',
         status: 'active',
         createdAt: '2025-07-03T11:00:00Z'
+    }
+]
+
+export const memberships: Membership[] = [
+    {
+        id: 1,
+        userId: 1,
+        tier: 'member',
+        points: 250,
+        totalSpent: 1200000,
+        upgradedAt: '2025-07-01T09:00:00Z'
+    },
+    {
+        id: 2,
+        userId: 2,
+        tier: 'member',
+        points: 100,
+        totalSpent: 500000,
+        upgradedAt: '2025-07-02T10:00:00Z'
+    },
+    {
+        id: 3,
+        userId: 3,
+        tier: 'vip',
+        points: 320,
+        totalSpent: 1800000,
+        upgradedAt: '2025-07-03T11:00:00Z'
     }
 ]
 

@@ -34,7 +34,7 @@ const navigateToEvent = (eventId: number) => {
       v-for="event in events"
       :key="event.id"
       @click="navigateToEvent(event.id)"
-      class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group hover:scale-105"
+      class="bg-[#161b22] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group hover:scale-105"
     >
       <!-- Event Image -->
       <div class="relative overflow-hidden">

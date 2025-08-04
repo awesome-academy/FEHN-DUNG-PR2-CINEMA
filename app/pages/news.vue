@@ -165,7 +165,7 @@ watch([searchQuery, selectedMonth, selectedYear], () => {
 </script>
 
 <template>
-  <div class="h-screen overflow-y-scroll bg-black text-white">
+  <div class="h-screen overflow-y-scroll bg-[#0d1117] text-white">
     <Navbar />
     <div class="container">
       <div class="flex flex-col gap-8 my-8">

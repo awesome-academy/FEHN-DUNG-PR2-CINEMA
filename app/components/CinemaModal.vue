@@ -33,7 +33,7 @@ const handleBackdropClick = (event: Event) => {
       @click="handleBackdropClick"
     >
       <div
-        class="bg-gray-900 rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-gray-700"
+        class="bg-[#161b22] rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-gray-700"
         @click.stop
       >
         <!-- Modal Header -->

@@ -7,7 +7,13 @@ import "swiper/css/navigation";
 import "swiper/css/free-mode";
 import { movies } from "~/data/sampleData";
 import type { Movie } from "~~/types/type";
-import { Play, TicketPlus, ChevronLeft, ChevronRight } from "lucide-vue-next";
+import {
+  Play,
+  TicketPlus,
+  ChevronLeft,
+  ChevronRight,
+  Star,
+} from "lucide-vue-next";
 import { useI18n } from "vue-i18n";
 import { useMovieDetails } from "~/composables/useMovieDetails";
 import MovieTrailerInfo from "./MovieTrailerInfo.vue";
@@ -90,12 +96,10 @@ const modules = [Navigation, FreeMode];
               {{ currentMovieDetail.name }}
             </h1>
             <div class="flex items-center gap-4 text-sm">
-              <span
-                v-if="currentMovieDetail.ratings?.[0]"
-                class="text-green-400 font-semibold"
-              >
-                {{ Math.round(currentMovieDetail.ratings[0] * 10) }}% Match
-              </span>
+              <div class="flex items-center gap-1">
+                <Star class="w-4 h-4 text-yellow-400" />
+                <span>{{ currentMovieDetail.ratings }}/5</span>
+              </div>
               <span class="border border-gray-400 px-1 text-xs">
                 {{
                   currentMovieDetail.status === "now_showing"

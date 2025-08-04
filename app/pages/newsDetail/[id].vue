@@ -76,7 +76,7 @@ if (!event.value) {
 </script>
 
 <template>
-  <div class="min-h-screen bg-black text-white pb-8">
+  <div class="min-h-screen bg-[#0d1117] text-white pb-8">
     <Navbar />
 
     <div v-if="event" class="container">
@@ -96,9 +96,7 @@ if (!event.value) {
             :alt="event.name"
             class="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-xl"
           />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"
-          />
+          <div class="absolute inset-0 rounded-lg" />
 
           <!-- Status Badge -->
           <div class="absolute top-4 left-4">
@@ -155,7 +153,7 @@ if (!event.value) {
           </div>
 
           <!-- Date Information -->
-          <div class="bg-gray-900 rounded-lg p-6 space-y-4">
+          <div class="bg-[#161b22] rounded-lg p-6 space-y-4">
             <h3 class="text-xl font-semibold flex items-center gap-2">
               <Calendar class="w-5 h-5 text-red-500" />
               {{ t("eventDetail.date") }}
@@ -200,7 +198,7 @@ if (!event.value) {
           <!-- Applicable Locations -->
           <div
             v-if="event.applicableCinemas && event.applicableCinemas.length > 0"
-            class="bg-gray-900 rounded-lg p-6"
+            class="bg-[#161b22] rounded-lg p-6"
           >
             <h3 class="text-xl font-semibold flex items-center gap-2 mb-4">
               <MapPin class="w-5 h-5 text-red-500" />
@@ -219,7 +217,7 @@ if (!event.value) {
           <!-- Applicable Movies -->
           <div
             v-if="event.applicableMovies && event.applicableMovies.length > 0"
-            class="bg-gray-900 rounded-lg p-6"
+            class="bg-[#161b22] rounded-lg p-6"
           >
             <h3 class="text-xl font-semibold flex items-center gap-2 mb-4">
               <Film class="w-5 h-5 text-red-500" />
@@ -238,7 +236,7 @@ if (!event.value) {
       </div>
 
       <!-- Terms and Conditions -->
-      <div v-if="event.terms" class="bg-gray-900 rounded-lg p-6">
+      <div v-if="event.terms" class="bg-[#161b22] rounded-lg p-6">
         <h3 class="text-2xl font-semibold mb-4">
           {{ t("eventDetail.terms") }}
         </h3>

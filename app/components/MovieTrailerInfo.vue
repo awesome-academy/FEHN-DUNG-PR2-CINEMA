@@ -103,7 +103,7 @@ onUnmounted(() => {
     @click.self="closeModal"
   >
     <div
-      class="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-gray-900 rounded-lg shadow-2xl"
+      class="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-[#161b22] rounded-lg shadow-2xl"
     >
       <button
         @click="closeModal"

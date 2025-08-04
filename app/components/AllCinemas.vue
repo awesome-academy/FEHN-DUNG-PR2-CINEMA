@@ -34,7 +34,7 @@ const selectCinema = (cinema: CinemaResult) => {
         v-for="cinema in cinemas"
         :key="cinema.id"
         @click="selectCinema(cinema)"
-        class="bg-gray-800 rounded-lg p-6 border border-gray-700 cursor-pointer transition-all duration-300 hover:bg-gray-700 hover:border-gray-600 hover:scale-105 hover:shadow-lg"
+        class="bg-[#161b22] rounded-lg p-6 border border-gray-700 cursor-pointer transition-all duration-300 hover:bg-gray-700 hover:border-gray-600 hover:scale-105 hover:shadow-lg"
       >
         <h3 class="text-xl font-bold mb-3 text-blue-400">{{ cinema.name }}</h3>
         <p class="text-gray-300 mb-3 line-clamp-3">{{ cinema.description }}</p>

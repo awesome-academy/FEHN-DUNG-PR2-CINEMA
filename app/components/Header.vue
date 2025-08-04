@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Newspaper, Ticket } from "lucide-vue-next";
+import { Newspaper, Ticket, Settings2 } from "lucide-vue-next";
 import { useUserStore } from "~/stores/user";
 import { watch } from "vue";
 
@@ -39,6 +39,13 @@ const handleSignOut = () => {
         >
           <Ticket :size="16" />
           <div>{{ t("topbar.tickets") }}</div>
+        </NuxtLink>
+        <NuxtLink
+          :to="localePath('/account')"
+          class="hidden md:flex justify-center items-center gap-2 hover:cursor-pointer hover:text-white hover:font-semibold"
+        >
+          <Settings2 :size="16" />
+          <div>{{ t("topbar.account") }}</div>
         </NuxtLink>
         <div class="hidden md:block">|</div>
         <template v-if="userStore.currentUser">

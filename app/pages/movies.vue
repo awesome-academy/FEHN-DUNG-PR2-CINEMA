@@ -175,7 +175,7 @@ watch([selectedStatus, searchQuery, selectedGenres, selectedYear], () => {
 });
 </script>
 <template>
-  <div class="h-screen overflow-y-scroll bg-black text-white">
+  <div class="h-screen overflow-y-scroll bg-[#0d1117] text-white">
     <Navbar />
     <div class="container">
       <div class="mx-auto px-4 py-8">

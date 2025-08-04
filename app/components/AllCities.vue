@@ -33,7 +33,7 @@ const selectCity = (city: string) => {
           'p-4 rounded-lg border-2 transition-all duration-300 hover:scale-105',
           selectedCity === city
             ? 'bg-blue-600 border-blue-600 text-white shadow-lg'
-            : 'bg-gray-800 border-gray-600 text-gray-300 hover:bg-gray-700 hover:border-gray-500',
+            : 'bg-[#161b22] border-gray-600 text-gray-300 hover:bg-gray-700 hover:border-gray-500',
         ]"
       >
         <div class="text-lg font-medium">{{ city }}</div>
