@@ -34,7 +34,7 @@ const handleSignOut = () => {
         </NuxtLink>
         <div class="hidden md:block">|</div>
         <NuxtLink
-          :to="localePath('/my_tickets')"
+          :to="localePath({ path: '/account', query: { tab: 'history' } })"
           class="hidden md:flex justify-center items-center gap-2 hover:cursor-pointer hover:text-white hover:font-semibold"
         >
           <Ticket :size="16" />

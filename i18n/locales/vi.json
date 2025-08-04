@@ -266,7 +266,30 @@
         },
         "history": {
             "title": "Lịch Sử Đặt Vé",
-            "comingSoon": "Lịch sử đặt vé sẽ sớm ra mắt..."
+            "noInvoices": "Không có lịch sử đặt vé",
+            "noInvoicesDescription": "Bạn chưa mua vé xem phim nào. Hãy khám phá các bộ phim và đặt vé ngay!",
+            "invoiceNumber": "Hóa đơn",
+            "completed": "Hoàn thành",
+            "purchaseDate": "Ngày mua",
+            "ticketCount": "Số vé",
+            "totalAmount": "Tổng tiền",
+            "viewDetails": "Xem chi tiết",
+            "hideDetails": "Ẩn chi tiết",
+            "ticketDetails": "Chi Tiết Vé",
+            "cinema": "Rạp phim",
+            "screen": "Phòng chiếu",
+            "showDate": "Ngày chiếu",
+            "showTime": "Giờ chiếu",
+            "seat": "Ghế",
+            "price": "Giá vé",
+            "ticketId": "Mã vé",
+            "ticketUsed": "Đã sử dụng",
+            "fnbItems": "Món Ăn & Đồ Uống",
+            "itemCount": "Tổng Số Món",
+            "quantity": "Số Lượng",
+            "pricePerItem": "Giá Mỗi Món",
+            "subtotal": "Tạm Tính",
+            "itemId": "Mã Món"
         }
     }
 }

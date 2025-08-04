@@ -1,10 +1,26 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { computed } from "vue";
+import { useSoldInvoiceDetails } from "~/composables/useSoldInvoiceDetail";
+import HistorySoldInvoices from "./HistorySoldInvoices.vue";
+
+interface Props {
+  user: any;
+}
+
+const props = defineProps<Props>();
+const { locale } = useI18n();
+
+const userId = computed(() => props.user?.id);
+const { soldInvoiceDetails } = useSoldInvoiceDetails(userId, locale);
+</script>
+
 <template>
   <div class="bg-[#161b22] rounded-lg p-6">
-    <h2 class="text-2xl font-bold text-white mb-4">
+    <h2 class="text-2xl font-bold text-white mb-6">
       {{ $t("account.history.title") }}
     </h2>
-    <p class="text-gray-400">{{ $t("account.history.comingSoon") }}</p>
+
+    <HistorySoldInvoices :invoices="soldInvoiceDetails" />
   </div>
 </template>
 

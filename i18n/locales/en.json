@@ -266,8 +266,31 @@
             "comingSoon": "Voucher management coming soon..."
         },
         "history": {
-            "title": "Order History",
-            "comingSoon": "Order history coming soon..."
+            "title": "Purchase History",
+            "noInvoices": "No purchase history",
+            "noInvoicesDescription": "You haven't made any ticket purchases yet. Start exploring movies and book your tickets!",
+            "invoiceNumber": "Invoice",
+            "completed": "Completed",
+            "purchaseDate": "Purchase Date",
+            "ticketCount": "Tickets",
+            "totalAmount": "Total",
+            "viewDetails": "View Details",
+            "hideDetails": "Hide Details",
+            "ticketDetails": "Ticket Details",
+            "cinema": "Cinema",
+            "screen": "Screen",
+            "showDate": "Date",
+            "showTime": "Showtime",
+            "seat": "Seat",
+            "price": "Price",
+            "ticketId": "Ticket ID",
+            "ticketUsed": "Used",
+            "fnbItems": "Food & Beverage Items",
+            "itemCount": "Total Items",
+            "quantity": "Quantity",
+            "pricePerItem": "Price per Item",
+            "subtotal": "Subtotal",
+            "itemId": "Item ID"
         }
     }
 }

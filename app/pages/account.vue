@@ -8,12 +8,31 @@ import Voucher from "../components/Voucher.vue";
 import History from "../components/History.vue";
 import { useUserStore } from "~/stores/user";
 import { useUserDetails } from "~/composables/useUserDetails";
+import { useRoute, useRouter } from "vue-router";
 
-const activeTab = ref("profile");
+const route = useRoute();
+
+const activeTabs = ["profile", "account", "memberCard", "voucher", "history"];
+
+const getDefaultTab = () => {
+  const tab = route.query.tab;
+  return typeof tab === "string" && activeTabs.includes(tab) ? tab : "profile";
+};
+
+const activeTab = ref(getDefaultTab());
 
 const handleTabChange = (tab: string) => {
   activeTab.value = tab;
 };
+
+watch(
+  () => route.query.tab,
+  (newTab) => {
+    if (typeof newTab === "string" && activeTabs.includes(newTab)) {
+      activeTab.value = newTab;
+    }
+  }
+);
 
 const userStore = useUserStore();
 
@@ -23,7 +42,9 @@ const { userDetail } = useUserDetails(userId);
 </script>
 
 <template>
-  <div class="h-screen overflow-y-scroll bg-[#0d1117] text-white">
+  <div
+    class="h-screen overflow-y-scroll overflow-hidden bg-[#0d1117] text-white"
+  >
     <Navbar />
     <div class="container">
       <div class="flex flex-col md:flex-row gap-8 py-8">

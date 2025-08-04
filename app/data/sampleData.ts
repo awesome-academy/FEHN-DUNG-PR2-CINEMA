@@ -2,7 +2,7 @@ import type {
     User, Genre, Movie,
     Cinema, Screen, Seat,
     TimeSlot, MovieSchedule,
-    Event, MembershipTier, Membership
+    Event, MembershipTier, Membership, SoldInvoice, Ticket, FnbItem, SoldFnb
 } from '../../types/type'
 
 export const users: User[] = [
@@ -1388,5 +1388,103 @@ export const events: Event[] = [
         status: 'inactive', // Chưa tới ngày diễn ra
         image: '/events/event6.jpg',
         applicableMovies: [5], // Chỉ áp dụng cho phim Avatar 3
+    }
+];
+
+export const fnbItems: FnbItem[] = [
+    {
+        id: 1,
+        code: 'POP-SALT-L',
+        translations: [{ locale: 'vi', name: 'Bắp Rang Mặn Lớn' }, { locale: 'en', name: 'Large Salty Popcorn' }],
+        type: 'popcorn',
+        size: 'L',
+        price: 75000,
+        image: '/fnb/popcorn-salt.jpg'
+    },
+    {
+        id: 2,
+        code: 'COKE-M',
+        translations: [{ locale: 'vi', name: 'Coca-Cola Vừa' }, { locale: 'en', name: 'Medium Coca-Cola' }],
+        type: 'drink',
+        size: 'M',
+        price: 45000,
+        image: '/fnb/coke.jpg'
+    },
+    {
+        id: 3,
+        code: 'COMBO-SINGLE-1',
+        translations: [{ locale: 'vi', name: 'Combo 1 Người' }, { locale: 'en', name: 'Single Combo' }],
+        type: 'combo',
+        size: 'M',
+        price: 110000,
+        image: '/fnb/combo1.jpg'
+    }
+];
+
+export const soldInvoices: SoldInvoice[] = [
+    {
+        id: 1,
+        code: 'INV-20250815-001',
+        date: '2025-08-15',
+        customerId: 3,
+        staffId: 2,
+        paymentMethod: 'cash',
+        createdAt: '2025-08-15T18:30:00Z'
+    },
+    {
+        id: 2,
+        code: 'INV-20250816-002',
+        date: '2025-08-16',
+        customerId: 3,
+        staffId: 2,
+        paymentMethod: 'momo',
+        createdAt: '2025-08-16T10:00:00Z'
+    }
+];
+
+export const tickets: Ticket[] = [
+    {
+        id: 1,
+        price: 120000,
+        movieScheduleId: 1,
+        seatId: 35,
+        soldInvoiceId: 1,
+        status: 'paid',
+        createdAt: '2025-08-15T18:30:00Z'
+    },
+    {
+        id: 2,
+        price: 80000,
+        movieScheduleId: 4,
+        seatId: 155,
+        soldInvoiceId: 2,
+        status: 'paid',
+        createdAt: '2025-08-16T10:00:00Z'
+    },
+    {
+        id: 3,
+        price: 80000,
+        movieScheduleId: 4,
+        seatId: 156,
+        soldInvoiceId: 2,
+        status: 'paid',
+        createdAt: '2025-08-16T10:00:00Z'
+    }
+];
+
+export const soldFnbs: SoldFnb[] = [
+    {
+        id: 1,
+        soldInvoiceId: 2,
+        fnbItemId: 1,
+        quantity: 1,
+        pricePerItem: 75000
+    },
+    {
+        id: 2,
+        soldInvoiceId: 2,
+        fnbItemId: 2,
+        quantity: 2,
+        pricePerItem: 45000
     }
 ];
