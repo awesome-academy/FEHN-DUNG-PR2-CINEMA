@@ -173,3 +173,26 @@ export interface Event {
     applicableMovies?: number[];
     requiredTier?: MembershipTier;
 }
+
+export interface FnbTranslation {
+    locale: string;
+    name: string;
+}
+
+export interface FnbItem {
+    id: number;
+    code: string;
+    translations: FnbTranslation[];
+    type: 'popcorn' | 'drink' | 'combo' | 'snack';
+    size: 'S' | 'M' | 'L';
+    price: number;
+    image: string;
+}
+
+export interface SoldFnb {
+    id: number;
+    soldInvoiceId: number;
+    fnbItemId: number;
+    quantity: number;
+    pricePerItem: number;
+}
