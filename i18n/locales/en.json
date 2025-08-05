@@ -292,5 +292,125 @@
             "subtotal": "Subtotal",
             "itemId": "Item ID"
         }
+    },
+    "buyTickets": {
+        "steps": {
+            "selectMovie": "Select Movie",
+            "selectDate": "Select Date",
+            "selectScreenType": "Screen Type",
+            "selectCinema": "Select Cinema",
+            "selectSchedule": "Select Time",
+            "selectSeat": "Select Seats",
+            "selectFnb": "Select Food",
+            "review": "Review Order",
+            "payment": "Payment"
+        },
+        "progress": {
+            "step": "Step",
+            "of": "of"
+        },
+        "common": {
+            "back": "Back",
+            "selected": "Selected",
+            "continue": "Continue",
+            "skip": "Skip"
+        },
+        "selectDate": {
+            "title": "Select Date",
+            "noAvailable": "No available dates for this movie",
+            "selected": "Selected date"
+        },
+        "date": {
+            "today": "Today",
+            "tomorrow": "Tomorrow"
+        },
+        "selectScreenType": {
+            "title": "Select Screen Type",
+            "noAvailable": "No screen types available"
+        },
+        "screenTypes": {
+            "standard": "Standard",
+            "vip": "VIP",
+            "imax": "IMAX",
+            "3d": "3D",
+            "4d": "4D",
+            "standardDesc": "Regular cinema experience with comfortable seating",
+            "vipDesc": "Premium experience with luxury seating and enhanced service",
+            "imaxDesc": "Large format screen with immersive sound system",
+            "3dDesc": "Three-dimensional viewing experience",
+            "4dDesc": "Multi-sensory experience with motion seats and effects"
+        },
+        "selectCinema": {
+            "title": "Select Cinema",
+            "noAvailable": "No cinemas available",
+            "viewMap": "View Map"
+        },
+        "selectSchedule": {
+            "title": "Select Showtime",
+            "noAvailable": "No showtimes available",
+            "duration": "Duration",
+            "startTime": "Start at",
+            "endTime": "Ends at",
+            "past": "Past"
+        },
+        "selectSeat": {
+            "title": "Select Seats",
+            "screen": "SCREEN",
+            "legend": "Legend",
+            "booked": "Booked",
+            "selected": "Selected",
+            "selectedSeats": "Selected Seats",
+            "totalPrice": "Total Price",
+            "continue": "Continue"
+        },
+        "seatTypes": {
+            "standard": "Standard",
+            "vip": "VIP",
+            "couple": "Couple"
+        },
+        "selectFnb": {
+            "title": "Food & Beverage",
+            "cart": "Your Cart",
+            "items": "items",
+            "totalPrice": "Total F&B Price",
+            "continue": "Continue",
+            "skip": "Skip F&B"
+        },
+        "fnbTypes": {
+            "popcorn": "Popcorn",
+            "drink": "Drinks",
+            "combo": "Combo Deals",
+            "snack": "Snacks"
+        },
+        "sizes": {
+            "small": "Small",
+            "medium": "Medium",
+            "large": "Large"
+        },
+        "review": {
+            "title": "Review Your Order",
+            "movieInfo": "Movie Information",
+            "cinemaInfo": "Cinema & Schedule",
+            "seatsInfo": "Seats Information",
+            "fnbInfo": "Food & Beverage",
+            "duration": "Duration",
+            "minutes": "minutes",
+            "screenType": "Screen Type",
+            "cinema": "Cinema",
+            "date": "Date",
+            "time": "Time",
+            "selectedSeats": "Selected Seats",
+            "ticketsPrice": "Tickets Price",
+            "fnbTotal": "F&B Total",
+            "fnbPrice": "F&B Price",
+            "totalPrice": "Total Price",
+            "proceedToPayment": "Proceed to Payment"
+        },
+        "payment": {
+            "title": "Payment",
+            "selectMethod": "Select Payment Method",
+            "orderSummary": "Order Summary",
+            "payNow": "Pay Now"
+        }
     }
 }

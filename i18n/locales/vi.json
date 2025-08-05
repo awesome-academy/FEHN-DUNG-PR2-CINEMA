@@ -291,5 +291,125 @@
             "subtotal": "Tạm Tính",
             "itemId": "Mã Món"
         }
+    },
+    "buyTickets": {
+        "steps": {
+            "selectMovie": "Chọn Phim",
+            "selectDate": "Chọn Ngày",
+            "selectScreenType": "Loại Phòng",
+            "selectCinema": "Chọn Rạp",
+            "selectSchedule": "Chọn Suất",
+            "selectSeat": "Chọn Ghế",
+            "selectFnb": "Chọn Đồ Ăn",
+            "review": "Kiểm tra",
+            "payment": "Thanh Toán"
+        },
+        "progress": {
+            "step": "Bước",
+            "of": "trên"
+        },
+        "common": {
+            "back": "Quay Lại",
+            "selected": "Đã Chọn",
+            "continue": "Tiếp Tục",
+            "skip": "Bỏ Qua"
+        },
+        "selectDate": {
+            "title": "Chọn Ngày Chiếu",
+            "noAvailable": "Không có ngày chiếu nào cho phim này",
+            "selected": "Ngày đã chọn"
+        },
+        "date": {
+            "today": "Hôm Nay",
+            "tomorrow": "Ngày Mai"
+        },
+        "selectScreenType": {
+            "title": "Chọn Loại Phòng Chiếu",
+            "noAvailable": "Không có loại phòng chiếu nào"
+        },
+        "screenTypes": {
+            "standard": "Tiêu Chuẩn",
+            "vip": "VIP",
+            "imax": "IMAX",
+            "3d": "3D",
+            "4d": "4D",
+            "standardDesc": "Trải nghiệm xem phim thông thường với ghế ngồi thoải mái",
+            "vipDesc": "Trải nghiệm cao cấp với ghế sang trọng và dịch vụ nâng cao",
+            "imaxDesc": "Màn hình định dạng lớn với hệ thống âm thanh sống động",
+            "3dDesc": "Trải nghiệm xem phim ba chiều",
+            "4dDesc": "Trải nghiệm đa giác quan với ghế chuyển động và hiệu ứng"
+        },
+        "selectCinema": {
+            "title": "Chọn Rạp Chiếu",
+            "noAvailable": "Không có rạp chiếu nào",
+            "viewMap": "Xem Bản Đồ"
+        },
+        "selectSchedule": {
+            "title": "Chọn Suất Chiếu",
+            "noAvailable": "Không có suất chiếu nào",
+            "startTime": "Bắt đầu lúc",
+            "duration": "Thời lượng",
+            "endTime": "Kết thúc lúc",
+            "past": "Đã qua"
+        },
+        "selectSeat": {
+            "title": "Chọn Ghế",
+            "screen": "MÀN HÌNH",
+            "legend": "Chú thích",
+            "booked": "Đã đặt",
+            "selected": "Đã chọn",
+            "selectedSeats": "Ghế Đã Chọn",
+            "totalPrice": "Tổng Tiền",
+            "continue": "Tiếp tục"
+        },
+        "seatTypes": {
+            "standard": "Tiêu Chuẩn",
+            "vip": "VIP",
+            "couple": "Đôi"
+        },
+        "selectFnb": {
+            "title": "Đồ Ăn & Thức Uống",
+            "cart": "Giỏ Hàng",
+            "items": "món",
+            "totalPrice": "Tổng Tiền Đồ Ăn",
+            "continue": "Tiếp tục",
+            "skip": "Bỏ qua đồ ăn"
+        },
+        "fnbTypes": {
+            "popcorn": "Bỏng Ngô",
+            "drink": "Thức Uống",
+            "combo": "Combo Ưu Đãi",
+            "snack": "Đồ Ăn Nhẹ"
+        },
+        "sizes": {
+            "small": "Nhỏ",
+            "medium": "Vừa",
+            "large": "Lớn"
+        },
+        "review": {
+            "title": "Xem Lại Đơn Hàng",
+            "movieInfo": "Thông Tin Phim",
+            "cinemaInfo": "Rạp & Lịch Chiếu",
+            "seatsInfo": "Thông Tin Ghế",
+            "fnbInfo": "Đồ Ăn & Thức Uống",
+            "duration": "Thời lượng",
+            "minutes": "phút",
+            "screenType": "Loại Phòng",
+            "cinema": "Rạp",
+            "date": "Ngày",
+            "time": "Giờ",
+            "selectedSeats": "Ghế Đã Chọn",
+            "ticketsPrice": "Tiền Vé",
+            "fnbTotal": "Tổng Đồ Ăn",
+            "fnbPrice": "Tiền Đồ Ăn",
+            "totalPrice": "Tổng Tiền",
+            "proceedToPayment": "Tiến Hành Thanh Toán"
+        },
+        "payment": {
+            "title": "Thanh Toán",
+            "selectMethod": "Chọn Phương Thức Thanh Toán",
+            "orderSummary": "Tóm Tắt Đơn Hàng",
+            "payNow": "Thanh Toán Ngay"
+        }
     }
 }
