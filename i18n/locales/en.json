@@ -311,9 +311,10 @@
         },
         "common": {
             "back": "Back",
-            "selected": "Selected",
+            "next": "Next",
             "continue": "Continue",
-            "skip": "Skip"
+            "cancel": "Cancel",
+            "confirm": "Confirm"
         },
         "selectDate": {
             "title": "Select Date",
@@ -390,27 +391,42 @@
         "review": {
             "title": "Review Your Order",
             "movieInfo": "Movie Information",
-            "cinemaInfo": "Cinema & Schedule",
-            "seatsInfo": "Seats Information",
-            "fnbInfo": "Food & Beverage",
-            "duration": "Duration",
-            "minutes": "minutes",
+            "movie": "Movie",
+            "date": "Date",
             "screenType": "Screen Type",
             "cinema": "Cinema",
-            "date": "Date",
-            "time": "Time",
+            "showtime": "Showtime",
+            "duration": "Duration",
+            "minutes": "minutes",
+            "seatInfo": "Seat Information",
             "selectedSeats": "Selected Seats",
-            "ticketsPrice": "Tickets Price",
-            "fnbTotal": "F&B Total",
-            "fnbPrice": "F&B Price",
-            "totalPrice": "Total Price",
+            "ticketCount": "Number of Tickets",
+            "tickets": "tickets",
+            "fnbInfo": "Food & Beverage",
+            "priceBreakdown": "Price Breakdown",
+            "ticketsPrice": "Tickets",
+            "fnbPrice": "Food & Beverage",
+            "totalPrice": "Total",
             "proceedToPayment": "Proceed to Payment"
         },
         "payment": {
             "title": "Payment",
-            "selectMethod": "Select Payment Method",
-            "orderSummary": "Order Summary",
-            "payNow": "Pay Now"
+            "totalAmount": "Total Amount",
+            "scanQr": "Scan QR Code to Pay",
+            "instructions": {
+                "title": "How to pay:",
+                "step1": "Open your banking app or e-wallet",
+                "step2": "Scan the QR code above",
+                "step3": "Confirm the payment amount",
+                "step4": "Complete the transaction"
+            },
+            "waiting": "Waiting for payment...",
+            "processing": "Processing...",
+            "success": "Payment successful!",
+            "alternativeMethods": "Or pay with:",
+            "simulatePayment": "Simulate Payment (Demo)",
+            "goToHome": "Back to Home",
+            "goToMyTickets": "Go to My Tickets"
         }
     }
 }

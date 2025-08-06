@@ -108,7 +108,7 @@ export interface SoldInvoice {
     date: string
     customerId: number
     staffId: number
-    paymentMethod: 'cash' | 'credit_card' | 'momo' | 'paypal'
+    paymentMethod: 'cash' | 'online'
     createdAt: string
 }
 

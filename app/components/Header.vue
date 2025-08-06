@@ -1,16 +1,19 @@
 <script setup lang="ts">
 import { Newspaper, Ticket, Settings2 } from "lucide-vue-next";
 import { useUserStore } from "~/stores/user";
+import { useOrderStore } from "~/stores/order";
 import { watch } from "vue";
 
 const { t } = useI18n();
 const localePath = useLocalePath();
-const userStore: any = useUserStore();
+const userStore = useUserStore();
+const orderStore = useOrderStore();
 const toast = useToast();
 const router = useRouter();
 
 const handleSignOut = () => {
   userStore.signOutSuccess();
+  orderStore.clearOrders();
   toast.success({
     message: "Đăng xuất thành công!",
     position: "topCenter",

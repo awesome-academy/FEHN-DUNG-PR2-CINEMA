@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import { useSoldInvoiceDetails } from "~/composables/useSoldInvoiceDetail";
+// import { useSoldInvoiceDetails } from "~/composables/useSoldInvoiceDetail";
 import HistorySoldInvoices from "./HistorySoldInvoices.vue";
+import { useOrderStore } from "~/stores/order";
 
 interface Props {
   user: any;
@@ -9,9 +10,21 @@ interface Props {
 
 const props = defineProps<Props>();
 const { locale } = useI18n();
+const orderStore = useOrderStore();
 
 const userId = computed(() => props.user?.id);
-const { soldInvoiceDetails } = useSoldInvoiceDetails(userId, locale);
+
+const userInvoices = computed(() => {
+  if (userId.value) {
+    return orderStore
+      .getOrdersByUserId(userId.value)
+      .sort(
+        (a, b) =>
+          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      );
+  }
+  return [];
+});
 </script>
 
 <template>
@@ -20,7 +33,7 @@ const { soldInvoiceDetails } = useSoldInvoiceDetails(userId, locale);
       {{ $t("account.history.title") }}
     </h2>
 
-    <HistorySoldInvoices :invoices="soldInvoiceDetails" />
+    <HistorySoldInvoices :invoices="userInvoices" />
   </div>
 </template>
 
