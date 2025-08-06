@@ -110,6 +110,12 @@ const visibleSteps: BookingStep[] = [
           :tickets-price="bookingFlow.ticketsPrice.value"
           :fnb-price="bookingFlow.fnbPrice.value"
           :total-price="bookingFlow.totalPrice.value"
+          :movies="bookingFlow.movies"
+          :cinemas="bookingFlow.cinemas.value.cinemas"
+          :schedules="
+            bookingFlow.schedules.value.schedules.filter((s) => s !== null)
+          "
+          :available-seats="bookingFlow.availableSeats.value"
           @proceed="bookingFlow.proceedToPayment"
           @back="bookingFlow.prevStep"
         />
@@ -118,6 +124,7 @@ const visibleSteps: BookingStep[] = [
         <BookingPayment
           v-if="bookingFlow.currentStep.value === 'payment'"
           :total-price="bookingFlow.totalPrice.value"
+          :booking-flow="bookingFlow"
           @back="bookingFlow.prevStep"
         />
       </div>

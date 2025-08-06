@@ -11,7 +11,7 @@ interface Emits {
 
 const props = defineProps<Props>();
 const emit = defineEmits<Emits>();
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 const formatDate = (dateString: string) => {
   const date = new Date(dateString);
@@ -24,7 +24,7 @@ const formatDate = (dateString: string) => {
   } else if (date.toDateString() === tomorrow.toDateString()) {
     return t("buyTickets.date.tomorrow");
   } else {
-    return date.toLocaleDateString("vi-VN", {
+    return date.toLocaleDateString(locale.value === "vi" ? "vi-VN" : "en-US", {
       weekday: "short",
       month: "short",
       day: "numeric",

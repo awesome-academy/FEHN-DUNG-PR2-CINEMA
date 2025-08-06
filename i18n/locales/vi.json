@@ -309,10 +309,11 @@
             "of": "trên"
         },
         "common": {
-            "back": "Quay Lại",
-            "selected": "Đã Chọn",
-            "continue": "Tiếp Tục",
-            "skip": "Bỏ Qua"
+            "back": "Quay lại",
+            "next": "Tiếp theo",
+            "continue": "Tiếp tục",
+            "cancel": "Hủy",
+            "confirm": "Xác nhận"
         },
         "selectDate": {
             "title": "Chọn Ngày Chiếu",
@@ -387,29 +388,44 @@
             "large": "Lớn"
         },
         "review": {
-            "title": "Xem Lại Đơn Hàng",
-            "movieInfo": "Thông Tin Phim",
-            "cinemaInfo": "Rạp & Lịch Chiếu",
-            "seatsInfo": "Thông Tin Ghế",
-            "fnbInfo": "Đồ Ăn & Thức Uống",
+            "title": "Xem lại đơn hàng",
+            "movieInfo": "Thông tin phim",
+            "movie": "Phim",
+            "date": "Ngày",
+            "screenType": "Loại màn hình",
+            "cinema": "Rạp chiếu",
+            "showtime": "Suất chiếu",
             "duration": "Thời lượng",
             "minutes": "phút",
-            "screenType": "Loại Phòng",
-            "cinema": "Rạp",
-            "date": "Ngày",
-            "time": "Giờ",
-            "selectedSeats": "Ghế Đã Chọn",
-            "ticketsPrice": "Tiền Vé",
-            "fnbTotal": "Tổng Đồ Ăn",
-            "fnbPrice": "Tiền Đồ Ăn",
-            "totalPrice": "Tổng Tiền",
-            "proceedToPayment": "Tiến Hành Thanh Toán"
+            "seatInfo": "Thông tin ghế",
+            "selectedSeats": "Ghế đã chọn",
+            "ticketCount": "Số vé",
+            "tickets": "vé",
+            "fnbInfo": "Thức ăn & Đồ uống",
+            "priceBreakdown": "Chi tiết giá",
+            "ticketsPrice": "Vé xem phim",
+            "fnbPrice": "Thức ăn & Đồ uống",
+            "totalPrice": "Tổng cộng",
+            "proceedToPayment": "Tiến hành thanh toán"
         },
         "payment": {
-            "title": "Thanh Toán",
-            "selectMethod": "Chọn Phương Thức Thanh Toán",
-            "orderSummary": "Tóm Tắt Đơn Hàng",
-            "payNow": "Thanh Toán Ngay"
+            "title": "Thanh toán",
+            "totalAmount": "Tổng tiền",
+            "scanQr": "Quét mã QR để thanh toán",
+            "instructions": {
+                "title": "Cách thanh toán:",
+                "step1": "Mở ứng dụng ngân hàng hoặc ví điện tử",
+                "step2": "Quét mã QR ở trên",
+                "step3": "Xác nhận số tiền thanh toán",
+                "step4": "Hoàn tất giao dịch"
+            },
+            "waiting": "Đang chờ thanh toán...",
+            "processing": "Đang xử lý...",
+            "success": "Thanh toán thành công!",
+            "alternativeMethods": "Hoặc thanh toán bằng:",
+            "simulatePayment": "Mô phỏng thanh toán (Demo)",
+            "goToHome": "Về trang chủ",
+            "goToMyTickets": "Xem vé của tôi"
         }
     }
 }
