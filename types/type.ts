@@ -75,12 +75,16 @@ export interface Screen {
     type: 'standard' | 'VIP' | 'IMAX' | '3D' | '4D'
 }
 
+export type SeatType = 'standard' | 'vip' | 'couple';
+
 export interface Seat {
     id: number
     screenId: number
     row: string
     column: string
     isAvailable: boolean
+    type: SeatType
+    price: number
 }
 
 export interface TimeSlot {

@@ -2,7 +2,7 @@ import type {
     User, Genre, Movie,
     Cinema, Screen, Seat,
     TimeSlot, MovieSchedule,
-    Event, MembershipTier, Membership, SoldInvoice, Ticket, FnbItem, SoldFnb
+    Event, Membership, SoldInvoice, Ticket, FnbItem, SoldFnb, SeatType
 } from '../../types/type'
 
 export const users: User[] = [
@@ -1150,22 +1150,55 @@ const generateAllScreens = (allCinemas: Cinema[]): Screen[] => {
     return allScreens;
 };
 
+const getCoupleSeatLabel = (col: number) => {
+    return `${col}-${col + 1}`;
+}
+
 const generateSeatsForScreen = (screenId: number, startSeatId: number): { seats: Seat[], nextSeatId: number } => {
     const seats: Seat[] = [];
-    const rows = ['A', 'B', 'C', 'D', 'E'];
+    const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
     const columns = 10;
     let currentSeatId = startSeatId;
 
+    const seatTypesConfig = {
+        standard: { price: 80000, rows: ['A', 'B', 'C'] },
+        vip: { price: 120000, rows: ['D', 'E', 'F'] },
+        couple: { price: 220000, rows: ['G'] }
+    };
+
     for (const row of rows) {
         for (let col = 1; col <= columns; col++) {
+            let type: SeatType = 'standard';
+            let price = seatTypesConfig.standard.price;
+
+            if (seatTypesConfig.vip.rows.includes(row)) {
+                type = 'vip';
+                price = seatTypesConfig.vip.price;
+            } else if (seatTypesConfig.couple.rows.includes(row)) {
+                // For couple seats, only use odd-numbered columns
+                // This ensures each couple seat occupies two adjacent seats (e.g., seats 1 & 2, 3 & 4, ...).
+                // Skip even-numbered columns to avoid generating duplicate couple seats for the second seat in each pair
+                if (col % 2 === 0) {
+                    continue;
+                }
+                type = 'couple';
+                price = seatTypesConfig.couple.price;
+            }
+
             seats.push({
                 id: currentSeatId,
                 screenId: screenId,
                 row: row,
-                column: col.toString(),
-                isAvailable: Math.random() > 0.3 // ~70% ghế có sẵn
+                column: type === 'couple' ? getCoupleSeatLabel(col) : col.toString(),
+                isAvailable: true,
+                type: type,
+                price: price
             });
             currentSeatId++;
+
+            if (type === 'couple') {
+                col++;
+            }
         }
     }
     return { seats, nextSeatId: currentSeatId };
@@ -1408,7 +1441,7 @@ export const fnbItems: FnbItem[] = [
         type: 'drink',
         size: 'M',
         price: 45000,
-        image: '/fnb/coke.jpg'
+        image: '/fnb/coke.png'
     },
     {
         id: 3,
@@ -1417,7 +1450,70 @@ export const fnbItems: FnbItem[] = [
         type: 'combo',
         size: 'M',
         price: 110000,
-        image: '/fnb/combo1.jpg'
+        image: '/fnb/combo1.webp'
+    },
+    {
+        id: 4,
+        code: 'POP-CARAMEL-M',
+        translations: [{ locale: 'vi', name: 'Bắp Rang Caramel Vừa' }, { locale: 'en', name: 'Medium Caramel Popcorn' }],
+        type: 'popcorn',
+        size: 'M',
+        price: 80000,
+        image: '/fnb/popcorn-caramel.webp'
+    },
+    {
+        id: 5,
+        code: 'POP-CHEESE-M',
+        translations: [{ locale: 'vi', name: 'Bắp Rang Phô Mai Vừa' }, { locale: 'en', name: 'Medium Cheese Popcorn' }],
+        type: 'popcorn',
+        size: 'M',
+        price: 80000,
+        image: '/fnb/popcorn-cheese.jpg'
+    },
+    {
+        id: 6,
+        code: 'WATER-M',
+        translations: [{ locale: 'vi', name: 'Nước Suối Vừa' }, { locale: 'en', name: 'Medium Mineral Water' }],
+        type: 'drink',
+        size: 'M',
+        price: 25000,
+        image: '/fnb/water.jpg'
+    },
+    {
+        id: 7,
+        code: 'SPRITE-L',
+        translations: [{ locale: 'vi', name: 'Sprite Lớn' }, { locale: 'en', name: 'Large Sprite' }],
+        type: 'drink',
+        size: 'L',
+        price: 50000,
+        image: '/fnb/sprite.jpg'
+    },
+    {
+        id: 8,
+        code: 'COMBO-COUPLE-1',
+        translations: [{ locale: 'vi', name: 'Combo 2 Người' }, { locale: 'en', name: 'Couple Combo' }],
+        type: 'combo',
+        size: 'L',
+        price: 155000,
+        image: '/fnb/combo2.webp'
+    },
+    {
+        id: 9,
+        code: 'SNACK-NACHOS',
+        translations: [{ locale: 'vi', name: 'Bánh Nachos Phô Mai' }, { locale: 'en', name: 'Nachos with Cheese' }],
+        type: 'snack',
+        size: 'M',
+        price: 65000,
+        image: '/fnb/nachos.jpg'
+    },
+    {
+        id: 10,
+        code: 'SNACK-HOTDOG',
+        translations: [{ locale: 'vi', name: 'Xúc Xích Hotdog' }, { locale: 'en', name: 'Hotdog' }],
+        type: 'snack',
+        size: 'M',
+        price: 55000,
+        image: '/fnb/hotdog.webp'
     }
 ];
 

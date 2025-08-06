@@ -19,6 +19,8 @@ import { useMovieDetails } from "~/composables/useMovieDetails";
 import MovieTrailerInfo from "./MovieTrailerInfo.vue";
 
 const { t, locale } = useI18n();
+const router = useRouter();
+const localePath = useLocalePath();
 
 const currentMovieIndex = ref(0);
 const isModalOpen = ref(false);
@@ -45,10 +47,14 @@ const formatDuration = (minutes: number) => {
   return `${hours}h ${mins}m`;
 };
 
-const buyTickets = () => {
-  if (currentMovieDetail.value) {
-    console.log("Buy tickets for:", currentMovieDetail.value.name);
-  }
+const buyTickets = (movieId: number) => {
+  const targetPath = localePath({
+    name: "buyTickets",
+    query: {
+      id: movieId,
+    },
+  });
+  router.push(targetPath);
 };
 
 const openTrailerModal = () => {
@@ -60,8 +66,14 @@ const closeTrailerModal = () => {
 };
 
 const handleBuyTicketsFromModal = (movieId: number) => {
-  console.log("Buy tickets for movie ID:", movieId);
-  // Implement buy tickets logic here
+  const targetPath = localePath({
+    name: "buyTickets",
+    query: {
+      id: movieId,
+    },
+  });
+  router.push(targetPath);
+
   closeTrailerModal();
 };
 
@@ -117,7 +129,7 @@ const modules = [Navigation, FreeMode];
             </p>
             <div class="flex gap-4">
               <button
-                @click="buyTickets"
+                @click="buyTickets(currentMovieDetail.id)"
                 class="flex items-center gap-2 bg-white text-black px-8 py-3 rounded font-semibold hover:bg-gray-200 hover:cursor-pointer transition-colors"
               >
                 <TicketPlus />
