@@ -38,6 +38,61 @@ export const users: User[] = [
         tier: 'vip',
         status: 'active',
         createdAt: '2025-07-03T11:00:00Z'
+    },
+    {
+        id: 4,
+        username: 'linh_tran',
+        email: 'linhtran@gmail.com',
+        password: '123456',
+        phone: '0905112233',
+        role: 'member',
+        tier: 'vvip',
+        status: 'active',
+        createdAt: '2025-06-15T14:20:00Z'
+    },
+    {
+        id: 5,
+        username: 'minh_nguyen',
+        email: 'minhnguyen@gmail.com',
+        password: '123456',
+        phone: '0988776655',
+        role: 'member',
+        tier: 'vip',
+        status: 'active',
+        createdAt: '2025-05-20T18:00:00Z'
+    },
+    {
+        id: 6,
+        username: 'hoa_le',
+        email: 'hoale@gmail.com',
+        password: '123456',
+        phone: '0918234567',
+        role: 'member',
+        tier: 'member',
+        status: 'inactive',
+        createdAt: '2025-04-10T08:45:00Z'
+    },
+    {
+        id: 7,
+        username: 'tuan_pham',
+        email: 'tuanpham@gmail.com',
+        password: '123456',
+        phone: '0334455667',
+        role: 'member',
+        tier: 'vip',
+        status: 'active',
+        createdAt: '2025-03-05T22:10:00Z'
+    },
+    {
+        id: 8,
+        username: 'anh_vu',
+        email: 'anhvu@gmail.com',
+        password: '123456',
+        phone: '0778899001',
+        role: 'member',
+        tier: 'member',
+        status: 'banned',
+        createdAt: '2025-02-18T11:30:00Z'
     }
 ]
 
@@ -65,6 +120,46 @@ export const memberships: Membership[] = [
         points: 320,
         totalSpent: 1800000,
         upgradedAt: '2025-07-03T11:00:00Z'
+    },
+    {
+        id: 4,
+        userId: 4,
+        tier: 'vvip',
+        points: 8000,
+        totalSpent: 9500000,
+        upgradedAt: '2025-06-15T14:20:00Z'
+    },
+    {
+        id: 5,
+        userId: 5,
+        tier: 'vip',
+        points: 550,
+        totalSpent: 3200000,
+        upgradedAt: '2025-05-20T18:00:00Z'
+    },
+    {
+        id: 6,
+        userId: 6,
+        tier: 'member',
+        points: 30,
+        totalSpent: 150000,
+        upgradedAt: '2025-04-10T08:45:00Z'
+    },
+    {
+        id: 7,
+        userId: 7,
+        tier: 'vip',
+        points: 1200,
+        totalSpent: 7500000,
+        upgradedAt: '2025-03-05T22:10:00Z'
+    },
+    {
+        id: 8,
+        userId: 8,
+        tier: 'member',
+        points: 10,
+        totalSpent: 50000,
+        upgradedAt: '2025-02-18T11:30:00Z'
     }
 ]
 

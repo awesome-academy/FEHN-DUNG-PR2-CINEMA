@@ -40,8 +40,12 @@ const breakdownChart = ref<HTMLCanvasElement | null>(null);
 let revenueChartInstance: ChartJS | null = null;
 let breakdownChartInstance: ChartJS | null = null;
 
-const formatNumber = (num: number): string => {
-  return new Intl.NumberFormat("en-US").format(num);
+const formatCurrency = (amount: number) => {
+  return new Intl.NumberFormat("vi-VN", {
+    style: "currency",
+    currency: "VND",
+    maximumFractionDigits: 0,
+  }).format(amount);
 };
 
 const initCharts = () => {
@@ -169,7 +173,7 @@ onUnmounted(() => {
           <div>
             <p class="text-sm font-medium text-gray-400 mb-1">Total Revenue</p>
             <p class="text-2xl font-bold text-white">
-              ${{ formatNumber(dashboardData.totalRevenue) }}
+              {{ formatCurrency(dashboardData.totalRevenue) }}
             </p>
           </div>
         </div>
@@ -181,7 +185,7 @@ onUnmounted(() => {
           <div>
             <p class="text-sm font-medium text-gray-400 mb-1">Tickets Sold</p>
             <p class="text-2xl font-bold text-white">
-              {{ formatNumber(dashboardData.ticketsSold) }}
+              {{ dashboardData.ticketsSold }}
             </p>
           </div>
         </div>
@@ -193,7 +197,7 @@ onUnmounted(() => {
           <div>
             <p class="text-sm font-medium text-gray-400 mb-1">F&B Sales</p>
             <p class="text-2xl font-bold text-white">
-              ${{ formatNumber(dashboardData.fnbSales) }}
+              {{ formatCurrency(dashboardData.fnbSales) }}
             </p>
           </div>
         </div>
