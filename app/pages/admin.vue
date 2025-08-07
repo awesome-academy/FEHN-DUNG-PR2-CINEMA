@@ -55,8 +55,12 @@ definePageMeta({
         </button>
       </div>
 
-      <div class="h-full overflow-y-auto p-2">
+      <div class="h-full w-full overflow-x-scroll p-2">
         <AdminDashboard v-if="currentPage === 'dashboard'" />
+        <AdminManageUsers
+          v-if="currentPage === 'users' || currentPage === 'memberships'"
+          :active-tab="currentPage"
+        />
       </div>
     </div>
   </div>
