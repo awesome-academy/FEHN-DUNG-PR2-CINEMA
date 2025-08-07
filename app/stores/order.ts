@@ -40,21 +40,26 @@ export const useOrderStore = defineStore('order', () => {
     const error = ref<string | null>(null);
 
     function loadOrdersFromStorage() {
-        try {
-            const savedOrders = localStorage.getItem('orders');
-            if (savedOrders) {
-                orders.value = JSON.parse(savedOrders);
+        if (typeof window !== 'undefined') {
+            try {
+                const savedOrders = localStorage.getItem('orders');
+                if (savedOrders) {
+                    orders.value = JSON.parse(savedOrders);
+                }
+            } catch (e) {
+                console.error("Failed to parse orders from localStorage:", e);
+                orders.value = [];
             }
-        } catch (e) {
-            console.error("Failed to parse orders from localStorage:", e);
-            orders.value = [];
         }
     }
+
     loadOrdersFromStorage();
 
-    watch(orders, (newOrders) => {
-        localStorage.setItem('orders', JSON.stringify(newOrders));
-    }, { deep: true });
+    if (typeof window !== 'undefined') {
+        watch(orders, (newOrders) => {
+            localStorage.setItem('orders', JSON.stringify(newOrders));
+        }, { deep: true });
+    }
 
     const createOrder = (payload: CreateOrderPayload, locale: string) => {
         loading.value = true;
