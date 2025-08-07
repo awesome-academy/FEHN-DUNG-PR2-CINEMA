@@ -41,7 +41,11 @@ const handleSignIn = () => {
     message: "Đăng nhập thành công!",
     position: "topCenter",
   });
-  router.push(localePath("/"));
+  if (findUser.role === "admin") {
+    router.push(localePath("/admin"));
+  } else {
+    router.push(localePath("/"));
+  }
 };
 </script>
 <template>

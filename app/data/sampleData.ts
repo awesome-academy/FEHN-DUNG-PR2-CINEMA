@@ -1533,7 +1533,7 @@ export const soldInvoices: SoldInvoice[] = [
         date: '2025-08-16',
         customerId: 3,
         staffId: 2,
-        paymentMethod: 'momo',
+        paymentMethod: 'online',
         createdAt: '2025-08-16T10:00:00Z'
     }
 ];

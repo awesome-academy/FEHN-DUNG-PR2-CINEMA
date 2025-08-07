@@ -37,20 +37,23 @@ const handleSignOut = () => {
         </NuxtLink>
         <div class="hidden md:block">|</div>
         <NuxtLink
+          v-if="userStore.currentUser"
           :to="localePath({ path: '/account', query: { tab: 'history' } })"
           class="hidden md:flex justify-center items-center gap-2 hover:cursor-pointer hover:text-white hover:font-semibold"
         >
           <Ticket :size="16" />
           <div>{{ t("topbar.tickets") }}</div>
         </NuxtLink>
+        <div v-if="userStore.currentUser" class="hidden md:block">|</div>
         <NuxtLink
+          v-if="userStore.currentUser"
           :to="localePath('/account')"
           class="hidden md:flex justify-center items-center gap-2 hover:cursor-pointer hover:text-white hover:font-semibold"
         >
           <Settings2 :size="16" />
           <div>{{ t("topbar.account") }}</div>
         </NuxtLink>
-        <div class="hidden md:block">|</div>
+        <div v-if="userStore.currentUser" class="hidden md:block">|</div>
         <template v-if="userStore.currentUser">
           <div
             @click="handleSignOut"
@@ -74,7 +77,6 @@ const handleSignOut = () => {
             {{ t("topbar.signUp") }}
           </NuxtLink>
         </template>
-        <div>|</div>
         <LanguageSwitcher />
       </div>
     </div>
