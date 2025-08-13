@@ -40,14 +40,15 @@ const formatCurrency = (amount: number) => {
 </script>
 
 <template>
-  <div class="p-2 md:p-6">
-    <div class="mb-6">
-      <h2 class="text-xl font-semibold text-white">Membership Management</h2>
-      <p class="text-gray-400 text-sm mt-1">
-        Track membership statistics and member details
-      </p>
+  <div class="space-y-6 p-4">
+    <!-- Header -->
+    <div class="flex items-center justify-between">
+      <h1 class="text-2xl md:text-3xl font-bold text-white">
+        Membership Management
+      </h1>
     </div>
 
+    <!-- Card Statistic -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
       <div class="bg-[#0d1117] rounded-lg border border-gray-700 p-6">
         <div class="flex items-center justify-between">
@@ -109,6 +110,7 @@ const formatCurrency = (amount: number) => {
       </div>
     </div>
 
+    <!-- Membership Table -->
     <div class="overflow-x-auto">
       <table class="w-full md:min-w-[800px]">
         <thead>
