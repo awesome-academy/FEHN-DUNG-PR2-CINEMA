@@ -314,17 +314,6 @@ const userEmail = computed(() => currentUser.value?.email);
               Tickets
             </button>
             <button
-              @click="$emit('navigate', 'sold-invoices')"
-              :class="[
-                'w-full text-left px-3 py-2 text-sm rounded-lg transition-colors',
-                activeItem === 'sold-invoices'
-                  ? 'bg-blue-500 text-white'
-                  : 'text-gray-400 hover:bg-gray-700 hover:text-white',
-              ]"
-            >
-              Sold Invoices
-            </button>
-            <button
               @click="$emit('navigate', 'sold-fnb')"
               :class="[
                 'w-full text-left px-3 py-2 text-sm rounded-lg transition-colors',
@@ -334,6 +323,17 @@ const userEmail = computed(() => currentUser.value?.email);
               ]"
             >
               Sold F&B
+            </button>
+            <button
+              @click="$emit('navigate', 'sold-invoices')"
+              :class="[
+                'w-full text-left px-3 py-2 text-sm rounded-lg transition-colors',
+                activeItem === 'sold-invoices'
+                  ? 'bg-blue-500 text-white'
+                  : 'text-gray-400 hover:bg-gray-700 hover:text-white',
+              ]"
+            >
+              Sold Invoices
             </button>
           </div>
         </div>
