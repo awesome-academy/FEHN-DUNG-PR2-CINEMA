@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import AdminSidebar from "../components/admin/AdminSidebar.vue";
 import AdminDashboard from "../components/admin/Dashboard.vue";
+import AdminManageUsers from "~/components/admin/user/AdminManageUsers.vue";
+import AdminManageCinemas from "~/components/admin/cinema/AdminManageCinemas.vue";
 import { Menu } from "lucide-vue-next";
 
 const currentPage = ref("dashboard");
@@ -59,6 +61,14 @@ definePageMeta({
         <AdminDashboard v-if="currentPage === 'dashboard'" />
         <AdminManageUsers
           v-if="currentPage === 'users' || currentPage === 'memberships'"
+          :active-tab="currentPage"
+        />
+        <AdminManageCinemas
+          v-if="
+            currentPage === 'cinemas' ||
+            currentPage === 'screens' ||
+            currentPage === 'seats'
+          "
           :active-tab="currentPage"
         />
       </div>
