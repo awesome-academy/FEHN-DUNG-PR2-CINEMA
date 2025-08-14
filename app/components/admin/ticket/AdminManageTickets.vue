@@ -10,7 +10,7 @@ interface Props {
 defineProps<Props>();
 </script>
 <template>
-  <div class="p-4 md:p-6">
+  <div class="min-h-screen">
     <TicketList v-if="activeTab === 'tickets'" />
     <SoldInvoiceList v-if="activeTab === 'sold-invoices'" />
     <SoldFnBList v-if="activeTab === 'sold-fnb'" />
