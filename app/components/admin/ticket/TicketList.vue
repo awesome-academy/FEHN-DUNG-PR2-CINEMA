@@ -60,7 +60,7 @@ const formatCurrency = (amount: number) => {
   <div class="space-y-6 p-4">
     <!-- Header -->
     <div class="flex items-center justify-between">
-      <h1 class="text-2xl md:text-3xl font-bold text-white">
+      <h1 class="text-xl md:text-3xl font-bold text-white">
         Ticket Management
       </h1>
     </div>

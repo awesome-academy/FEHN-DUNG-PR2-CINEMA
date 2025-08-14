@@ -133,6 +133,11 @@ export interface Rating {
 
 export type VoucherType = 'percent' | 'fixed';
 
+export interface VoucherTranslation {
+    locale: string
+    description: string
+}
+
 export interface Voucher {
     id: number;
     code: string;
@@ -144,7 +149,7 @@ export interface Voucher {
     validTo: string;
     usageLimit?: number;
     status: 'active' | 'inactive' | 'expired';
-    description?: string;
+    translations: VoucherTranslation[];
     applicableTiers?: MembershipTier[];
 }
 

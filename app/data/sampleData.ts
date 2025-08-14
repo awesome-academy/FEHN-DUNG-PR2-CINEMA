@@ -2,7 +2,8 @@ import type {
     User, Genre, Movie,
     Cinema, Screen, Seat,
     TimeSlot, MovieSchedule,
-    Event, Membership, SoldInvoice, Ticket, FnbItem, SoldFnb, SeatType
+    Event, Membership, SoldInvoice, Ticket,
+    FnbItem, SoldFnb, SeatType, Voucher
 } from '../../types/type'
 
 export const users: User[] = [
@@ -1678,4 +1679,158 @@ export const soldFnbs: SoldFnb[] = [
         quantity: 2,
         pricePerItem: 45000
     }
+];
+
+export const vouchers: Voucher[] = [
+    {
+        id: 1,
+        code: 'SUMMER25',
+        type: 'percent',
+        value: 25,
+        maxDiscount: 50000,
+        minOrder: 150000,
+        validFrom: '2025-06-01T00:00:00Z',
+        validTo: '2025-08-31T23:59:59Z',
+        usageLimit: 1000,
+        status: 'active',
+        translations: [
+            { locale: 'vi', description: 'Giảm 25% cho vé xem phim mùa hè, tối đa 50k.' },
+            { locale: 'en', description: '25% off for summer movie tickets, max discount 50k.' }
+        ],
+        applicableTiers: ['member', 'vip'],
+    },
+    {
+        id: 2,
+        code: 'WELCOME30K',
+        type: 'fixed',
+        value: 30000,
+        minOrder: 100000,
+        validFrom: '2025-01-01T00:00:00Z',
+        validTo: '2025-12-31T23:59:59Z',
+        usageLimit: 1,
+        status: 'active',
+        translations: [
+            { locale: 'vi', description: 'Giảm ngay 30k cho thành viên mới.' },
+            { locale: 'en', description: 'Instant 30k off for new members.' }
+        ],
+        applicableTiers: ['member'],
+    },
+    {
+        id: 3,
+        code: 'VVIPCOMBO',
+        type: 'fixed',
+        value: 100000,
+        minOrder: 300000,
+        validFrom: '2025-07-01T00:00:00Z',
+        validTo: '2025-09-30T23:59:59Z',
+        usageLimit: 50,
+        status: 'active',
+        translations: [
+            { locale: 'vi', description: 'Ưu đãi đặc biệt 100k cho thành viên VVIP.' },
+            { locale: 'en', description: 'Special 100k offer for VVIP members.' }
+        ],
+        applicableTiers: ['vvip'],
+    },
+    {
+        id: 4,
+        code: 'TET2025',
+        type: 'percent',
+        value: 50,
+        maxDiscount: 100000,
+        minOrder: 200000,
+        validFrom: '2025-01-20T00:00:00Z',
+        validTo: '2025-02-10T23:59:59Z',
+        usageLimit: 500,
+        status: 'expired',
+        translations: [
+            { locale: 'vi', description: 'Voucher khuyến mãi Tết Nguyên Đán 2025.' },
+            { locale: 'en', description: 'Lunar New Year 2025 promotional voucher.' }
+        ],
+    },
+    {
+        id: 5,
+        code: 'FREESHIP',
+        type: 'fixed',
+        value: 15000,
+        validFrom: '2025-08-01T00:00:00Z',
+        validTo: '2025-08-31T23:59:59Z',
+        status: 'active',
+        translations: [
+            { locale: 'vi', description: 'Miễn phí vận chuyển (giảm 15k).' },
+            { locale: 'en', description: 'Free shipping (15k discount).' }
+        ],
+    },
+    {
+        id: 6,
+        code: 'MIDNIGHTSALE',
+        type: 'percent',
+        value: 40,
+        maxDiscount: 75000,
+        minOrder: 120000,
+        validFrom: '2025-09-01T00:00:00Z',
+        validTo: '2025-09-01T06:00:00Z',
+        status: 'inactive',
+        translations: [
+            { locale: 'vi', description: 'Flash sale nửa đêm, chưa tới ngày.' },
+            { locale: 'en', description: 'Midnight flash sale, not yet active.' }
+        ],
+    },
+    {
+        id: 7,
+        code: 'VIPONLY20',
+        type: 'percent',
+        value: 20,
+        minOrder: 100000,
+        validFrom: '2025-01-01T00:00:00Z',
+        validTo: '2025-12-31T23:59:59Z',
+        status: 'active',
+        translations: [
+            { locale: 'vi', description: 'Giảm 20% cho thành viên VIP.' },
+            { locale: 'en', description: '20% off for VIP members.' }
+        ],
+        applicableTiers: ['vip', 'vvip'],
+    },
+    {
+        id: 8,
+        code: 'SPRINGFLING',
+        type: 'fixed',
+        value: 20000,
+        minOrder: 80000,
+        validFrom: '2025-03-01T00:00:00Z',
+        validTo: '2025-04-30T23:59:59Z',
+        status: 'expired',
+        translations: [
+            { locale: 'vi', description: 'Khuyến mãi mùa xuân đã hết hạn.' },
+            { locale: 'en', description: 'Expired spring promotion.' }
+        ],
+    },
+    {
+        id: 9,
+        code: 'BOGOPOP',
+        type: 'fixed',
+        value: 55000,
+        minOrder: 100000,
+        validFrom: '2025-08-10T00:00:00Z',
+        validTo: '2025-08-20T23:59:59Z',
+        status: 'active',
+        translations: [
+            { locale: 'vi', description: 'Mua 1 tặng 1 bắp rang bơ (giảm 55k).' },
+            { locale: 'en', description: 'Buy 1 Get 1 Popcorn (55k discount).' }
+        ],
+    },
+    {
+        id: 10,
+        code: 'CHRISTMAS2025',
+        type: 'percent',
+        value: 30,
+        maxDiscount: 60000,
+        minOrder: 180000,
+        validFrom: '2025-12-01T00:00:00Z',
+        validTo: '2025-12-25T23:59:59Z',
+        status: 'inactive',
+        translations: [
+            { locale: 'vi', description: 'Voucher Giáng sinh, sắp ra mắt.' },
+            { locale: 'en', description: 'Christmas voucher, coming soon.' }
+        ],
+    },
 ];

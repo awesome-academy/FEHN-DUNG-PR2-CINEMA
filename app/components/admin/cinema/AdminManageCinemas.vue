@@ -11,7 +11,7 @@ defineProps<Props>();
 </script>
 
 <template>
-  <div class="p-4 md:p-6">
+  <div class="min-h-screen">
     <CinemaList v-if="activeTab === 'cinemas'" />
     <ScreenList v-if="activeTab === 'screens'" />
     <SeatList v-if="activeTab === 'seats'" />

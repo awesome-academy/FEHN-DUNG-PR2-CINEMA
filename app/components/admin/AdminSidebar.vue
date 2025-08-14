@@ -20,7 +20,7 @@ interface OpenSections {
   movies: boolean;
   cinemas: boolean;
   tickets: boolean;
-  events: boolean;
+  promotions: boolean;
   fnb: boolean;
 }
 
@@ -44,7 +44,7 @@ const openSections = ref<OpenSections>({
   movies: false,
   cinemas: false,
   tickets: false,
-  events: false,
+  promotions: false,
   fnb: false,
 });
 
@@ -341,33 +341,22 @@ const userEmail = computed(() => currentUser.value?.email);
         <!-- Manage Events -->
         <div>
           <button
-            @click="toggleSection('events')"
+            @click="toggleSection('promotions')"
             class="w-full flex items-center justify-between px-3 py-2 text-sm font-medium text-gray-300 rounded-lg hover:bg-gray-700 hover:text-white transition-colors"
           >
             <div class="flex items-center gap-2">
               <Calendar class="w-4 h-4" />
-              Manage Events
+              Manage Promotions
             </div>
             <ChevronDown
               :class="[
                 'w-4 h-4 transition-transform',
-                openSections.events ? 'rotate-180' : '',
+                openSections.promotions ? 'rotate-180' : '',
               ]"
             />
           </button>
 
-          <div v-show="openSections.events" class="ml-6 mt-1 space-y-1">
-            <button
-              @click="$emit('navigate', 'vouchers')"
-              :class="[
-                'w-full text-left px-3 py-2 text-sm rounded-lg transition-colors',
-                activeItem === 'vouchers'
-                  ? 'bg-blue-500 text-white'
-                  : 'text-gray-400 hover:bg-gray-700 hover:text-white',
-              ]"
-            >
-              Vouchers
-            </button>
+          <div v-show="openSections.promotions" class="ml-6 mt-1 space-y-1">
             <button
               @click="$emit('navigate', 'events')"
               :class="[
@@ -378,6 +367,17 @@ const userEmail = computed(() => currentUser.value?.email);
               ]"
             >
               Events
+            </button>
+            <button
+              @click="$emit('navigate', 'vouchers')"
+              :class="[
+                'w-full text-left px-3 py-2 text-sm rounded-lg transition-colors',
+                activeItem === 'vouchers'
+                  ? 'bg-blue-500 text-white'
+                  : 'text-gray-400 hover:bg-gray-700 hover:text-white',
+              ]"
+            >
+              Vouchers
             </button>
           </div>
         </div>
