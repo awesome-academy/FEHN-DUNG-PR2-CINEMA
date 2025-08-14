@@ -6,6 +6,7 @@ import AdminManageCinemas from "~/components/admin/cinema/AdminManageCinemas.vue
 import AdminManageMovies from "~/components/admin/movie/AdminManageMovies.vue";
 import AdminManageTickets from "~/components/admin/ticket/AdminManageTickets.vue";
 import AdminManagePromotions from "~/components/admin/promotion/AdminManagePromotions.vue";
+import AdminManageFnbs from "~/components/admin/fnb/AdminManageFnbs.vue";
 import { Menu } from "lucide-vue-next";
 
 const currentPage = ref("dashboard");
@@ -93,6 +94,10 @@ definePageMeta({
         />
         <AdminManagePromotions
           v-if="currentPage === 'events' || currentPage === 'vouchers'"
+          :active-tab="currentPage"
+        />
+        <AdminManageFnbs
+          v-if="currentPage === 'fnb-items'"
           :active-tab="currentPage"
         />
       </div>
