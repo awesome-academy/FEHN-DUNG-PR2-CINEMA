@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { memberships } from '~/data/sampleData';
 
 interface UserState {
     currentUser: any | null;
@@ -30,11 +31,17 @@ export const useUserStore = defineStore('user', {
         },
 
         signInSuccess(user: any) {
-            this.currentUser = user;
+            const membership = memberships.find(m => m.userId === user.id);
+            const fullUserDetails = {
+                ...user,
+                points: membership?.points ?? 0,
+                totalSpent: membership?.totalSpent ?? 0,
+            };
+            this.currentUser = fullUserDetails;
             this.isLoggedIn = true;
             this.loading = false;
             this.error = null;
-            localStorage.setItem('user', JSON.stringify(user));
+            localStorage.setItem('user', JSON.stringify(fullUserDetails));
         },
 
         signInFailure(err: string) {
@@ -80,6 +87,18 @@ export const useUserStore = defineStore('user', {
         updateFailure(err: string) {
             this.loading = false;
             this.error = err;
+        },
+
+        updateUserSpending(amount: number) {
+            if (!this.currentUser) return;
+
+            this.currentUser.totalSpent += amount;
+
+            // 10,000 VND = 1 point
+            const newPoints = Math.floor(amount / 10000);
+            this.currentUser.points += newPoints;
+
+            localStorage.setItem('user', JSON.stringify(this.currentUser));
         },
 
         restoreUserFromLocal() {

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import type { FnbItem, Movie, Cinema, TimeSlot, Seat } from "~~/types/type";
+import { screens } from "@/data/sampleData";
 
 interface Props {
   selectedMovieId: number | null;
@@ -8,6 +9,7 @@ interface Props {
   selectedScreenType: string | null;
   selectedCinemaId: number | null;
   selectedScheduleId: number | null;
+  selectedScreenId: number | null;
   selectedSeatIds: number[];
   selectedFnbItems: { fnbItem: FnbItem; quantity: number }[];
   ticketsPrice: number;
@@ -67,6 +69,10 @@ const scheduleTime = computed(() => {
   return `${ts.startTime} - ${ts.endTime}`;
 });
 
+const getScreenInfo = computed(() => {
+  return screens.find((s) => s.id === props.selectedScreenId);
+});
+
 // Format date
 const formattedDate = computed(() => {
   if (!props.selectedDate) return "N/A";
@@ -120,6 +126,14 @@ const formatPrice = (price: number) => {
               >{{ $t("buyTickets.review.screenType") }}:</span
             >
             <span class="ml-2 font-medium">{{ selectedScreenType }}</span>
+          </div>
+          <div>
+            <span class="text-gray-400"
+              >{{ $t("buyTickets.review.screenName") }}:</span
+            >
+            <span class="ml-2 font-medium">{{
+              getScreenInfo?.name || "N/A"
+            }}</span>
           </div>
           <div>
             <span class="text-gray-400"

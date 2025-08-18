@@ -351,11 +351,12 @@
             "startTime": "Bắt đầu lúc",
             "duration": "Thời lượng",
             "endTime": "Kết thúc lúc",
-            "past": "Đã qua"
+            "past": "Đã qua",
+            "selectedSchedules": "Suất chiếu đã chọn"
         },
         "selectSeat": {
             "title": "Chọn Ghế",
-            "screen": "MÀN HÌNH",
+            "screen": "Phòng",
             "legend": "Chú thích",
             "booked": "Đã đặt",
             "selected": "Đã chọn",
@@ -393,6 +394,7 @@
             "movie": "Phim",
             "date": "Ngày",
             "screenType": "Loại màn hình",
+            "screenName": "Tên phòng chiếu",
             "cinema": "Rạp chiếu",
             "showtime": "Suất chiếu",
             "duration": "Thời lượng",

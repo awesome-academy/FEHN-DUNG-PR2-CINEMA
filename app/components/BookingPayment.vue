@@ -116,6 +116,8 @@ const simulatePayment = async () => {
       locale.value
     );
 
+    userStore.updateUserSpending(props.totalPrice);
+
     paymentStatus.value = "success";
     toast.success({
       message: "Thanh toán thành công!",

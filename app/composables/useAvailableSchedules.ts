@@ -24,7 +24,8 @@ export function useAvailableSchedules(
             if (timeSlot && timeSlot.date === selectedDate) {
                 return {
                     id: ms.id,
-                    timeSlot: timeSlot
+                    timeSlot: timeSlot,
+                    screenId: ms.screenId
                 };
             }
             return null;

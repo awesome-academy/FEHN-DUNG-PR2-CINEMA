@@ -352,11 +352,12 @@
             "duration": "Duration",
             "startTime": "Start at",
             "endTime": "Ends at",
-            "past": "Past"
+            "past": "Past",
+            "selectedSchedules": "Selected Schedules"
         },
         "selectSeat": {
             "title": "Select Seats",
-            "screen": "SCREEN",
+            "screen": "Screen",
             "legend": "Legend",
             "booked": "Booked",
             "selected": "Selected",
@@ -394,6 +395,7 @@
             "movie": "Movie",
             "date": "Date",
             "screenType": "Screen Type",
+            "screenName": "Screen Name",
             "cinema": "Cinema",
             "showtime": "Showtime",
             "duration": "Duration",

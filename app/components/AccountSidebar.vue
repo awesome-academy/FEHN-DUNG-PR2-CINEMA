@@ -25,7 +25,6 @@ const menuItems = [
   { id: "profile", icon: SquareUser, key: "profile" },
   { id: "account", icon: UserPen, key: "account" },
   { id: "memberCard", icon: CreditCard, key: "memberCard" },
-  { id: "voucher", icon: Tickets, key: "voucher" },
   { id: "history", icon: History, key: "history" },
 ];
 

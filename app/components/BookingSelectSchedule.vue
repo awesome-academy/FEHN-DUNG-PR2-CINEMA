@@ -64,8 +64,8 @@ const isTimeSlotPast = (timeString: string, dateString: string) => {
   return timeSlotDate < now;
 };
 
-const handleScheduleSelect = (scheduleId: number) => {
-  emit("select", scheduleId);
+const handleScheduleSelect = (schedule: any) => {
+  emit("select", schedule);
 };
 
 const handleBack = () => {
@@ -99,7 +99,7 @@ const handleBack = () => {
       <button
         v-for="schedule in schedules"
         :key="schedule.id"
-        @click="handleScheduleSelect(schedule.id)"
+        @click="handleScheduleSelect(schedule)"
         :disabled="
           isTimeSlotPast(schedule.timeSlot.startTime, schedule.timeSlot.date)
         "
@@ -194,7 +194,9 @@ const handleBack = () => {
             class="flex items-center mt-3 text-blue-400"
           >
             <CheckCircle class="w-4 h-4 mr-2" />
-            <span class="">{{ t("buyTickets.common.selected") }}</span>
+            <span class="">{{
+              t("buyTickets.selectSchedule.selectedSchedules")
+            }}</span>
           </div>
         </div>
       </button>

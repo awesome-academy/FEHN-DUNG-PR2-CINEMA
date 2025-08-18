@@ -1226,19 +1226,24 @@ export const cinemas: Cinema[] = [
 const generateAllScreens = (allCinemas: Cinema[]): Screen[] => {
     const allScreens: Screen[] = [];
     let screenId = 1;
-    const screenTypes: Screen['type'][] = ['standard', 'VIP', 'IMAX', '3D', '4D'];
 
     for (const cinema of allCinemas) {
-        // Tạo 3 phòng chiếu cho mỗi rạp
-        for (let i = 1; i <= 3; i++) {
-            const randomIndex = Math.floor(Math.random() * screenTypes.length);
-            const randomType = screenTypes[randomIndex] as Screen['type'];
+        const screensInCinema: { name: string, type: Screen['type'] }[] = [
+            { name: 'P1', type: 'standard' },
+            { name: 'P2', type: 'standard' },
+            { name: 'P3', type: 'VIP' },
+            { name: 'P4', type: '3D' },
+            { name: 'P5', type: '4D' },
+            { name: 'P6', type: 'IMAX' },
+        ];
+
+        for (const screen of screensInCinema) {
             allScreens.push({
                 id: screenId,
-                name: `Screen ${i}`,
+                name: screen.name,
                 cinemaId: cinema.id,
                 capacity: 50,
-                type: randomType
+                type: screen.type
             });
             screenId++;
         }
@@ -1314,14 +1319,38 @@ const generateAllSeats = (allScreens: Screen[]): Seat[] => {
 
 const createTimeSlots = (): TimeSlot[] => {
     const slots: TimeSlot[] = [];
-    const dates = ['2025-08-11', '2025-08-12', '2025-08-13', '2025-08-14', '2025-08-15', '2025-08-16', '2025-08-17'];
-    const startTimes = ['09:00', '11:30', '14:00', '16:30', '19:00', '21:30'];
+    const dates: string[] = [];
+
+    const today = new Date();
+
+    today.setHours(0, 0, 0, 0);
+
+    for (let i = 0; i < 7; i++) {
+        const nextDay = new Date(today);
+        nextDay.setDate(today.getDate() + i);
+
+        const year = nextDay.getFullYear();
+        const month = (nextDay.getMonth() + 1).toString().padStart(2, '0');
+        const day = nextDay.getDate().toString().padStart(2, '0');
+        dates.push(`${year}-${month}-${day}`);
+    }
+
+    const startTimes = [
+        '09:00',
+        '10:15',
+        '12:00',
+        '14:45',
+        '17:30',
+        '19:00',
+        '20:00',
+        '21:45',
+        '23:55'
+    ];
     let id = 1;
     for (const date of dates) {
         for (const startTime of startTimes) {
-            const [hour, minute] = startTime.split(':').map(Number);
             const end = new Date(`${date}T${startTime}`);
-            end.setMinutes(end.getMinutes() + 150); // Thêm 150 phút
+            end.setMinutes(end.getMinutes() + 150);
             const endTime = `${end.getHours().toString().padStart(2, '0')}:${end.getMinutes().toString().padStart(2, '0')}`;
             slots.push({ id, startTime, endTime, date });
             id++;
@@ -1333,33 +1362,35 @@ const createTimeSlots = (): TimeSlot[] => {
 const createMovieSchedules = (allCinemas: Cinema[], allScreens: Screen[], allTimeSlots: TimeSlot[]): MovieSchedule[] => {
     const schedules: MovieSchedule[] = [];
     let scheduleId = 1;
-    const usedScreenTime = new Set<string>(); // Key: "screenId-timeSlotId"
-    const todayStr = '2025-07-30'; // Giả định ngày hôm nay
-
-    const pastTimeSlots = allTimeSlots.filter(ts => ts.date < todayStr);
-    const nowShowingTimeSlots = allTimeSlots.filter(ts => ts.date >= todayStr);
-    const endedMovies = movies.filter(m => m.status === 'ended');
     const nowShowingMovies = movies.filter(m => m.status === 'now_showing');
 
-    // Tạo lịch cho phim đang chiếu
-    for (const movie of nowShowingMovies) {
-        // Tạo lịch chiếu ở 5 rạp ngẫu nhiên để dữ liệu không quá lớn
-        const randomCinemas = [...allCinemas].sort(() => 0.5 - Math.random()).slice(0, 5);
-        for (const cinema of randomCinemas) {
-            const cinemaScreens = allScreens.filter(s => s.cinemaId === cinema.id);
-            if (cinemaScreens.length === 0) continue;
+    if (nowShowingMovies.length === 0) {
+        return [];
+    }
 
-            const screen = cinemaScreens[Math.floor(Math.random() * cinemaScreens.length)];
-            const timeSlot = nowShowingTimeSlots[Math.floor(Math.random() * nowShowingTimeSlots.length)];
-            if (!screen || !timeSlot) continue;
+    for (const cinema of allCinemas) {
+        const screensInThisCinema = allScreens.filter(s => s.cinemaId === cinema.id);
 
-            const key = `${screen.id}-${timeSlot.id}`;
-            if (!usedScreenTime.has(key)) {
-                schedules.push({ id: scheduleId++, cinemaId: cinema.id, movieId: movie.id, screenId: screen.id, timeSlotId: timeSlot.id });
-                usedScreenTime.add(key);
+        for (const timeSlot of allTimeSlots) {
+            const shuffledMovies = [...nowShowingMovies].sort(() => Math.random() - 0.5);
+
+            let movieIndex = 0;
+            for (const screen of screensInThisCinema) {
+                const movieToShow = shuffledMovies[movieIndex % shuffledMovies.length];
+
+                schedules.push({
+                    id: scheduleId++,
+                    cinemaId: cinema.id,
+                    movieId: movieToShow!.id,
+                    screenId: screen.id,
+                    timeSlotId: timeSlot.id,
+                });
+
+                movieIndex++;
             }
         }
     }
+
     return schedules;
 };
 

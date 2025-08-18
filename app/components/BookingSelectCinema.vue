@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Cinema } from "~~/types/type";
 import { ArrowLeft, MapPin, MapPinOff, CheckCircle } from "lucide-vue-next";
+import { computed, ref } from "vue";
 
 interface Props {
   cinemas: Cinema[];
@@ -15,6 +16,27 @@ interface Emits {
 const props = defineProps<Props>();
 const emit = defineEmits<Emits>();
 const { t, locale } = useI18n();
+
+const cities = computed(() => {
+  const uniqueCities = [...new Set(props.cinemas.map((cinema) => cinema.city))];
+  return uniqueCities;
+});
+
+const selectedCity = ref(cities.value[0] || "");
+
+watch(
+  () => props.cinemas,
+  () => {
+    if (!selectedCity.value && cities.value.length > 0) {
+      selectedCity.value = cities.value[0] as string;
+    }
+  },
+  { immediate: true }
+);
+
+const filteredCinemas = computed(() => {
+  return props.cinemas.filter((cinema) => cinema.city === selectedCity.value);
+});
 
 const getCinemaName = (cinema: Cinema) => {
   const translation = cinema.translations.find(
@@ -37,6 +59,10 @@ const handleCinemaSelect = (cinemaId: number) => {
 const handleBack = () => {
   emit("back");
 };
+
+const handleCitySelect = (city: string) => {
+  selectedCity.value = city;
+};
 </script>
 
 <template>
@@ -54,7 +80,26 @@ const handleBack = () => {
       </button>
     </div>
 
-    <div v-if="cinemas.length === 0" class="text-center py-8">
+    <!-- City Selection Buttons -->
+    <div v-if="cities.length > 1" class="mb-6">
+      <div class="flex flex-wrap gap-3">
+        <button
+          v-for="city in cities"
+          :key="city"
+          @click="handleCitySelect(city)"
+          class="px-4 py-2 rounded-lg font-medium transition-all duration-300"
+          :class="{
+            'bg-blue-500 text-white': selectedCity === city,
+            'bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white':
+              selectedCity !== city,
+          }"
+        >
+          {{ city }}
+        </button>
+      </div>
+    </div>
+
+    <div v-if="filteredCinemas.length === 0" class="text-center py-8">
       <MapPinOff class="w-16 h-16 text-gray-400 mx-auto mb-4" />
       <p class="text-gray-400">
         {{ t("buyTickets.selectCinema.noAvailable") }}
@@ -63,7 +108,7 @@ const handleBack = () => {
 
     <div v-else class="space-y-4">
       <button
-        v-for="cinema in cinemas"
+        v-for="cinema in filteredCinemas"
         :key="cinema.id"
         @click="handleCinemaSelect(cinema.id)"
         class="w-full p-6 rounded-lg border-2 transition-all duration-300 hover:scale-[1.02] text-left"

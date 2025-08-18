@@ -6,13 +6,14 @@ import { useAvailableCinemas } from "./useAvailableCinemas";
 import { useAvailableSchedules } from "./useAvailableSchedules";
 import { useAvailableSeats } from "./useAvailableSeats";
 import { useAvailableFnb } from "./useAvailableFnb";
-import type { Movie, Screen, Cinema, TimeSlot, FnbItem, Seat } from "~~/types/type";
+import type { Movie, Screen, Cinema, TimeSlot, FnbItem, Seat, MovieSchedule } from "~~/types/type";
+import { screens } from "~/data/sampleData";
 
 export type BookingStep =
     | "selectMovie"
     | "selectDate"
-    | "selectScreenType"
     | "selectCinema"
+    | "selectScreenType"
     | "selectSchedule"
     | "selectSeat"
     | "selectFnb"
@@ -21,16 +22,16 @@ export type BookingStep =
 
 export function useBookingFlow() {
     const currentStep = ref<BookingStep>("selectMovie");
-
     const selectedMovieId = ref<number | null>(null);
     const selectedDate = ref<string | null>(null);
-    const selectedScreenType = ref<Screen["type"] | null>(null);
     const selectedCinemaId = ref<number | null>(null);
+    const selectedScreenType = ref<Screen["type"] | null>(null);
     const selectedScheduleId = ref<number | null>(null);
+    const selectedScreenId = ref<number | null>(null);
     const selectedSeatIds = ref<number[]>([]);
     const selectedFnbItems = ref<{ fnbItem: FnbItem; quantity: number }[]>([]);
 
-    // 1. Choose movie
+    // 1. SELECT MOVIE
     const { movies } = useAvailableMovies();
 
     const initializeWithMovie = (movieId: number) => {
@@ -43,30 +44,33 @@ export function useBookingFlow() {
         }
     };
 
-    // 2. Choose date
+    // 2. SELECT DATE 
     const dates = computed(() =>
         selectedMovieId.value ? useAvailableDates(selectedMovieId.value) : { dates: [] }
     );
 
-    // 3. Choose screen type
-    const screenTypes = computed(() =>
-        selectedMovieId.value && selectedDate.value
-            ? useAvailableScreenTypes(selectedMovieId.value, selectedDate.value)
-            : { screenTypes: [] }
-    );
-
-    // 4. Choose cinema
+    // 3. SELECT CINEMA 
     const cinemas = computed(() =>
-        selectedMovieId.value && selectedDate.value && selectedScreenType.value
+        selectedMovieId.value && selectedDate.value
             ? useAvailableCinemas(
                 selectedMovieId.value,
-                selectedDate.value,
-                selectedScreenType.value
+                selectedDate.value
             )
             : { cinemas: [] }
     );
 
-    // 5. Choose movie schedule
+    // 4. SELECT SCREEN TYPE
+    const screenTypes = computed(() =>
+        selectedMovieId.value && selectedDate.value && selectedCinemaId.value
+            ? useAvailableScreenTypes(
+                selectedMovieId.value,
+                selectedDate.value,
+                selectedCinemaId.value
+            )
+            : { screenTypes: [] }
+    );
+
+    // 5. SELECT MOVIE SCHEDULE
     const schedules = computed(() =>
         selectedMovieId.value &&
             selectedDate.value &&
@@ -81,7 +85,7 @@ export function useBookingFlow() {
             : { schedules: [] }
     );
 
-    // 6. Choose seat
+    // 6. SELECT SEAT
     const seatInfo = computed(() =>
         selectedScheduleId.value
             ? useAvailableSeats(selectedScheduleId.value)
@@ -90,13 +94,11 @@ export function useBookingFlow() {
     const availableSeats = computed(() => seatInfo.value.availableSeats);
     const bookedSeatIds = computed(() => seatInfo.value.bookedSeatIds);
 
-    // 7. Choose FNB
+    // 7. SELECT FNB
     const { fnbItems } = useAvailableFnb();
 
     const ticketsPrice = computed(() => {
-        if (!selectedSeatIds.value.length || !availableSeats.value.length) {
-            return 0;
-        }
+        if (!selectedSeatIds.value.length || !availableSeats.value.length) return 0;
         const selectedFullSeats = availableSeats.value.filter(seat =>
             selectedSeatIds.value.includes(seat.id)
         );
@@ -104,9 +106,7 @@ export function useBookingFlow() {
     });
 
     const fnbPrice = computed(() => {
-        if (!selectedFnbItems.value.length) {
-            return 0;
-        }
+        if (!selectedFnbItems.value.length) return 0;
         return selectedFnbItems.value.reduce(
             (total, item) => total + item.fnbItem.price * item.quantity,
             0
@@ -115,35 +115,25 @@ export function useBookingFlow() {
 
     const totalPrice = computed(() => ticketsPrice.value + fnbPrice.value);
 
+    const steps: BookingStep[] = [
+        "selectMovie",
+        "selectDate",
+        "selectCinema",
+        "selectScreenType",
+        "selectSchedule",
+        "selectSeat",
+        "selectFnb",
+        "review",
+        "payment",
+    ];
+
     const nextStep = () => {
-        const steps: BookingStep[] = [
-            "selectMovie",
-            "selectDate",
-            "selectScreenType",
-            "selectCinema",
-            "selectSchedule",
-            "selectSeat",
-            "selectFnb",
-            "review",
-            "payment",
-        ];
         const idx = steps.indexOf(currentStep.value);
         const next = steps[idx + 1];
         if (next) currentStep.value = next;
     };
 
     const prevStep = () => {
-        const steps: BookingStep[] = [
-            "selectMovie",
-            "selectDate",
-            "selectScreenType",
-            "selectCinema",
-            "selectSchedule",
-            "selectSeat",
-            "selectFnb",
-            "review",
-            "payment",
-        ];
         const idx = steps.indexOf(currentStep.value);
         const prev = steps[idx - 1];
         if (prev) currentStep.value = prev;
@@ -156,6 +146,7 @@ export function useBookingFlow() {
         selectedScreenType.value = null;
         selectedCinemaId.value = null;
         selectedScheduleId.value = null;
+        selectedScreenId.value = null;
         selectedSeatIds.value = [];
         selectedFnbItems.value = [];
     };
@@ -163,9 +154,10 @@ export function useBookingFlow() {
     const selectMovie = (movieId: number) => {
         selectedMovieId.value = movieId;
         selectedDate.value = null;
-        selectedScreenType.value = null;
         selectedCinemaId.value = null;
+        selectedScreenType.value = null;
         selectedScheduleId.value = null;
+        selectedScreenId.value = null;
         selectedSeatIds.value = [];
         selectedFnbItems.value = [];
         currentStep.value = "selectDate";
@@ -173,18 +165,10 @@ export function useBookingFlow() {
 
     const selectDate = (date: string) => {
         selectedDate.value = date;
+        selectedCinemaId.value = null;
         selectedScreenType.value = null;
-        selectedCinemaId.value = null;
         selectedScheduleId.value = null;
-        selectedSeatIds.value = [];
-        selectedFnbItems.value = [];
-        currentStep.value = "selectScreenType";
-    };
-
-    const selectScreenType = (type: Screen["type"]) => {
-        selectedScreenType.value = type;
-        selectedCinemaId.value = null;
-        selectedScheduleId.value = null;
+        selectedScreenId.value = null;
         selectedSeatIds.value = [];
         selectedFnbItems.value = [];
         currentStep.value = "selectCinema";
@@ -192,14 +176,26 @@ export function useBookingFlow() {
 
     const selectCinema = (cinemaId: number) => {
         selectedCinemaId.value = cinemaId;
+        selectedScreenType.value = null;
         selectedScheduleId.value = null;
+        selectedScreenId.value = null;
+        selectedSeatIds.value = [];
+        selectedFnbItems.value = [];
+        currentStep.value = "selectScreenType";
+    };
+
+    const selectScreenType = (type: Screen["type"]) => {
+        selectedScreenType.value = type;
+        selectedScheduleId.value = null;
+        selectedScreenId.value = null;
         selectedSeatIds.value = [];
         selectedFnbItems.value = [];
         currentStep.value = "selectSchedule";
     };
 
-    const selectSchedule = (scheduleId: number) => {
-        selectedScheduleId.value = scheduleId;
+    const selectSchedule = (schedule: any) => {
+        selectedScheduleId.value = schedule.id;
+        selectedScreenId.value = schedule.screenId;
         selectedSeatIds.value = [];
         currentStep.value = "selectSeat";
     };
@@ -237,6 +233,7 @@ export function useBookingFlow() {
         currentStep.value = "payment";
     };
 
+
     return {
         currentStep,
         nextStep,
@@ -245,16 +242,17 @@ export function useBookingFlow() {
 
         selectedMovieId,
         selectedDate,
-        selectedScreenType,
         selectedCinemaId,
+        selectedScreenType,
         selectedScheduleId,
+        selectedScreenId,
         selectedSeatIds,
         selectedFnbItems,
 
         movies,
         dates,
-        screenTypes,
         cinemas,
+        screenTypes,
         schedules,
         availableSeats,
         bookedSeatIds,
@@ -267,8 +265,8 @@ export function useBookingFlow() {
         initializeWithMovie,
         selectMovie,
         selectDate,
-        selectScreenType,
         selectCinema,
+        selectScreenType,
         selectSchedule,
         selectSeat,
         finishSeatSelection,

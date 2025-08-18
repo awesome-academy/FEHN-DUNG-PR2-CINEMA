@@ -45,10 +45,14 @@ function getYouTubeId(url: string) {
   return match ? match[1] : "";
 }
 
-const handleBuyTickets = () => {
-  if (movie.value?.id) {
-    console.log("Buy tickets for movie:", movie.value.id);
-  }
+const handleBuyTickets = (movieId: number) => {
+  const targetPath = localePath({
+    name: "buyTickets",
+    query: {
+      id: movieId,
+    },
+  });
+  router.push(targetPath);
 };
 
 const goBack = () => {
@@ -205,7 +209,7 @@ const goBack = () => {
           <!-- Buy Tickets Button -->
           <div class="pt-4">
             <button
-              @click="handleBuyTickets"
+              @click="handleBuyTickets(movie.id)"
               :disabled="movie.status === 'ended'"
               class="flex items-center gap-3 bg-red-600 text-white hover:cursor-pointer px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-700 disabled:bg-gray-600 disabled:cursor-not-allowed transition-all transform hover:scale-105 active:scale-95"
             >
