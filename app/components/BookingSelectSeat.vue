@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import type { Seat } from "~~/types/type";
 import { ArrowLeft } from "lucide-vue-next";
+import { screens } from "@/data/sampleData";
 
 interface Props {
   availableSeats: Seat[];
   bookedSeatIds: number[];
   selectedSeatIds: number[];
+  selectedScreenId: number | null;
 }
 
 interface Emits {
@@ -17,6 +19,10 @@ interface Emits {
 const props = defineProps<Props>();
 const emit = defineEmits<Emits>();
 const { t } = useI18n();
+
+const getScreenInfo = computed(() => {
+  return screens.find((s) => s.id === props.selectedScreenId);
+});
 
 const parseSeatColumnNumber = (column: string | number): number => {
   if (typeof column === "string" && column.includes("-")) {
@@ -154,7 +160,12 @@ const formatPrice = (price: number) => {
     <div class="mb-8">
       <div class="bg-blue-700 h-3 rounded-lg mb-2"></div>
       <p class="text-center text-sm text-gray-400">
-        {{ t("buyTickets.selectSeat.screen") }}
+        <template v-if="getScreenInfo?.name">
+          {{ t("buyTickets.selectSeat.screen") }}: {{ getScreenInfo.name }}
+        </template>
+        <template v-else>
+          {{ t("buyTickets.selectSeat.screen") }}
+        </template>
       </p>
     </div>
 

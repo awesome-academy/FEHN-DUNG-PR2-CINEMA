@@ -38,7 +38,7 @@ const userStore = useUserStore();
 
 const userId = computed(() => userStore.currentUser?.id);
 
-const { userDetail } = useUserDetails(userId);
+const { userDetail } = useUserDetails();
 </script>
 
 <template>

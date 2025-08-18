@@ -19,8 +19,8 @@ onMounted(() => {
 
 const visibleSteps: BookingStep[] = [
   "selectDate",
-  "selectScreenType",
   "selectCinema",
+  "selectScreenType",
   "selectSchedule",
   "selectSeat",
   "selectFnb",
@@ -49,21 +49,21 @@ const visibleSteps: BookingStep[] = [
           @select="bookingFlow.selectDate"
         />
 
-        <!-- Select Screen Type -->
-        <BookingSelectScreenType
-          v-if="bookingFlow.currentStep.value === 'selectScreenType'"
-          :screen-types="bookingFlow.screenTypes.value.screenTypes"
-          :selected-type="bookingFlow.selectedScreenType.value"
-          @select="bookingFlow.selectScreenType"
-          @back="bookingFlow.prevStep"
-        />
-
         <!-- Select Cinema -->
         <BookingSelectCinema
           v-if="bookingFlow.currentStep.value === 'selectCinema'"
           :cinemas="bookingFlow.cinemas.value.cinemas"
           :selected-cinema-id="bookingFlow.selectedCinemaId.value"
           @select="bookingFlow.selectCinema"
+          @back="bookingFlow.prevStep"
+        />
+
+        <!-- Select Screen Type -->
+        <BookingSelectScreenType
+          v-if="bookingFlow.currentStep.value === 'selectScreenType'"
+          :screen-types="bookingFlow.screenTypes.value.screenTypes"
+          :selected-type="bookingFlow.selectedScreenType.value"
+          @select="bookingFlow.selectScreenType"
           @back="bookingFlow.prevStep"
         />
 
@@ -82,6 +82,7 @@ const visibleSteps: BookingStep[] = [
           :available-seats="bookingFlow.availableSeats.value"
           :booked-seat-ids="bookingFlow.bookedSeatIds.value"
           :selected-seat-ids="bookingFlow.selectedSeatIds.value"
+          :selected-screen-id="bookingFlow.selectedScreenId.value"
           @select-seat="bookingFlow.selectSeat"
           @finish="bookingFlow.finishSeatSelection"
           @back="bookingFlow.prevStep"
@@ -105,6 +106,7 @@ const visibleSteps: BookingStep[] = [
           :selected-screen-type="bookingFlow.selectedScreenType.value"
           :selected-cinema-id="bookingFlow.selectedCinemaId.value"
           :selected-schedule-id="bookingFlow.selectedScheduleId.value"
+          :selected-screen-id="bookingFlow.selectedScreenId.value"
           :selected-seat-ids="bookingFlow.selectedSeatIds.value"
           :selected-fnb-items="bookingFlow.selectedFnbItems.value"
           :tickets-price="bookingFlow.ticketsPrice.value"

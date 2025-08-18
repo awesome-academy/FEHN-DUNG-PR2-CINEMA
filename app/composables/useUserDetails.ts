@@ -1,5 +1,4 @@
 import { computed } from "vue";
-import { users as allUsers, memberships as allMemberships } from "~/data/sampleData";
 import { useUserStore } from "~/stores/user";
 
 export interface UserResult {
@@ -16,31 +15,15 @@ export interface UserResult {
     totalSpent: number
 }
 
-export function useUserDetails(userId: Ref<number | undefined>) {
+export function useUserDetails() {
     const userStore = useUserStore();
 
     const userDetail = computed<UserResult | null>(() => {
-        const user = userStore.currentUser && userStore.currentUser.id === userId.value
-            ? userStore.currentUser
-            : null;
-        if (!user) return null;
+        if (!userStore.currentUser) return null;
 
-        const membership = allMemberships.find(m => m.userId === userId.value);
-
-        return {
-            id: user.id,
-            username: user.username,
-            email: user.email,
-            password: user.password,
-            phone: user.phone,
-            role: user.role,
-            tier: user.tier,
-            status: user.status,
-            createdAt: user.createdAt,
-            points: membership?.points ?? 0,
-            totalSpent: membership?.totalSpent ?? 0
-        }
+        return userStore.currentUser as UserResult;
     });
+
     return {
         userDetail
     }

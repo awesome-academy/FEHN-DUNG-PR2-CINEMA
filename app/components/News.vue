@@ -6,6 +6,7 @@ import { Calendar } from "lucide-vue-next";
 const { t, locale } = useI18n();
 const { events: allEvents } = useEvents(locale);
 const localePath = useLocalePath();
+const router = useRouter();
 
 // Filter active events for display
 const activeEvents = computed(() => {
@@ -46,6 +47,10 @@ const formatDate = (dateString: string) => {
     year: "numeric",
   });
 };
+
+const navigateToEvent = (eventId: number) => {
+  router.push(localePath(`/newsDetail/${eventId}`));
+};
 </script>
 
 <template>
@@ -63,6 +68,7 @@ const formatDate = (dateString: string) => {
         <div
           v-for="event in activeEvents"
           :key="event.id"
+          @click="navigateToEvent(event.id)"
           class="group relative bg-[#161b22] rounded-2xl overflow-hidden transition-all duration-300 hover:cursor-pointer hover:shadow-2xl hover:shadow-gray-500/20"
         >
           <!-- Event Image -->
@@ -131,6 +137,7 @@ const formatDate = (dateString: string) => {
             </div>
 
             <button
+              @click="navigateToEvent(event.id)"
               class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
             >
               {{ locale === "vi" ? "Xem Chi Tiết" : "View Details" }}
