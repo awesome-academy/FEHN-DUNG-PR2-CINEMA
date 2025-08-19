@@ -6,9 +6,13 @@ export function useAvailableCinemas(
     selectedMovieId: number,
     selectedDate: string
 ) {
+    // 1. Lấy ra tất cả lịch chiếu của phim đã chọn
     const schedules = movieSchedules.filter(ms => ms.movieId === selectedMovieId);
+
+    // 2. Lấy ra tất cả time slots ứng với ngày đã chọn
     const slots = timeSlots.filter(ts => ts.date === selectedDate);
 
+    // 3. Tìm ra các cinemaId có suất chiếu của phim đó vào ngày đó
     const cinemaIds = [
         ...new Set(
             schedules
