@@ -2,6 +2,7 @@
 import { ref, reactive } from "vue";
 import type { UserResult } from "~/composables/useUserDetails";
 import { useUserStore } from "~/stores/user";
+import FavouriteCinemaSelection from "./FavouriteCinemaSelection.vue";
 
 const toast = useToast();
 const userStore = useUserStore();
@@ -125,6 +126,8 @@ const handleChangePassword = () => {
       </h1>
       <p class="text-gray-400">{{ $t("account.account.subtitle") }}</p>
     </div>
+
+    <FavouriteCinemaSelection />
 
     <!-- Profile Information Form -->
     <div class="bg-[#161b22] rounded-lg p-6">

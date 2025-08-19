@@ -291,6 +291,22 @@
             "pricePerItem": "Price per Item",
             "subtotal": "Subtotal",
             "itemId": "Item ID"
+        },
+        "favoriteCinema": {
+            "title": "Favorite Cinema",
+            "noFavorite": "No favorite cinema selected",
+            "selectBenefit": "Select a favorite cinema to automatically choose it when buying tickets",
+            "autoSelectNote": "This cinema will be automatically selected when you buy tickets",
+            "select": "Select Favorite Cinema",
+            "change": "Change Favorite Cinema",
+            "selectCinema": "Choose Your Favorite Cinema",
+            "remove": "Remove",
+            "current": "Current Favorite",
+            "setSuccess": "Successfully set {cinema} as favorite cinema!",
+            "removeSuccess": "Favorite cinema removed successfully!"
+        },
+        "common": {
+            "cancel": "Cancel"
         }
     },
     "buyTickets": {
@@ -314,7 +330,8 @@
             "next": "Next",
             "continue": "Continue",
             "cancel": "Cancel",
-            "confirm": "Confirm"
+            "confirm": "Confirm",
+            "selected": "Selected"
         },
         "selectDate": {
             "title": "Select Date",

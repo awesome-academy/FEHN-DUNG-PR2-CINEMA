@@ -290,6 +290,22 @@
             "pricePerItem": "Giá Mỗi Món",
             "subtotal": "Tạm Tính",
             "itemId": "Mã Món"
+        },
+        "favoriteCinema": {
+            "title": "Rạp Yêu Thích",
+            "noFavorite": "Chưa chọn rạp yêu thích",
+            "selectBenefit": "Chọn rạp yêu thích để tự động chọn khi mua vé",
+            "autoSelectNote": "Rạp này sẽ được tự động chọn khi bạn mua vé",
+            "select": "Chọn Rạp Yêu Thích",
+            "change": "Thay Đổi Rạp Yêu Thích",
+            "selectCinema": "Chọn Rạp Yêu Thích Của Bạn",
+            "remove": "Xóa",
+            "current": "Đang Yêu Thích",
+            "setSuccess": "Đã đặt {cinema} làm rạp yêu thích!",
+            "removeSuccess": "Đã xóa rạp yêu thích thành công!"
+        },
+        "common": {
+            "cancel": "Hủy"
         }
     },
     "buyTickets": {
@@ -313,7 +329,8 @@
             "next": "Tiếp theo",
             "continue": "Tiếp tục",
             "cancel": "Hủy",
-            "confirm": "Xác nhận"
+            "confirm": "Xác nhận",
+            "selected": "Đã chọn"
         },
         "selectDate": {
             "title": "Chọn Ngày Chiếu",
